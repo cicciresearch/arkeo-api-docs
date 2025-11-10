@@ -1,0 +1,10 @@
+site_name: Arkeo All-in-One API
+theme:
+  name: material
+
+nav:
+  - Introduction: index.md
+  - MAIN Commands: main.md
+  - ROUTINE Commands: routine.md
+  - TMPCTL Commands: tmpctl.md
+  - MUX Commands: mux.md
