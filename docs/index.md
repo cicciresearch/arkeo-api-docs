@@ -1,17 +1,70 @@
-# Welcome to MkDocs
+# Arkeo All-in-One API Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The Arkeo All-in-One API allows external applications to control and query
+the Arkeo measurement software through a TCP/JSON interface.
 
-## Commands
+Each connected client can send JSON-encoded requests and receive JSON responses.
+All commands follow a standard message structure containing a **target**, a **command**, 
+optional **parameters**, and a **request ID** to match responses.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## 🔧 Request Format
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Every request message must contain the following JSON structure:
+
+```json
+{
+  "target": "<TARGET>",
+  "command": "<COMMAND>",
+  "params": { ... },
+  "request_id": 42
+}
+````
+
+* **target**: Specifies which subsystem should handle the command.
+  Example targets: `"MAIN"`, `"ROUTINE"`, `"TMPCTL"`, `"MUX"`.
+* **command**: The specific instruction for that target.
+* **params**: Optional command parameters (may be empty `{}`).
+* **request_id**: An integer identifier assigned by the client.
+
+---
+
+## Response Format
+
+Each command returns a structured JSON response. The response always includes
+a `status` field and the same `request_id` as the corresponding request.
+
+```json
+{
+  "status": "OK" | "ERROR",
+  "data": { ... },     // present if status = "OK"
+  "error": { ... },    // present if status = "ERROR"
+  "request_id": 42
+}
+```
+
+### Response Keys
+
+* **status**: Indicates success or failure (`"OK"` or `"ERROR"`).
+* **data**: Command-specific response payload.
+* **error**: Only present if an error occurred; contains fields such as:
+
+  ```json
+  { "code": 101, "message": "Invalid parameters" }
+  ```
+* **request_id**: Echoes the ID from the request.
+
+---
+
+## Targets Overview
+
+| Target      | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
+| **MAIN**    | Controls system-wide operations, including routine activation.              |
+| **ROUTINE** | Handles measurement routines such as JV, MPPT, Impedance, and Luminescence. |
+| **TMPCTL**  | Controls and monitors temperature controllers.                              |
+| **MUX**     | Manages multiplexer connections.                                            |
+
+---
+

@@ -1,10 +1,32 @@
-site_name: Arkeo All-in-One API
+site_name: Arkeo All-in-One API Documentation
+
 theme:
   name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - codehilite
+  - admonition
+  - attr_list
+  - md_in_html
 
 nav:
   - Introduction: index.md
   - MAIN Commands: main.md
-  - ROUTINE Commands: routine.md
+  - ROUTINE Commands:
+      - Overview: routine/index.md
+      - Luminescence Routine: routine/luminescence.md
   - TMPCTL Commands: tmpctl.md
   - MUX Commands: mux.md
