@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../IPCE/">
+        <link rel="prev" href="../JV/">
       
       
-        <link rel="next" href="../../tmpctl/">
+        <link rel="next" href="../luminescence/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Luminescence Routine - Arkeo All-in-One API Documentation</title>
+        <title>IPCE Routine - Arkeo All-in-One API Documentation</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#luminescence-routine-commands" class="md-skip">
+        <a href="#ipce-routine-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Luminescence Routine
+              IPCE Routine
             
           </span>
         </div>
@@ -308,26 +308,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../IPCE/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IPCE Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -343,7 +323,7 @@
           
   
   <span class="md-ellipsis">
-    Luminescence Routine
+    IPCE Routine
   </span>
   
 
@@ -354,7 +334,7 @@
         
   
   <span class="md-ellipsis">
-    Luminescence Routine
+    IPCE Routine
   </span>
   
 
@@ -390,6 +370,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-index" class="md-nav__link">
     Command Index
   </a>
@@ -397,11 +385,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acquiredark-acquirereference-acquiresingle" class="md-nav__link">
-    AcquireDark / AcquireReference / AcquireSingle
+  <a href="#setshutter" class="md-nav__link">
+    SetShutter
   </a>
   
-    <nav class="md-nav" aria-label="AcquireDark / AcquireReference / AcquireSingle">
+    <nav class="md-nav" aria-label="SetShutter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -424,11 +412,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#autoexposure" class="md-nav__link">
-    AutoExposure
+  <a href="#setwavelength" class="md-nav__link">
+    SetWavelength
   </a>
   
-    <nav class="md-nav" aria-label="AutoExposure">
+    <nav class="md-nav" aria-label="SetWavelength">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -451,11 +439,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setlaser" class="md-nav__link">
-    SetLaser
+  <a href="#startcalibration" class="md-nav__link">
+    StartCalibration
   </a>
   
-    <nav class="md-nav" aria-label="SetLaser">
+    <nav class="md-nav" aria-label="StartCalibration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -477,10 +465,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getchopperfrequency" class="md-nav__link">
+    GetChopperFrequency
+  </a>
+  
+    <nav class="md-nav" aria-label="GetChopperFrequency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-request_3" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response_3" class="md-nav__link">
+    Example Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmonochromatorstatus" class="md-nav__link">
+    GetMonochromatorStatus
+  </a>
+  
+    <nav class="md-nav" aria-label="GetMonochromatorStatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-request_4" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response_4" class="md-nav__link">
+    Example Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luminescence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Luminescence Routine
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -572,6 +634,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-index" class="md-nav__link">
     Command Index
   </a>
@@ -579,11 +649,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acquiredark-acquirereference-acquiresingle" class="md-nav__link">
-    AcquireDark / AcquireReference / AcquireSingle
+  <a href="#setshutter" class="md-nav__link">
+    SetShutter
   </a>
   
-    <nav class="md-nav" aria-label="AcquireDark / AcquireReference / AcquireSingle">
+    <nav class="md-nav" aria-label="SetShutter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -606,11 +676,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#autoexposure" class="md-nav__link">
-    AutoExposure
+  <a href="#setwavelength" class="md-nav__link">
+    SetWavelength
   </a>
   
-    <nav class="md-nav" aria-label="AutoExposure">
+    <nav class="md-nav" aria-label="SetWavelength">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -633,11 +703,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setlaser" class="md-nav__link">
-    SetLaser
+  <a href="#startcalibration" class="md-nav__link">
+    StartCalibration
   </a>
   
-    <nav class="md-nav" aria-label="SetLaser">
+    <nav class="md-nav" aria-label="StartCalibration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -649,6 +719,60 @@
         
           <li class="md-nav__item">
   <a href="#example-response_2" class="md-nav__link">
+    Example Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getchopperfrequency" class="md-nav__link">
+    GetChopperFrequency
+  </a>
+  
+    <nav class="md-nav" aria-label="GetChopperFrequency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-request_3" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response_3" class="md-nav__link">
+    Example Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmonochromatorstatus" class="md-nav__link">
+    GetMonochromatorStatus
+  </a>
+  
+    <nav class="md-nav" aria-label="GetMonochromatorStatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-request_4" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response_4" class="md-nav__link">
     Example Response
   </a>
   
@@ -674,15 +798,15 @@
                   
 
 
-<h1 id="luminescence-routine-commands">Luminescence Routine Commands<a class="headerlink" href="#luminescence-routine-commands" title="Permanent link">&para;</a></h1>
-<p>This section lists the commands specific to the Luminescence routine.<br />
-These commands allow acquisition of luminescence spectra, automatic exposure adjustment, and control of laser excitation.</p>
+<h1 id="ipce-routine-commands">IPCE Routine Commands<a class="headerlink" href="#ipce-routine-commands" title="Permanent link">&para;</a></h1>
+<p>This section lists the commands specific to the IPCE routine.  </p>
 <h2 id="settings-json">⚙ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;integration_time&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="nt">&quot;averages&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;pixel_smoothing&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <hr />
 <h2 id="data-json">🔢 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
-<hr />
+<h2 id="_1"><div class="highlight"><pre><span></span><code>
+</code></pre></div><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h2 id="command-index">Command Index<a class="headerlink" href="#command-index" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -693,77 +817,137 @@ These commands allow acquisition of luminescence spectra, automatic exposure adj
 </thead>
 <tbody>
 <tr>
-<td><a href="#acquire">AcquireDark / AcquireReference / AcquireSingle</a></td>
-<td>Capture a spectrum.</td>
+<td><a href="#acquire">SetShutter</a></td>
+<td>Opens or closes the shutter.</td>
 </tr>
 <tr>
-<td><a href="#autoexposure">AutoExposure</a></td>
-<td>Automatically determine optimal integration time.</td>
+<td><a href="#setwavelength">SetWavelength</a></td>
+<td>Move the monochromator to the specified wavelength.</td>
 </tr>
 <tr>
-<td><a href="#setlaser">SetLaser</a></td>
-<td>Enable or disable the excitation laser.</td>
+<td><a href="#startcalibration">StartCalibration</a></td>
+<td>Start the lamp calibration with a photodiode.</td>
+</tr>
+<tr>
+<td><a href="#getchopperfrequency">GetChopperFrequency</a></td>
+<td>Retreive the live chopper frequency.</td>
+</tr>
+<tr>
+<td><a href="#getmonostatus">GetMonochromatorStatus</a></td>
+<td>Get the monochromator status.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="acquiredark-acquirereference-acquiresingle">AcquireDark / AcquireReference / AcquireSingle<a class="headerlink" href="#acquiredark-acquirereference-acquiresingle" title="Permanent link">&para;</a></h2>
+<h2 id="setshutter">SetShutter<a class="headerlink" href="#setshutter" title="Permanent link">&para;</a></h2>
 <p><strong>Description</strong><br />
-Captures a spectrum and stores it in memory either as Dark / Reference / Spectrum based on the command type. The current spectrumeter settings are used.</p>
-<p><strong>Note</strong>: a new dark/reference must be acquired each time the integration time changes</p>
+Open or close the shutter </p>
 <h3 id="example-request">Example Request<a class="headerlink" href="#example-request" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AcquireDark&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetShutter&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;shutter_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="example-response">Example Response<a class="headerlink" href="#example-response" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;stored&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="autoexposure">AutoExposure<a class="headerlink" href="#autoexposure" title="Permanent link">&para;</a></h2>
-<p><strong>Description</strong>
-Determines the optimal integration time for luminescence acquisition by iteratively measuring signal intensity.
-The result includes the selected exposure time in milliseconds.</p>
+<h2 id="setwavelength">SetWavelength<a class="headerlink" href="#setwavelength" title="Permanent link">&para;</a></h2>
+<p><strong>Description</strong><br />
+Move the monochromator to the specified wavelength in nm</p>
 <h3 id="example-request_1">Example Request<a class="headerlink" href="#example-request_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AutoExposure&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">203</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetWavelength&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;wavelength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">550.0</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="example-response_1">Example Response<a class="headerlink" href="#example-response_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;integration_time&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;averages&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">203</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="setlaser">SetLaser<a class="headerlink" href="#setlaser" title="Permanent link">&para;</a></h2>
-<p><strong>Description</strong>
-Controls the excitation laser used during luminescence measurements. Set the PWM frequency and duty cycle of the selected laser channel.</p>
+<h2 id="startcalibration">StartCalibration<a class="headerlink" href="#startcalibration" title="Permanent link">&para;</a></h2>
+<p><strong>Description</strong><br />
+Start the lamp calibration with a photodiode</p>
 <h3 id="example-request_2">Example Request<a class="headerlink" href="#example-request_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetLaser&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;channel&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;duty_cycle&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">204</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartCalibration&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Arkeo\\calibration\\photodiode.txt&quot;</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="example-response_2">Example Response<a class="headerlink" href="#example-response_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">204</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
 </code></pre></div>
+<hr />
+<h2 id="getchopperfrequency">GetChopperFrequency<a class="headerlink" href="#getchopperfrequency" title="Permanent link">&para;</a></h2>
+<p><strong>Description</strong><br />
+Retreive the live chopper frequency in Hz.</p>
+<h3 id="example-request_3">Example Request<a class="headerlink" href="#example-request_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetChopperFrequency&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="example-response_3">Example Response<a class="headerlink" href="#example-response_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="mf">13.35</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="getmonochromatorstatus">GetMonochromatorStatus<a class="headerlink" href="#getmonochromatorstatus" title="Permanent link">&para;</a></h2>
+<p><strong>Description</strong><br />
+Returns the status and configuration of the monochromator.</p>
+<h3 id="example-request_4">Example Request<a class="headerlink" href="#example-request_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetShutter&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;shutter_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="example-response_4">Example Response<a class="headerlink" href="#example-response_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Serial Monochromator&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;connected&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wavelength&quot;</span><span class="p">:</span><span class="mf">550.1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;shutter&quot;</span><span class="p">:</span><span class="s2">&quot;Open&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;grating&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;config&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;gratwave&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;gratpos&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;fltrwave&quot;</span><span class="p">:[</span><span class="mi">100</span><span class="p">,</span><span class="mi">355</span><span class="p">,</span><span class="mi">625</span><span class="p">,</span><span class="mi">1115</span><span class="p">,</span><span class="mi">1580</span><span class="p">,</span><span class="err">I</span><span class="kc">nf</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="err">y</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;fltrpos&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;autofilter&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;autograting&quot;</span><span class="p">:</span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
 
 
 
