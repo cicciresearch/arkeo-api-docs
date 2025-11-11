@@ -1,9 +1,7 @@
 # ROUTINE Commands
 
 Commands in this section are shared across all measurement routines.
-Each routine can be started from the MAIN target, after which the commands below
-control the measurement process, retrieve results, and manage settings.
-
+Each routine can be started from the MAIN target, after which the commands below control the measurement process, retrieve results, and manage settings. They can only be called if a routine is active. If no routine is active, any of these commands return `error 4006: no active routine` as an error object.
 ---
 
 ## Command Index
@@ -12,27 +10,30 @@ control the measurement process, retrieve results, and manage settings.
 |----------|-------------|
 | [StartMeasurement](#startmeasurement) | Start a measurement within the active routine. |
 | [StopMeasurement](#stopmeasurement) | Stop the current measurement. |
+| [CloseRoutine](#closeroutine) | Stops any ongoing measurement and close the routine. |
 | [ApplySettings](#applysettings) | Apply configuration parameters to the routine. |
-| [LoadSettings](#loadsettings) | Retrieve the current routine configuration. |
+| [GetSettings](#getsettings) | Retrieve the current routine configuration. |
 | [GetStatus](#getstatus) | Query the routine’s current operational state. |
 | [GetTestData](#gettestdata) | Retrieve the most recent measurement data. |
+| [SetInfo](#setinfo) | Applies user and device name. |
+| [ClearErrors](#clearerrors) | Clears any errors when the routine is in the error state. |
+| [GetCustomCommands](#getcustomcommands) | Returns a list of custom commands available for the active routine. |
 
 ---
 
 ## StartMeasurement
 
 **Description**  
-Starts a measurement using the currently active routine.
+Starts a measurement. This command returns an error when the routine is not in the Ready state.
 
 ### Example Request
 ```json
 {
   "target": "ROUTINE",
   "command": "StartMeasurement",
-  "params": {},
   "request_id": 20
 }
-````
+```
 
 ### Example Response
 
@@ -40,9 +41,7 @@ Starts a measurement using the currently active routine.
 {
   "status": "OK",
   "data": {
-    "routine_status": "Running",
-    "started": true,
-    "progress": 0
+    "state":"OK"
   },
   "request_id": 20
 }
@@ -53,7 +52,7 @@ Starts a measurement using the currently active routine.
 ## StopMeasurement
 
 **Description**
-Stops the running measurement. If no measurement is active, the command will return without error.
+Stops the measurements. This command returns an error when the routine is not in the Starting or Running state.
 
 ### Example Request
 
@@ -61,7 +60,6 @@ Stops the running measurement. If no measurement is active, the command will ret
 {
   "target": "ROUTINE",
   "command": "StopMeasurement",
-  "params": {},
   "request_id": 21
 }
 ```
@@ -72,10 +70,55 @@ Stops the running measurement. If no measurement is active, the command will ret
 {
   "status": "OK",
   "data": {
-    "routine_status": "Ready",
-    "stopped": true
+    "state":"OK"
   },
   "request_id": 21
+}
+```
+
+---
+
+## CloseRoutine
+
+**Description**
+Stops any ongoing measurement, clears all errors and close the routine. 
+
+### Example Request
+
+```json
+{
+  "target": "ROUTINE",
+  "command": "CloseRoutine",
+  "request_id": 21
+}
+```
+
+### Example Response
+
+```json
+{
+  "status": "OK",
+  "data": {
+    "state":"OK"
+  },
+  "request_id": 21
+}
+```
+
+---
+
+## GetSettings
+
+**Description**
+Returns the routine configuration. The format depends on the active routine.
+
+### Example Request
+
+```json
+{
+  "target": "ROUTINE",
+  "command": "GetSettings",
+  "request_id": 23
 }
 ```
 
@@ -84,8 +127,7 @@ Stops the running measurement. If no measurement is active, the command will ret
 ## ApplySettings
 
 **Description**
-Applies a set of configuration parameters to the active routine.
-Parameters are specific to the routine and provided as a JSON object.
+Applies a configuration. The configuration JSON must match the active routine. It is recommended to use GetSettings to obtain the correct JSON.
 
 ### Example Request
 
@@ -93,71 +135,45 @@ Parameters are specific to the routine and provided as a JSON object.
 {
   "target": "ROUTINE",
   "command": "ApplySettings",
-  "params": {
-    "voltage_range": [0.0, 1.2],
-    "integration_time_ms": 500
-  },
-  "request_id": 22
-}
-```
-
-### Example Response
-
-```json
-{
-  "status": "OK",
-  "data": { "applied": true },
-  "request_id": 22
-}
-```
-
----
-
-## LoadSettings
-
-**Description**
-Retrieves the current configuration of the routine.
-
-### Example Request
-
-```json
-{
-  "target": "ROUTINE",
-  "command": "LoadSettings",
-  "params": {},
-  "request_id": 23
-}
-```
-
-### Example Response
-
-```json
-{
-  "status": "OK",
-  "data": {
-    "settings": {
-      "voltage_range": [0.0, 1.2],
-      "integration_time_ms": 500
+  "parameter": {
+    "device_type":"NI-SMU",
+    "device_settings":{"Compliance (A)":0.01},
+    "scan_settings":{
+      "scan":{
+        "Start (V)":-0.2,
+        "End (V)":1,
+        "Step (V)":0.02,
+        ...
+      }
     }
   },
-  "request_id": 23
+  "request_id": 22
+}
+```
+
+### Example Response
+
+```json
+{
+  "status": "OK",
+  "data": { "state":"OK" },
+  "request_id": 22
 }
 ```
 
 ---
 
-## GetStatus
+## GetTestStatus
 
 **Description**
-Retrieves the current operational state of the routine, including progress and error information.
+Returns the current status of the routine.
 
 ### Example Request
 
 ```json
 {
   "target": "ROUTINE",
-  "command": "GetStatus",
-  "params": {},
+  "command": "GetTestStatus",
   "request_id": 24
 }
 ```
@@ -167,15 +183,7 @@ Retrieves the current operational state of the routine, including progress and e
 ```json
 {
   "status": "OK",
-  "data": {
-    "routine_status": "Running",
-    "progress": 42,
-    "error": null,
-    "details": {
-      "current_voltage": 0.65,
-      "points_acquired": 128
-    }
-  },
+  "data": { "routine_status":"Running" },
   "request_id": 24
 }
 ```
@@ -195,7 +203,7 @@ Retrieves the current operational state of the routine, including progress and e
 ## GetTestData
 
 **Description**
-Retrieves the most recent test or measurement data from the active routine.
+Retrieves the most recent test or measurement data from the active routine. The response depends on the active routine.
 
 ### Example Request
 
@@ -203,8 +211,27 @@ Retrieves the most recent test or measurement data from the active routine.
 {
   "target": "ROUTINE",
   "command": "GetTestData",
-  "params": {},
   "request_id": 25
+}
+```
+
+---
+
+## SetInfo
+
+**Description**
+Set the user name, device name and device area. 
+
+### Example Request
+
+```json
+{
+  "target": "ROUTINE",
+  "command": "SetInfo",
+  "parameter": {"user_name": "User",
+                "device_name": "Sample",
+                "device_area": 1.23 },
+  "request_id": 26
 }
 ```
 
@@ -214,14 +241,64 @@ Retrieves the most recent test or measurement data from the active routine.
 {
   "status": "OK",
   "data": {
-    "measurement_id": "batch_20251001_001",
-    "columns": ["Voltage (V)", "Current (A)"],
-    "data": [
-      [0.0, 0.0],
-      [0.1, 0.0012],
-      [0.2, 0.0025]
-    ]
+    "state":"OK"
   },
-  "request_id": 25
+  "request_id": 26
+}
+```
+
+---
+
+## ClearErrors
+
+**Description**
+Clears any errors when the routine is in error. After this command, the routine returns to the Ready state.
+
+### Example Request
+
+```json
+{
+  "target": "ROUTINE",
+  "command": "ClearErrors",
+  "request_id": 27
+}
+```
+
+### Example Response
+
+```json
+{
+  "status": "OK",
+  "data": {
+    "state":"OK"
+  },
+  "request_id": 27
+}
+```
+
+---
+
+## GetCustomCommands
+
+**Description**
+Returns a list of custom commands available for the active routine.
+
+### Example Request
+
+```json
+{
+  "target": "ROUTINE",
+  "command": "GetCustomCommands",
+  "request_id": 28
+}
+```
+
+### Example Response
+
+```json
+{
+  "status": "OK",
+  "data": {"CustomCommands":["AcquireDark","AcquireReference","AcquireSingle","SetLaser","AutoExposure"]},
+  "request_id": 28
 }
 ```

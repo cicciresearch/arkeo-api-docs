@@ -1,0 +1,23 @@
+/* --- Table styling overrides for tighter layout --- */
+
+/* Reduce vertical spacing */
+.md-typeset table {
+  margin: 0.5em 0;
+}
+
+/* Reduce cell padding */
+.md-typeset table th,
+.md-typeset table td {
+  padding: 4px 8px;
+}
+
+/* Align top for better multi-line readability */
+.md-typeset table th,
+.md-typeset table td {
+  vertical-align: top;
+}
+
+/* Optional: slightly smaller font for tables */
+.md-typeset table {
+  font-size: 0.9em;
+}

@@ -1,12 +1,7 @@
 # Arkeo All-in-One API Documentation
 
-The Arkeo All-in-One API allows external applications to control and query
-the Arkeo measurement software through a TCP/JSON interface.
-
-Each connected client can send JSON-encoded requests and receive JSON responses.
-All commands follow a standard message structure containing a **target**, a **command**, 
-optional **parameters**, and a **request ID** to match responses.
-
+The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.
+All commands follow a standard message structure containing a **target**, a **command**, optional **parameters**, and a **request ID** to match responses.
 ---
 
 ## 🔧 Request Format
@@ -17,23 +12,24 @@ Every request message must contain the following JSON structure:
 {
   "target": "<TARGET>",
   "command": "<COMMAND>",
-  "params": { ... },
-  "request_id": 42
+  "parameter": { ... },
+  "request_id": 42  //optional
 }
-````
+```
 
-* **target**: Specifies which subsystem should handle the command.
+* **target**: Specifies which module should handle the command.
   Example targets: `"MAIN"`, `"ROUTINE"`, `"TMPCTL"`, `"MUX"`.
 * **command**: The specific instruction for that target.
-* **params**: Optional command parameters (may be empty `{}`).
+* **parameter**: Optional command parameters (may be empty `{}`).
 * **request_id**: An integer identifier assigned by the client.
 
 ---
 
+**Note**: Each command must be preceded by a 4-byte integer indicating the total length of the command.
+
 ## Response Format
 
-Each command returns a structured JSON response. The response always includes
-a `status` field and the same `request_id` as the corresponding request.
+Each command returns a structured JSON response. The response always includes a `status` field and the same `request_id` as the corresponding request. Similar to the request, each response is preceded by a 4-byte integer indicating the total length of the command.
 
 ```json
 {
@@ -67,4 +63,3 @@ a `status` field and the same `request_id` as the corresponding request.
 | **MUX**     | Manages multiplexer connections.                                            |
 
 ---
-

@@ -27,7 +27,7 @@ If the channel is already connected, this command has no effect.
 {
   "target": "MUX",
   "command": "Connect",
-  "params": { "channel": 3 },
+  "parameter": { "channel": 3 },
   "request_id": 401
 }
 ````
@@ -59,7 +59,7 @@ If the channel is already disconnected, the command has no effect.
 {
   "target": "MUX",
   "command": "Disconnect",
-  "params": { "channel": 3 },
+  "parameter": { "channel": 3 },
   "request_id": 402
 }
 ```
@@ -91,7 +91,7 @@ Each element represents one channel, where `true` means connected and `false` me
 {
   "target": "MUX",
   "command": "GetStatus",
-  "params": {},
+  "parameter": {},
   "request_id": 403
 }
 ```
@@ -122,7 +122,7 @@ Each Boolean value in the `channels` array represents one channel’s desired st
 {
   "target": "MUX",
   "command": "SetStatus",
-  "params": {
+  "parameter": {
     "channels": [true, false, false, true, true, false]
   },
   "request_id": 404

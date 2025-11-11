@@ -11,13 +11,19 @@ theme:
     - search.suggest
     - content.code.annotate
     - content.code.copy
+  custom_dir: docs/assets
+extra_css:
+  - assets/stylesheets/extra.css
 
 markdown_extensions:
   - toc:
       permalink: true
   - tables
-  - fenced_code
-  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: false
+      linenums: false
+      guess_lang: false
+  - pymdownx.superfences
   - admonition
   - attr_list
   - md_in_html
@@ -27,6 +33,8 @@ nav:
   - MAIN Commands: main.md
   - ROUTINE Commands:
       - Overview: routine/index.md
+      - JV Routine: routine/JV.md
+      - IPCE Routine: routine/IPCE.md
       - Luminescence Routine: routine/luminescence.md
   - TMPCTL Commands: tmpctl.md
   - MUX Commands: mux.md
