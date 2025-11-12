@@ -12,7 +12,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../IPCE/">
+        <link rel="next" href="../ipce/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -42,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
       <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
@@ -337,14 +339,27 @@
       
         <li class="md-nav__item">
   <a href="#settings-json" class="md-nav__link">
-    ⚙ Settings JSON
+    ⚙️ Settings JSON
   </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Settings JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-description" class="md-nav__link">
+    Structure description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#data-json" class="md-nav__link">
-    🔢 Data JSON
+    🧾 Data JSON
   </a>
   
 </li>
@@ -371,11 +386,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../IPCE/" class="md-nav__link">
+      <a href="../ipce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     IPCE Routine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resistivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resistivity Routine
   </span>
   
 
@@ -396,6 +431,26 @@
   
   <span class="md-ellipsis">
     Luminescence Routine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impedance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impedance Routine
   </span>
   
 
@@ -450,6 +505,71 @@
   
 
     
+      
+      
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -478,14 +598,27 @@
       
         <li class="md-nav__item">
   <a href="#settings-json" class="md-nav__link">
-    ⚙ Settings JSON
+    ⚙️ Settings JSON
   </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Settings JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-description" class="md-nav__link">
+    Structure description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#data-json" class="md-nav__link">
-    🔢 Data JSON
+    🧾 Data JSON
   </a>
   
 </li>
@@ -513,8 +646,9 @@
 
 
 <h1 id="jv-routine-commands">JV Routine Commands<a class="headerlink" href="#jv-routine-commands" title="Permanent link">&para;</a></h1>
-<p>This section lists the commands specific to the JV routine.  </p>
-<h2 id="settings-json">⚙ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
+<p>This section lists the commands specific to the JV routine.<br />
+The diode equation is given by <span class="arithmatex">\(I = I_0 (e^{qV/kT} - 1)\)</span>.</p>
+<h2 id="settings-json">⚙️ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;device_type&quot;</span><span class="p">:</span><span class="s2">&quot;NI-SMU&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;device_settings&quot;</span><span class="p">:{</span><span class="nt">&quot;Compliance (A)&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">},</span>
@@ -545,8 +679,165 @@
 <span class="w">  </span><span class="nt">&quot;sweep_settings&quot;</span><span class="p">:[]</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="structure-description">Structure description<a class="headerlink" href="#structure-description" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>device_type</code></td>
+<td><code>string</code></td>
+<td>Specifies the connected measurement device (e.g. <code>"NI-SMU"</code>, <code>"Keithley"</code>).</td>
+</tr>
+<tr>
+<td><code>device_settings</code></td>
+<td><code>object</code></td>
+<td>Device configuration parameters.</td>
+</tr>
+<tr>
+<td><code>device_settings.Compliance (A)</code></td>
+<td><code>number</code></td>
+<td>Current compliance limit in amperes.</td>
+</tr>
+<tr>
+<td><code>scan_settings</code></td>
+<td><code>object</code></td>
+<td>Container for all scan-related parameters.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan</code></td>
+<td><code>object</code></td>
+<td>Voltage sweep configuration.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.start (V)</code></td>
+<td><code>number</code></td>
+<td>Start voltage of the JV scan.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.end (V)</code></td>
+<td><code>number</code></td>
+<td>End voltage of the JV scan.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.step (V)</code></td>
+<td><code>number</code></td>
+<td>Voltage increment per measurement step.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.delay (ms)</code></td>
+<td><code>number</code></td>
+<td>Delay between consecutive measurement points, in milliseconds.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.rate (V/s)</code></td>
+<td><code>number</code></td>
+<td>Approximate scan rate in volts per second.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.direction</code></td>
+<td><code>string</code></td>
+<td><code>"forward"</code> or <code>"reverse"</code> direction of the scan.</td>
+</tr>
+<tr>
+<td><code>scan_settings.scan.mode</code></td>
+<td><code>string</code></td>
+<td>Operating mode (e.g. <code>"voltage_sweep"</code>, <code>"current_sweep"</code>).</td>
+</tr>
+<tr>
+<td><code>scan_settings.precondition</code></td>
+<td><code>object</code></td>
+<td>Parameters for preconditioning the device before measurement.</td>
+</tr>
+<tr>
+<td><code>scan_settings.precondition.voltage (V)</code></td>
+<td><code>number</code></td>
+<td>Voltage used for preconditioning.</td>
+</tr>
+<tr>
+<td><code>scan_settings.precondition.duration (s)</code></td>
+<td><code>number</code></td>
+<td>Duration of preconditioning in seconds.</td>
+</tr>
+<tr>
+<td><code>scan_settings.device</code></td>
+<td><code>object</code></td>
+<td>Device-level information.</td>
+</tr>
+<tr>
+<td><code>scan_settings.device.area (cm²)</code></td>
+<td><code>number</code></td>
+<td>Active area of the device under test.</td>
+</tr>
+<tr>
+<td><code>scan_settings.device.pixel_count</code></td>
+<td><code>integer</code></td>
+<td>Number of pixels or subcells.</td>
+</tr>
+<tr>
+<td><code>scan_settings.device.polarity</code></td>
+<td><code>string</code></td>
+<td>Device polarity (e.g. <code>"p-type"</code>, <code>"n-type"</code>).</td>
+</tr>
+<tr>
+<td><code>scan_settings.light</code></td>
+<td><code>object</code></td>
+<td>Light source control.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light.enabled</code></td>
+<td><code>boolean</code></td>
+<td>If <code>true</code>, illumination is active during measurement.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light.intensity (mW/cm²)</code></td>
+<td><code>number</code></td>
+<td>Nominal light intensity.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light.source</code></td>
+<td><code>string</code></td>
+<td>Type of illumination (e.g. <code>"LED"</code>, <code>"Sunlight"</code>).</td>
+</tr>
+<tr>
+<td><code>scan_settings.light_config</code></td>
+<td><code>object</code></td>
+<td>Configuration of specific LED or light channels.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light_config.UV (%)</code></td>
+<td><code>number</code></td>
+<td>Relative contribution of UV LEDs.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light_config.Blue (%)</code></td>
+<td><code>number</code></td>
+<td>Relative contribution of blue LEDs.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light_config.Green (%)</code></td>
+<td><code>number</code></td>
+<td>Relative contribution of green LEDs.</td>
+</tr>
+<tr>
+<td><code>scan_settings.light_config.Red (%)</code></td>
+<td><code>number</code></td>
+<td>Relative contribution of red LEDs.</td>
+</tr>
+<tr>
+<td><code>sweep_settings</code></td>
+<td><code>array</code></td>
+<td>Reserved for future multi-step or dynamic sweeps.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="data-json">🔢 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
+<h2 id="data-json">🧾 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
@@ -665,6 +956,12 @@
     
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../js/katex-init.js"></script>
       
     
   </body>
