@@ -1,4 +1,4 @@
-site_name: Arkeo All-in-One API Documentation
+site_name: Arkeo All-in-One API Documentation (v0.1)
 
 theme:
   name: material
@@ -11,9 +11,6 @@ theme:
     - search.suggest
     - content.code.annotate
     - content.code.copy
-  custom_dir: docs/assets
-extra_css:
-  - assets/stylesheets/extra.css
 
 markdown_extensions:
   - toc:
@@ -27,14 +24,29 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
 
 nav:
   - Introduction: index.md
   - MAIN Commands: main.md
   - ROUTINE Commands:
       - Overview: routine/index.md
-      - JV Routine: routine/JV.md
-      - IPCE Routine: routine/IPCE.md
+      - JV Routine: routine/jv.md
+      - IPCE Routine: routine/ipce.md
+      - Resistivity Routine: routine/resistivity.md
       - Luminescence Routine: routine/luminescence.md
+      - Impedance Routine: routine/impedance.md
   - TMPCTL Commands: tmpctl.md
   - MUX Commands: mux.md
+  - Examples:
+      - Python Example: examples/python.md
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - js/katex-init.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+  - assets/stylesheets/extra.css

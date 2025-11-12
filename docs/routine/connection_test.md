@@ -1,6 +1,6 @@
-# IPCE Routine Commands
+# Connection Test Routine Commands
 
-This section lists the commands specific to the IPCE routine.  
+This section lists the commands specific to the Connection Test routine.  
 
 ## ⚙️ Settings JSON
 ```json

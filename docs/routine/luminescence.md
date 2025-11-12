@@ -3,31 +3,34 @@
 This section lists the commands specific to the Luminescence routine.  
 These commands allow acquisition of luminescence spectra, automatic exposure adjustment, and control of laser excitation.
 
-## ⚙ Settings JSON
+## ⚙️ Settings JSON
 ```json
 {"integration_time":100,"averages":1,"pixel_smoothing":1}
 ```
 
 ---
 
-## 🔢 Data JSON
+## 🧾 Data JSON
+```json
 
+```
 ---
 
 ## Command Index
 
 | Command | Description |
 |----------|-------------|
-| [AcquireDark / AcquireReference / AcquireSingle](#acquire) | Capture a spectrum. |
+| [AcquireDark / AcquireReference / ](#acquire) | Capture a reference spectrum. |
+| [AcquireSingle](#acquiresingle) | Capture a spectrum. |
 | [AutoExposure](#autoexposure) | Automatically determine optimal integration time. |
 | [SetLaser](#setlaser) | Enable or disable the excitation laser. |
 
 ---
 
-## AcquireDark / AcquireReference / AcquireSingle
+## AcquireDark / AcquireReference
 
 **Description**  
-Captures a spectrum and stores it in memory either as Dark / Reference / Spectrum based on the command type. The current spectrumeter settings are used.
+Captures a spectrum and stores it in memory either as Dark / Reference. The current spectrometer settings are used. Returns a 2D array with 2 rows: Wavelength in nm and raw spectrum
 
 **Note**: a new dark/reference must be acquired each time the integration time changes
 
@@ -45,7 +48,44 @@ Captures a spectrum and stores it in memory either as Dark / Reference / Spectru
 ```json
 {
   "status": "OK",
-  "data": { "stored": true },
+  "data": { 
+    "spectrum": [[144.6012,145.207,145.8128, ...],  //wavelength in nm
+                 [80.49375,93.57708,102.1604, ...]] //spectrum in a.u.
+    },
+  "request_id": 201
+}
+```
+
+---
+
+## AcquireSingle
+
+**Description**  
+Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spectrum, irradiance in µW/cm².
+
+**Note** The 2nd row is the raw spectrum of the spectrometer and does not include the dark subtraction.
+
+**Note** Irradiance is only valid when a dark spectrum is acquired before this function is called.
+
+### Example Request
+```json
+{
+  "target": "ROUTINE",
+  "command": "AcquireSingle",
+  "request_id": 201
+}
+```
+
+### Example Response
+
+```json
+{
+  "status": "OK",
+  "data": { 
+    "spectrum": [[144.6012,145.207,145.8128, ...],  //wavelength in nm
+                 [80.49375,93.57708,102.1604, ...], //spectrum in a.u.
+                 [0.24535,0.2544,0.34538, ...]]     //irradiance in µW/cm²
+    },
   "request_id": 201
 }
 ```

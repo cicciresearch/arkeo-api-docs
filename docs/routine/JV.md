@@ -1,8 +1,9 @@
 # JV Routine Commands
 
 This section lists the commands specific to the JV routine.  
+The diode equation is given by $I = I_0 (e^{qV/kT} - 1)$.
 
-## ⚙ Settings JSON
+## ⚙️ Settings JSON
 ```json
 {
   "device_type":"NI-SMU",
@@ -36,9 +37,44 @@ This section lists the commands specific to the JV routine.
 
 ```
 
+### Structure description
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `device_type` | `string` | Specifies the connected measurement device (e.g. `"NI-SMU"`, `"Keithley"`). |
+| `device_settings` | `object` | Device configuration parameters. |
+| `device_settings.Compliance (A)` | `number` | Current compliance limit in amperes. |
+| `scan_settings` | `object` | Container for all scan-related parameters. |
+| `scan_settings.scan` | `object` | Voltage sweep configuration. |
+| `scan_settings.scan.start (V)` | `number` | Start voltage of the JV scan. |
+| `scan_settings.scan.end (V)` | `number` | End voltage of the JV scan. |
+| `scan_settings.scan.step (V)` | `number` | Voltage increment per measurement step. |
+| `scan_settings.scan.delay (ms)` | `number` | Delay between consecutive measurement points, in milliseconds. |
+| `scan_settings.scan.rate (V/s)` | `number` | Approximate scan rate in volts per second. |
+| `scan_settings.scan.direction` | `string` | `"forward"` or `"reverse"` direction of the scan. |
+| `scan_settings.scan.mode` | `string` | Operating mode (e.g. `"voltage_sweep"`, `"current_sweep"`). |
+| `scan_settings.precondition` | `object` | Parameters for preconditioning the device before measurement. |
+| `scan_settings.precondition.voltage (V)` | `number` | Voltage used for preconditioning. |
+| `scan_settings.precondition.duration (s)` | `number` | Duration of preconditioning in seconds. |
+| `scan_settings.device` | `object` | Device-level information. |
+| `scan_settings.device.area (cm²)` | `number` | Active area of the device under test. |
+| `scan_settings.device.pixel_count` | `integer` | Number of pixels or subcells. |
+| `scan_settings.device.polarity` | `string` | Device polarity (e.g. `"p-type"`, `"n-type"`). |
+| `scan_settings.light` | `object` | Light source control. |
+| `scan_settings.light.enabled` | `boolean` | If `true`, illumination is active during measurement. |
+| `scan_settings.light.intensity (mW/cm²)` | `number` | Nominal light intensity. |
+| `scan_settings.light.source` | `string` | Type of illumination (e.g. `"LED"`, `"Sunlight"`). |
+| `scan_settings.light_config` | `object` | Configuration of specific LED or light channels. |
+| `scan_settings.light_config.UV (%)` | `number` | Relative contribution of UV LEDs. |
+| `scan_settings.light_config.Blue (%)` | `number` | Relative contribution of blue LEDs. |
+| `scan_settings.light_config.Green (%)` | `number` | Relative contribution of green LEDs. |
+| `scan_settings.light_config.Red (%)` | `number` | Relative contribution of red LEDs. |
+| `sweep_settings` | `array` | Reserved for future multi-step or dynamic sweeps. |
+
+
 ---
 
-## 🔢 Data JSON
+## 🧾 Data JSON
 ```json
 {
   "user":"User",
