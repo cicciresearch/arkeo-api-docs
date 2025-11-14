@@ -9,22 +9,22 @@
       
       
       
-        <link rel="prev" href="../routine/impedance/">
+        <link rel="prev" href="../luminescence/">
       
       
-        <link rel="next" href="../mux/">
+        <link rel="next" href="../impedance/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
     
       
-        <title>TMPCTL Commands - Arkeo All-in-One API Documentation (v0.1)</title>
+        <title>Transient Photo Response Routine - Arkeo All-in-One API Documentation (v0.1)</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
       
 
@@ -45,9 +45,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#temperature-controller" class="md-skip">
+        <a href="#transient-photo-response-routine-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
+    <a href="../.." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TMPCTL Commands
+              Transient Photo Response Routine
             
           </span>
         </div>
@@ -179,7 +179,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
+    <a href="../.." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -196,7 +196,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -215,7 +215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../main/" class="md-nav__link">
+      <a href="../../main/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -232,21 +232,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -259,7 +259,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             ROUTINE Commands
@@ -272,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/connection_test/" class="md-nav__link">
+      <a href="../connection_test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/jv/" class="md-nav__link">
+      <a href="../jv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/ipce/" class="md-nav__link">
+      <a href="../ipce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/resistivity/" class="md-nav__link">
+      <a href="../resistivity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/luminescence/" class="md-nav__link">
+      <a href="../luminescence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,9 +390,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../routine/TPR/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transient Photo Response Routine
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -401,6 +421,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings-json" class="md-nav__link">
+    ⚙️ Settings JSON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-json" class="md-nav__link">
+    🧾 Data JSON
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -412,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routine/impedance/" class="md-nav__link">
+      <a href="../impedance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,18 +491,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tmpctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +502,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -468,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mux/" class="md-nav__link">
+      <a href="../../mux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/python/" class="md-nav__link">
+      <a href="../../examples/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,6 +610,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings-json" class="md-nav__link">
+    ⚙️ Settings JSON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-json" class="md-nav__link">
+    🧾 Data JSON
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -579,8 +645,45 @@
                   
 
 
-<h1 id="temperature-controller">Temperature controller<a class="headerlink" href="#temperature-controller" title="Permanent link">&para;</a></h1>
-<p>TBD</p>
+<h1 id="transient-photo-response-routine-commands">Transient Photo Response Routine Commands<a class="headerlink" href="#transient-photo-response-routine-commands" title="Permanent link">&para;</a></h1>
+<p>This section lists the commands specific to the Transient Photo Response routine.  </p>
+<h2 id="settings-json">⚙️ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="s2">&quot;TPC&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;device_type&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;device_settings&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;Voltage Compliance&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Current Compliance&quot;</span><span class="p">:</span><span class="mf">0.01</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;output_settings&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;pulse&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mf">0.002</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;duty_cycle&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;delay&quot;</span><span class="p">:</span><span class="mf">1E-4</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;averaging&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;points&quot;</span><span class="p">:</span><span class="mi">1000</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;level&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;start_unit&quot;</span><span class="p">:</span><span class="s2">&quot;a.u.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;end_unit&quot;</span><span class="p">:</span><span class="s2">&quot;a.u.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;ramp&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;dark&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;bias&quot;</span><span class="p">:</span><span class="mf">0.5</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;additional&quot;</span><span class="p">:{</span><span class="nt">&quot;step_delay&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;transient&quot;</span><span class="p">:{</span><span class="nt">&quot;high&quot;</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span><span class="nt">&quot;mid&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="nt">&quot;low&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="data-json">🧾 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;Voltage (V)&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;Current (A)&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+</code></pre></div>
+<hr />
 
 
 
@@ -624,16 +727,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
-        <script src="../js/katex-init.js"></script>
+        <script src="../../js/katex-init.js"></script>
       
     
   </body>
