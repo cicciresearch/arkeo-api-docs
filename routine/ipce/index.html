@@ -392,8 +392,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#userbas-de-jong-devicesample-temperature0-testipce-time2025-11-20t162847462z-file-scan-nameipce-columns-wavelength-nm-eqe-j_dut-acm2-j_int-acm2-data-300511127313120292999914652862212e-11nan-310409082352975042179786580603119e-10266787817748082e-7-320418754042209682480029375632581e-10163639676014496e-6-33049068748237155151960531556791e-9582337871103985e-6" class="md-nav__link">
+    {
+  &quot;user&quot;:&quot;Bas de Jong&quot;,
+  &quot;device&quot;:&quot;Sample&quot;,
+  &quot;temperature&quot;:0,
+  &quot;test&quot;:&quot;IPCE&quot;,
+  &quot;time&quot;:&quot;2025-11-20T16:28:47.462Z&quot;,
+  &quot;file&quot;:&quot;&quot;,
+  &quot;scan&quot;:{
+    &quot;name&quot;:&quot;IPCE&quot;,
+    &quot;columns&quot;:[
+      &quot;Wavelength (nm)&quot;,
+      &quot;EQE (%)&quot;,
+      &quot;J_DUT (A/cm2)&quot;,
+      &quot;J_int (A/cm2)&quot;
+    ],
+    &quot;data&quot;:[
+      [300,5.11127313120292,9.99914652862212E-11,NaN],
+      [310,4.09082352975042,1.79786580603119E-10,2.66787817748082E-7],
+      [320,4.18754042209682,4.80029375632581E-10,1.63639676014496E-6],
+      [330,4.9068748237155,1.51960531556791E-9,5.82337871103985E-6],
+      ...
+    ]
+  }
+}
 
   </a>
   
@@ -781,8 +804,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#userbas-de-jong-devicesample-temperature0-testipce-time2025-11-20t162847462z-file-scan-nameipce-columns-wavelength-nm-eqe-j_dut-acm2-j_int-acm2-data-300511127313120292999914652862212e-11nan-310409082352975042179786580603119e-10266787817748082e-7-320418754042209682480029375632581e-10163639676014496e-6-33049068748237155151960531556791e-9582337871103985e-6" class="md-nav__link">
+    {
+  &quot;user&quot;:&quot;Bas de Jong&quot;,
+  &quot;device&quot;:&quot;Sample&quot;,
+  &quot;temperature&quot;:0,
+  &quot;test&quot;:&quot;IPCE&quot;,
+  &quot;time&quot;:&quot;2025-11-20T16:28:47.462Z&quot;,
+  &quot;file&quot;:&quot;&quot;,
+  &quot;scan&quot;:{
+    &quot;name&quot;:&quot;IPCE&quot;,
+    &quot;columns&quot;:[
+      &quot;Wavelength (nm)&quot;,
+      &quot;EQE (%)&quot;,
+      &quot;J_DUT (A/cm2)&quot;,
+      &quot;J_int (A/cm2)&quot;
+    ],
+    &quot;data&quot;:[
+      [300,5.11127313120292,9.99914652862212E-11,NaN],
+      [310,4.09082352975042,1.79786580603119E-10,2.66787817748082E-7],
+      [320,4.18754042209682,4.80029375632581E-10,1.63639676014496E-6],
+      [330,4.9068748237155,1.51960531556791E-9,5.82337871103985E-6],
+      ...
+    ]
+  }
+}
 
   </a>
   
@@ -948,12 +994,49 @@
 <h1 id="ipce-routine-commands">IPCE Routine Commands<a class="headerlink" href="#ipce-routine-commands" title="Permanent link">&para;</a></h1>
 <p>This section lists the commands specific to the IPCE routine.  </p>
 <h2 id="settings-json">⚙️ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wavelength&quot;</span><span class="p">:{</span><span class="nt">&quot;Start&quot;</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span><span class="nt">&quot;Step&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="nt">&quot;End&quot;</span><span class="p">:</span><span class="mi">900</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;acquisition&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;Acquisition time (s)&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Averaging&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Delay (s)&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Bias Voltage (V)&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;LED Level&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Chopper Frequency (Hz)&quot;</span><span class="p">:</span><span class="mi">0</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;device&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Simulate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;configuration&quot;</span><span class="p">:{</span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="data-json">🧾 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
-<h2 id="_1"><div class="highlight"><pre><span></span><code>
-</code></pre></div><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="userbas-de-jong-devicesample-temperature0-testipce-time2025-11-20t162847462z-file-scan-nameipce-columns-wavelength-nm-eqe-j_dut-acm2-j_int-acm2-data-300511127313120292999914652862212e-11nan-310409082352975042179786580603119e-10266787817748082e-7-320418754042209682480029375632581e-10163639676014496e-6-33049068748237155151960531556791e-9582337871103985e-6"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;Bas de Jong&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;temperature&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="s2">&quot;IPCE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;2025-11-20T16:28:47.462Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scan&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;IPCE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;columns&quot;</span><span class="p">:[</span>
+<span class="w">      </span><span class="s2">&quot;Wavelength (nm)&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;EQE (%)&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;J_DUT (A/cm2)&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;J_int (A/cm2)&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:[</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">300</span><span class="p">,</span><span class="mf">5.11127313120292</span><span class="p">,</span><span class="mf">9.99914652862212E-11</span><span class="p">,</span><span class="err">NaN</span><span class="p">],</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">310</span><span class="p">,</span><span class="mf">4.09082352975042</span><span class="p">,</span><span class="mf">1.79786580603119E-10</span><span class="p">,</span><span class="mf">2.66787817748082E-7</span><span class="p">],</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">320</span><span class="p">,</span><span class="mf">4.18754042209682</span><span class="p">,</span><span class="mf">4.80029375632581E-10</span><span class="p">,</span><span class="mf">1.63639676014496E-6</span><span class="p">],</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">330</span><span class="p">,</span><span class="mf">4.9068748237155</span><span class="p">,</span><span class="mf">1.51960531556791E-9</span><span class="p">,</span><span class="mf">5.82337871103985E-6</span><span class="p">],</span>
+<span class="w">      </span><span class="err">...</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><a class="headerlink" href="#userbas-de-jong-devicesample-temperature0-testipce-time2025-11-20t162847462z-file-scan-nameipce-columns-wavelength-nm-eqe-j_dut-acm2-j_int-acm2-data-300511127313120292999914652862212e-11nan-310409082352975042179786580603119e-10266787817748082e-7-320418754042209682480029375632581e-10163639676014496e-6-33049068748237155151960531556791e-9582337871103985e-6" title="Permanent link">&para;</a></h2>
 <h2 id="command-index">Command Index<a class="headerlink" href="#command-index" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

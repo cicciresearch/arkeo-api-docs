@@ -684,8 +684,8 @@
 
 
 <h1 id="arkeo-all-in-one-api-documentation">Arkeo All-in-One API Documentation<a class="headerlink" href="#arkeo-all-in-one-api-documentation" title="Permanent link">&para;</a></h1>
-<p>The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.
-All commands follow a standard message structure containing a <strong>target</strong>, a <strong>command</strong>, optional <strong>parameters</strong>, and a <strong>request ID</strong> to match responses.</p>
+<p>The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.</p>
+<p>All commands follow a standard message structure containing a <strong>target</strong>, a <strong>command</strong>, optional <strong>parameters</strong>, and a <strong>request ID</strong> to match responses.</p>
 <hr />
 <h2 id="request-format">🔧 Request Format<a class="headerlink" href="#request-format" title="Permanent link">&para;</a></h2>
 <p>Every request message must contain the following JSON structure:</p>
@@ -718,11 +718,11 @@ All commands follow a standard message structure containing a <strong>target</st
 <ul>
 <li><strong>status</strong>: Indicates success or failure (<code>"OK"</code> or <code>"ERROR"</code>).</li>
 <li><strong>data</strong>: Command-specific response payload.</li>
-<li><strong>error</strong>: Only present if an error occurred; contains fields such as:</li>
+<li><strong>error</strong>: Only present if an error occurred; contains fields such as:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid parameters&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></li>
+<li><strong>request_id</strong>: Echoes the ID from the request.</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid parameters&quot;</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-* <strong>request_id</strong>: Echoes the ID from the request.</p>
 <hr />
 <h2 id="targets-overview">Targets Overview<a class="headerlink" href="#targets-overview" title="Permanent link">&para;</a></h2>
 <table>
