@@ -4,14 +4,51 @@ This section lists the commands specific to the IPCE routine.
 
 ## ⚙️ Settings JSON
 ```json
-
+{
+  "wavelength":{"Start":300,"Step":10,"End":900},
+  "acquisition":{
+    "Acquisition time (s)":1,
+    "Averaging":1,
+    "Delay (s)":0,
+    "Bias Voltage (V)":0,
+    "LED Level":0,
+    "Chopper Frequency (Hz)":0
+  },
+  "device":{
+    "type":"Simulate",
+    "configuration":{"foo":"bar"}
+  }
+}
 ```
 
 ---
 
 ## 🧾 Data JSON
 ```json
-
+{
+  "user":"Bas de Jong",
+  "device":"Sample",
+  "temperature":0,
+  "test":"IPCE",
+  "time":"2025-11-20T16:28:47.462Z",
+  "file":"",
+  "scan":{
+    "name":"IPCE",
+    "columns":[
+      "Wavelength (nm)",
+      "EQE (%)",
+      "J_DUT (A/cm2)",
+      "J_int (A/cm2)"
+    ],
+    "data":[
+      [300,5.11127313120292,9.99914652862212E-11,NaN],
+      [310,4.09082352975042,1.79786580603119E-10,2.66787817748082E-7],
+      [320,4.18754042209682,4.80029375632581E-10,1.63639676014496E-6],
+      [330,4.9068748237155,1.51960531556791E-9,5.82337871103985E-6],
+	  ...
+    ]
+  }
+}
 ```
 ---
 

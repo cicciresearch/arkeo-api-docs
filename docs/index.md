@@ -1,9 +1,10 @@
 # Arkeo All-in-One API Documentation
 
 The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.
-All commands follow a standard message structure containing a **target**, a **command**, optional **parameters**, and a **request ID** to match responses.
----
 
+All commands follow a standard message structure containing a **target**, a **command**, optional **parameters**, and a **request ID** to match responses.
+
+---
 ## 🔧 Request Format
 
 Every request message must contain the following JSON structure:
@@ -45,7 +46,6 @@ Each command returns a structured JSON response. The response always includes a 
 * **status**: Indicates success or failure (`"OK"` or `"ERROR"`).
 * **data**: Command-specific response payload.
 * **error**: Only present if an error occurred; contains fields such as:
-
   ```json
   { "code": 101, "message": "Invalid parameters" }
   ```

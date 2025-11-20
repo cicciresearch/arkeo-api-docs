@@ -33,6 +33,7 @@ Only the latest data point is returned
 **Description**  
 Applies the specified current in A to the sample.
 
+**Note** You can use scientific notation when applying low current levels. For example ```{"current": 3.14E-9}``` will apply 3.14 nA.
 ### Example Request
 ```json
 {

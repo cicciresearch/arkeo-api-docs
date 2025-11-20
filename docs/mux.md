@@ -9,25 +9,23 @@ Each channel can be individually connected or disconnected, or all channels can 
 
 | Command | Description |
 |----------|-------------|
-| [Connect](#connect) | Connect a specific channel. |
-| [Disconnect](#disconnect) | Disconnect a specific channel. |
-| [GetStatus](#getstatus) | Retrieve the connection status of all channels. |
-| [SetStatus](#setstatus) | Set the connection state for all channels at once. |
+| [Connect](#connect) | Connects the multiplexer. |
+| [Disconnect](#disconnect) | Disconnects the multiplexer. |
+| [GetStatus](#getstatus) | Gets the status of the multiplexer. |
+| [SetStatus](#setstatus) | Set the state of each multiplexer channel. |
 
 ---
 
 ## Connect
 
 **Description**  
-Connects a specific channel on the multiplexer.  
-If the channel is already connected, this command has no effect.
+Connect to the multiplexer
 
 ### Example Request
 ```json
 {
   "target": "MUX",
   "command": "Connect",
-  "parameter": { "channel": 3 },
   "request_id": 401
 }
 ````
@@ -38,8 +36,7 @@ If the channel is already connected, this command has no effect.
 {
   "status": "OK",
   "data": {
-    "connected": true,
-    "channel": 3
+    "state": "OK"
   },
   "request_id": 401
 }
@@ -50,8 +47,7 @@ If the channel is already connected, this command has no effect.
 ## Disconnect
 
 **Description**
-Disconnects a specific channel on the multiplexer.
-If the channel is already disconnected, the command has no effect.
+Disconnect from the multiplexer
 
 ### Example Request
 
@@ -59,7 +55,6 @@ If the channel is already disconnected, the command has no effect.
 {
   "target": "MUX",
   "command": "Disconnect",
-  "parameter": { "channel": 3 },
   "request_id": 402
 }
 ```
@@ -70,8 +65,7 @@ If the channel is already disconnected, the command has no effect.
 {
   "status": "OK",
   "data": {
-    "disconnected": true,
-    "channel": 3
+    "state": "OK"
   },
   "request_id": 402
 }
@@ -91,7 +85,6 @@ Each element represents one channel, where `true` means connected and `false` me
 {
   "target": "MUX",
   "command": "GetStatus",
-  "parameter": {},
   "request_id": 403
 }
 ```
@@ -102,7 +95,10 @@ Each element represents one channel, where `true` means connected and `false` me
 {
   "status": "OK",
   "data": {
-    "channels": [true, false, true, false, false, true]
+    "connected":true,
+    "firmware":"Multiplexer_v1.1",
+    "nrRelays":4,
+    "status":[false, false, false, true]
   },
   "request_id": 403
 }
@@ -123,7 +119,7 @@ Each Boolean value in the `channels` array represents one channel’s desired st
   "target": "MUX",
   "command": "SetStatus",
   "parameter": {
-    "channels": [true, false, false, true, true, false]
+    "state": [true, false, false, true, true, false]
   },
   "request_id": 404
 }
@@ -135,7 +131,7 @@ Each Boolean value in the `channels` array represents one channel’s desired st
 {
   "status": "OK",
   "data": {
-    "channels": [true, false, false, true, true, false]
+    "state": "OK"
   },
   "request_id": 404
 }
