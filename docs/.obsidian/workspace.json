@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "routine/ipce.md",
+                "file": "routine/connection_test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ipce"
+              "title": "connection_test"
             }
           }
         ]
@@ -185,10 +185,16 @@
   },
   "active": "05a79ff22bec4611",
   "lastOpenFiles": [
-    "routine/resistivity.md",
+    "routine/jv.md",
+    "routine/impedance.md",
+    "routine/index.md",
+    "routine/ipce.md",
     "routine/luminescence.md",
-    "index.md",
+    "routine/TPR.md",
+    "routine/connection_test.md",
     "main.md",
+    "routine/resistivity.md",
+    "index.md",
     "mux.md",
     "tmpctl.md"
   ]
