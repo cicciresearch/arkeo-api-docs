@@ -2,64 +2,60 @@
 
 The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.
 
-All commands follow a standard message structure containing a **target**, a **command**, optional **parameters**, and a **request ID** to match responses.
-
----
-## 🔧 Request Format
-
-Every request message must contain the following JSON structure:
-
-```json
-{
-  "target": "<TARGET>",
-  "command": "<COMMAND>",
-  "parameter": { ... },
-  "request_id": 42  //optional
-}
-```
-
-* **target**: Specifies which module should handle the command.
-  Example targets: `"MAIN"`, `"ROUTINE"`, `"TMPCTL"`, `"MUX"`.
-* **command**: The specific instruction for that target.
-* **parameter**: Optional command parameters (may be empty `{}`).
-* **request_id**: An integer identifier assigned by the client.
-
 ---
 
-**Note**: Each command must be preceded by a 4-byte integer indicating the total length of the command.
+## API Modules
 
-## Response Format
+The API is divided in 4 section, each controlling a specific part of the software.
 
-Each command returns a structured JSON response. The response always includes a `status` field and the same `request_id` as the corresponding request. Similar to the request, each response is preceded by a 4-byte integer indicating the total length of the command.
+<div class="grid cards" markdown>
 
-```json
-{
-  "status": "OK" | "ERROR",
-  "data": { ... },     // present if status = "OK"
-  "error": { ... },    // present if status = "ERROR"
-  "request_id": 42
-}
-```
+-   :material-cog-outline: **MAIN** - **System-level control**
 
-### Response Keys
+    Manage application state, connections, and global operations such as routine selection and execution.
 
-* **status**: Indicates success or failure (`"OK"` or `"ERROR"`).
-* **data**: Command-specific response payload.
-* **error**: Only present if an error occurred; contains fields such as:
-  ```json
-  { "code": 101, "message": "Invalid parameters" }
-  ```
-* **request_id**: Echoes the ID from the request.
+    ---
+    [:octicons-arrow-right-24: Explore MAIN](main/index.md)
+
+-   :material-chart-line: **ROUTINE** - **Measurement routines**
+
+    Configure and run measurement workflows such as JV scans, MPPT, impedance spectroscopy, and luminescence measurements.
+
+    ---
+    [:octicons-arrow-right-24: Explore ROUTINE](routine/index.md)
+
+-   :material-thermometer: **TMPCTL** - **Temperature control**
+
+    Monitor and control temperature controllers, setpoints, ramps, and stabilization status.
+
+    ---
+    [:octicons-arrow-right-24: Explore TMPCTL](tmpctl/index.md)
+
+-   :material-call-split: **MUX** - **Multiplexer management**
+
+    Configure and control hardware multiplexers for channel routing and device selection.
+
+    ---
+    [:octicons-arrow-right-24: Explore MUX](mux/index.md)
+
+</div>
 
 ---
 
-## Targets Overview
+## Getting started
 
-| Target      | Description                                                                 |
-| ----------- | --------------------------------------------------------------------------- |
-| **MAIN**    | Controls system-wide operations, including routine activation.              |
-| **ROUTINE** | Handles measurement routines such as JV, MPPT, Impedance, and Luminescence. |
-| **TMPCTL**  | Controls and monitors temperature controllers.                              |
-| **MUX**     | Manages multiplexer connections.                                            |
+If this is your first time using the API, start here:
+
+- 📘 **[API overview & protocol](getting-started/overview.md)**
+- 🔧 **[Request & response format](getting-started/protocol.md)**
+- 🧪 **[Example JSON commands](getting-started/examples.md)**
 
 ---
+
+## Connection details
+
+- **Protocol**: TCP
+- **Port**: `6360`
+- **Message format**: JSON (length-prefixed)
+
+The API is designed to be language-agnostic and can be used from LabVIEW, Python, MATLAB, C/C++, or any TCP-capable environment.

@@ -57,11 +57,11 @@ This section lists the commands specific to the IPCE routine.
 
 | Command | Description |
 |----------|-------------|
-| [SetShutter](#acquire) | Opens or closes the shutter. |
+| [SetShutter](#setshutter) | Opens or closes the shutter. |
 | [SetWavelength](#setwavelength) | Move the monochromator to the specified wavelength. |
 | [StartCalibration](#startcalibration) | Start the lamp calibration with a photodiode. |
 | [GetChopperFrequency](#getchopperfrequency) | Retreive the live chopper frequency. |
-| [GetMonochromatorStatus](#getmonostatus) | Get the monochromator status. |
+| [GetMonochromatorStatus](#getmonochromatorstatus) | Get the monochromator status. |
 
 ---
 

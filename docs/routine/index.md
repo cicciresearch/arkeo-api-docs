@@ -13,7 +13,7 @@ Each routine can be started from the MAIN target, after which the commands below
 | [CloseRoutine](#closeroutine) | Stops any ongoing measurement and close the routine. |
 | [ApplySettings](#applysettings) | Apply configuration parameters to the routine. |
 | [GetSettings](#getsettings) | Retrieve the current routine configuration. |
-| [GetStatus](#getstatus) | Query the routine’s current operational state. |
+| [GetTestStatus](#getteststatus) | Query the routine’s current operational state. |
 | [GetTestData](#gettestdata) | Retrieve the most recent measurement data. |
 | [SetInfo](#setinfo) | Applies user and device name. |
 | [ClearErrors](#clearerrors) | Clears any errors when the routine is in the error state. |
