@@ -53,6 +53,8 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/compact-lists.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -332,15 +334,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typical-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Typical use cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
       Architecture overview
@@ -404,24 +397,6 @@
   <a href="#measurement-workflow-high-level" class="md-nav__link">
     <span class="md-ellipsis">
       Measurement workflow (high level)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relationship-to-arkeo-software-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relationship to ARKEO software concepts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-this-documentation-is-organized" class="md-nav__link">
-    <span class="md-ellipsis">
-      How this documentation is organized
     </span>
   </a>
   
@@ -941,15 +916,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typical-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Typical use cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
       Architecture overview
@@ -1019,24 +985,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relationship-to-arkeo-software-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relationship to ARKEO software concepts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-this-documentation-is-organized" class="md-nav__link">
-    <span class="md-ellipsis">
-      How this documentation is organized
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next steps
@@ -1068,63 +1016,38 @@ external software such as LabVIEW, Python, MATLAB, or custom test frameworks.</p
 <p>The API is designed for laboratory and research environments where measurements
 must be scripted, repeated, synchronized with external instruments, or
 integrated into larger experimental workflows.</p>
-<p>This page introduces the <strong>core concepts and architecture</strong> of the API before
+<p>This page introduces the core concepts and architecture of the API before
 diving into command details.</p>
 <hr />
 <h2 id="what-the-api-is-and-is-not">What the API is (and is not)<a class="headerlink" href="#what-the-api-is-and-is-not" title="Permanent link">&para;</a></h2>
 <p>The API is a <strong>control and query interface</strong> to a running ARKEO application.</p>
-<p>It allows you to:
-- Start, stop, and configure measurements
-- Control measurement routines programmatically
-- Read back state, status, and results
-- Coordinate ARKEO with external hardware or software</p>
-<p>It does <strong>not</strong>:
-- Replace the ARKEO graphical user interface
-- Perform measurements on its own
-- Bypass ARKEO’s internal safety checks and limits</p>
-<p>The API always acts <strong>through</strong> the ARKEO application.</p>
-<hr />
-<h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>The API is commonly used for:</p>
+<p>It allows you to:</p>
 <ul>
-<li><strong>Automated testing</strong></li>
-<li>Batch measurements</li>
-<li>Parameter sweeps</li>
-<li>
-<p>Long-term stability experiments</p>
-</li>
-<li>
-<p><strong>Integration</strong></p>
-</li>
-<li>Synchronization with environmental chambers</li>
-<li>Coordination with optical setups or external SMUs</li>
-<li>
-<p>Data pipelines and FAIR data workflows</p>
-</li>
-<li>
-<p><strong>Remote control</strong></p>
-</li>
-<li>Headless operation</li>
-<li>Network-based experiment orchestration</li>
+<li>Start, stop, and configure measurements</li>
+<li>Control measurement routines programmatically</li>
+<li>Read back state, status, and results</li>
+<li>Coordinate ARKEO with external hardware or software</li>
 </ul>
+<p>It does not</p>
+<ul>
+<li>Replace the ARKEO graphical user interface</li>
+<li>Add funtions that cannot be accessed by the user interface</li>
+<li>Perform measurements on its own</li>
+<li>Bypass ARKEO’s internal safety checks and limits</li>
+</ul>
+<p>The API always acts through the ARKEO application.</p>
 <hr />
 <h2 id="architecture-overview">Architecture overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<p>At a high level, the system consists of three parts:</p>
-<p>+-------------------+ TCP / JSON +---------------------+
-| External client | &lt;-------------------&gt; | ARKEO application |
-| (Python, LV, etc) | | (API server) |
-+-------------------+ +---------------------+</p>
+<p>At a high level, the system consists of two parts:</p>
+<p><strong>ARKEO application</strong></p>
 <ul>
-<li><strong>ARKEO application</strong></li>
 <li>Runs locally on the measurement PC</li>
 <li>Owns all hardware connections</li>
 <li>Executes measurements and routines</li>
-<li>
-<p>Exposes a TCP server for API access</p>
-</li>
-<li>
+<li>Exposes a TCP server for API access</li>
+</ul>
 <p><strong>External clients</strong></p>
-</li>
+<ul>
 <li>Connect over TCP</li>
 <li>Send JSON-encoded commands</li>
 <li>Receive structured JSON responses</li>
@@ -1138,33 +1061,34 @@ by ARKEO.</p>
 A target represents a logical subsystem inside ARKEO.</p>
 <p>Main targets include:</p>
 <ul>
-<li><strong>MAIN</strong> - Application-level control and global state  </li>
-<li><strong>ROUTINE</strong> - Measurement routines (JV, tracking, impedance, etc.)  </li>
-<li><strong>TMPCTL</strong> - Temperature controllers and thermal environments  </li>
-<li><strong>MUX</strong> - Multiplexer configuration and channel routing  </li>
+<li><a href="../../main/"><strong>MAIN</strong></a> - Application-level control and global state  </li>
+<li><a href="../../routine/"><strong>ROUTINE</strong></a> - Measurement routines (JV, tracking, impedance, etc.)  </li>
+<li><a href="../../tmpctl/"><strong>TMPCTL</strong></a> - Temperature controllers and thermal environments  </li>
+<li><a href="../../mux/"><strong>MUX</strong></a> - Multiplexer configuration and channel routing  </li>
 </ul>
 <p>Targets provide a clear separation between <strong>what</strong> you control and <strong>how</strong> it
 is controlled.</p>
 <hr />
 <h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h3>
 <p>Each target exposes a set of <strong>commands</strong>.</p>
-<p>A command:
-- Performs an action (e.g. start a routine)
-- Changes a configuration
-- Queries the current state</p>
-<p>Commands are always explicit and deterministic:<br />
-the same command with the same parameters produces the same effect, provided
-the system state allows it.</p>
+<p>A command:</p>
+<ul>
+<li>Performs an action (e.g. start a routine)</li>
+<li>Changes a configuration</li>
+<li>Queries the current state</li>
+</ul>
+<p>Commands are always explicit and deterministic: the same command with the same parameters produces the same effect, provided the system state allows it. Every command returns a response. New commands <strong>should not</strong> be send before a response is received.</p>
 <hr />
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p>Commands may accept <strong>parameters</strong> that define their behavior.</p>
-<p>Examples:
-- Voltage limits
-- Measurement settings
-- Channel indices
-- Setpoints or modes</p>
-<p>Parameters are always provided as structured JSON objects and are validated by
-ARKEO before execution.</p>
+<p>Examples:</p>
+<ul>
+<li>Routine name</li>
+<li>Measurement settings</li>
+<li>Channel indices</li>
+<li>Setpoints or modes</li>
+</ul>
+<p>Parameters are always provided as structured JSON objects and are validated by ARKEO before execution. If an unknown or wrong parameter is send, the command is ignored and an error object is returned.</p>
 <hr />
 <h3 id="requests-and-responses-conceptual">Requests and responses (conceptual)<a class="headerlink" href="#requests-and-responses-conceptual" title="Permanent link">&para;</a></h3>
 <p>All communication follows a <strong>request → response</strong> pattern:</p>
@@ -1173,55 +1097,34 @@ ARKEO before execution.</p>
 <li>ARKEO processes it</li>
 <li>ARKEO returns a response indicating success or failure</li>
 </ul>
-<p>Responses always include:
-- Execution status
-- Optional data payload
-- Error information if something went wrong</p>
-<p>This makes the API suitable for <strong>robust automation and error handling</strong>.</p>
+<p>Responses always include:</p>
+<ul>
+<li>Execution status</li>
+<li>Optional data payload</li>
+<li>Error information if something went wrong</li>
+</ul>
 <hr />
 <h2 id="measurement-workflow-high-level">Measurement workflow (high level)<a class="headerlink" href="#measurement-workflow-high-level" title="Permanent link">&para;</a></h2>
 <p>A typical automated measurement sequence looks like this:</p>
 <ol>
 <li>Connect to the ARKEO API server</li>
-<li>Configure channels, routines, and settings</li>
-<li>Select and configure a measurement routine</li>
-<li>Start the routine</li>
-<li>Monitor status and progress</li>
-<li>Stop or finalize the measurement</li>
+<li>Send a StartRoutine command</li>
+<li>Wait until the routine finished initializing by polling the GetTestStatus command</li>
+<li>Apply the correct settings with the ApplySettings command</li>
+<li>(optional) use any custom commands if required by the routine</li>
+<li>Start the measurement with the StartMeasurement command</li>
+<li>Monitor status and progress with the GetTestStatus and GetTestData command</li>
 <li>Retrieve or post-process generated data</li>
 </ol>
 <p>The exact commands depend on the routine and target involved, but this logical
 flow remains consistent.</p>
 <hr />
-<h2 id="relationship-to-arkeo-software-concepts">Relationship to ARKEO software concepts<a class="headerlink" href="#relationship-to-arkeo-software-concepts" title="Permanent link">&para;</a></h2>
-<p>The API mirrors the same concepts used in the ARKEO user interface:</p>
-<ul>
-<li><strong>Routines</strong> correspond to measurement tools available in the GUI</li>
-<li><strong>Channels</strong> map to configured electrical paths and devices</li>
-<li><strong>Sensors and environments</strong> reflect ARKEO’s internal monitoring systems</li>
-<li><strong>Settings</strong> use the same parameter names and meanings as the GUI</li>
-</ul>
-<p>This ensures that:
-- API usage matches documented software behavior
-- Scripts remain compatible with manual operation
-- Results are consistent across automated and interactive workflows</p>
-<hr />
-<h2 id="how-this-documentation-is-organized">How this documentation is organized<a class="headerlink" href="#how-this-documentation-is-organized" title="Permanent link">&para;</a></h2>
-<p>This documentation is structured around the API architecture:</p>
-<ul>
-<li><strong>Overview</strong> - Concepts and architecture (this page)</li>
-<li><strong>Target sections</strong> - One section per target (MAIN, ROUTINE, TMPCTL, MUX)</li>
-<li><strong>Command references</strong> - Detailed command descriptions and parameters</li>
-<li><strong>Examples</strong> - Practical command sequences and workflows</li>
-</ul>
-<p>You can read the documentation linearly or jump directly to the target you need.</p>
-<hr />
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>If this is your first time using the API:</p>
 <ol>
-<li>Start with the <strong>MAIN</strong> target to understand application-level control</li>
-<li>Explore <strong>ROUTINE</strong> to automate measurements</li>
-<li>Use <strong>TMPCTL</strong> and <strong>MUX</strong> when integrating hardware and environments</li>
+<li>Start with the <a href="../../main/"><strong>MAIN</strong></a> target to understand application-level control</li>
+<li>Explore <a href="../../routine/"><strong>ROUTINE</strong></a> to automate measurements</li>
+<li>Use <a href="../../tmpctl/"><strong>TMPCTL</strong></a> and <a href="../../mux/"><strong>MUX</strong></a> when integrating hardware and environments</li>
 </ol>
 <p>Each target section includes:
 - Available commands

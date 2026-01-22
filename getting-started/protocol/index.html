@@ -53,6 +53,8 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/compact-lists.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -415,24 +417,6 @@
   <a href="#error-semantics" class="md-nav__link">
     <span class="md-ellipsis">
       Error semantics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#execution-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Execution model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compatibility-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compatibility notes
     </span>
   </a>
   
@@ -985,24 +969,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#execution-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Execution model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compatibility-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compatibility notes
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1020,13 +986,9 @@
 
 
 <h1 id="api-protocol">API Protocol<a class="headerlink" href="#api-protocol" title="Permanent link">&para;</a></h1>
-<p>The ARKEO API uses a <strong>TCP-based request-response protocol</strong> with
-<strong>length-prefixed JSON messages</strong>.</p>
-<p>External clients connect to a running ARKEO application and exchange
-structured JSON commands to control measurements, query state, and
-configure hardware-related subsystems.</p>
-<p>This page describes the <strong>wire-level protocol</strong>, independent of any
-specific target or command.</p>
+<p>The ARKEO API uses a <strong>TCP-based request-response protocol</strong> with <strong>length-prefixed JSON messages</strong>.</p>
+<p>External clients connect to a running ARKEO application and exchange structured JSON commands to control measurements, query state, and configure hardware-related subsystems.</p>
+<p>This page describes the <strong>wire-level protocol</strong>, independent of any specific target or command.</p>
 <hr />
 <h2 id="transport-and-connection-model">Transport and connection model<a class="headerlink" href="#transport-and-connection-model" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1034,14 +996,7 @@ specific target or command.</p>
 <li><strong>Default port</strong>: <code>6360</code>  </li>
 <li><strong>Connection type</strong>: persistent  </li>
 </ul>
-<p>The ARKEO application acts as a TCP server.<br />
-Clients establish a connection and keep it open for the duration of
-their interaction.</p>
-<p>The protocol is strictly <strong>sequential</strong>:
-- One request is sent
-- One response is received
-- Only then may the next request be sent</p>
-<p>There is no request pipelining or concurrent in-flight commands.</p>
+<p>The ARKEO application acts as a TCP server. Clients establish a connection and keep it open for the duration of their interaction. The protocol is strictly <strong>sequential</strong>: One request is sent and one response is received. Only then may the next request be sent.</p>
 <hr />
 <h2 id="message-framing">Message framing<a class="headerlink" href="#message-framing" title="Permanent link">&para;</a></h2>
 <p>Every message exchanged over the connection is framed as:</p>
@@ -1099,9 +1054,7 @@ of bytes and interprets them as a UTF-8 encoded JSON object.</p>
 </tbody>
 </table>
 <p>All fields except <code>request_id</code> are mandatory.</p>
-<p>The <code>request_id</code> field is optional and, if present, is echoed back in the
-corresponding response. It allows clients to correlate requests and
-responses but does not affect command execution.</p>
+<p>The <code>request_id</code> field is optional and, if present, is echoed back in the corresponding response. It allows clients to correlate requests and responses but does not affect command execution.</p>
 <hr />
 <h2 id="response-message-format">Response message format<a class="headerlink" href="#response-message-format" title="Permanent link">&para;</a></h2>
 <p>Each request produces exactly one response.</p>
@@ -1154,39 +1107,11 @@ responses but does not affect command execution.</p>
 <p>The API distinguishes between <strong>protocol-level errors</strong> and
 <strong>command-level errors</strong>.</p>
 <ul>
-<li>
-<p>A response with <code>"status": "ERROR"</code> indicates that the <strong>main JSON
-  request structure is invalid</strong> and could not be processed correctly.</p>
-</li>
-<li>
-<p>A response containing an <code>"error"</code> object indicates that the request
-  was syntactically valid, but the <strong>target rejected it</strong>, most commonly
-  due to invalid or missing command parameters.</p>
-</li>
+<li>A response with <code>"status": "ERROR"</code> indicates that the main JSON request structure is invalid and could not be processed correctly.</li>
+<li>A response containing an <code>"error"</code> object indicates that the request was syntactically valid, but the target rejected it, most commonly due to invalid or missing command parameters.</li>
 </ul>
-<p>In both cases, the response is well-formed JSON and follows the standard
-framing rules.</p>
-<p>Transport-level errors (such as connection loss) are not represented as
-API responses and must be handled by the client at the socket level.</p>
-<hr />
-<h2 id="execution-model">Execution model<a class="headerlink" href="#execution-model" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Requests are processed in the order received</li>
-<li>Commands may affect global application state</li>
-<li>Long-running operations may return immediately with status information</li>
-<li>Measurement safety limits and hardware constraints are always enforced
-  by ARKEO</li>
-</ul>
-<p>Clients should always check the response status before using returned
-data.</p>
-<hr />
-<h2 id="compatibility-notes">Compatibility notes<a class="headerlink" href="#compatibility-notes" title="Permanent link">&para;</a></h2>
-<p>The protocol is designed to be stable and forward-compatible.</p>
-<p>Clients should:
-- Ignore unknown fields in responses
-- Not assume that all errors are known in advance
-- Treat unrecognized error codes as generic failures</p>
-<p>Any protocol-level changes will be documented explicitly.</p>
+<p>In both cases, the response is well-formed JSON and follows the standard framing rules.</p>
+<p>Transport-level errors (such as connection loss) are not represented as API responses and must be handled by the client at the socket level.</p>
 <hr />
 
 
