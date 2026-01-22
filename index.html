@@ -10,11 +10,11 @@
       
       
       
-        <link rel="next" href="main/">
+        <link rel="next" href="getting-started/overview/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -22,9 +22,15 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
       
       
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -45,7 +51,7 @@
     
       <link rel="stylesheet" href="assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,9 +63,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -86,12 +89,12 @@
     <a href="." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -103,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Home
             
           </span>
         </div>
@@ -111,27 +114,32 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -139,7 +147,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -150,6 +158,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -180,7 +189,7 @@
     <a href="." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Arkeo All-in-One API Documentation (v0.1)
@@ -195,6 +204,7 @@
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -206,8 +216,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Introduction
+    Home
+    
   </span>
   
 
@@ -217,8 +229,10 @@
       <a href="." class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Introduction
+    Home
+    
   </span>
   
 
@@ -240,35 +254,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#request-format" class="md-nav__link">
-    🔧 Request Format
+  <a href="#api-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Modules
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#response-format" class="md-nav__link">
-    Response Format
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Response Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-keys" class="md-nav__link">
-    Response Keys
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#targets-overview" class="md-nav__link">
-    Targets Overview
+  <a href="#connection-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection details
+    </span>
   </a>
   
 </li>
@@ -286,55 +293,43 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="main/" class="md-nav__link">
+  
+    
+    
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    MAIN Commands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
+        
       
-      
-  
-  
-  
     
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        
-        
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
-    ROUTINE Commands
+    Getting Started
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            ROUTINE Commands
+            Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -343,12 +338,15 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="routine/" class="md-nav__link">
+      <a href="getting-started/overview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Overview
+    API Overview
+    
   </span>
   
 
@@ -363,132 +361,15 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="routine/connection_test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Connection Test
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="routine/jv/" class="md-nav__link">
+      <a href="getting-started/protocol/" class="md-nav__link">
         
   
-  <span class="md-ellipsis">
-    JV Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="routine/ipce/" class="md-nav__link">
-        
   
   <span class="md-ellipsis">
-    IPCE Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="routine/resistivity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Resistivity Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="routine/luminescence/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Luminescence Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="routine/TPR/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transient Photo Response Routine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="routine/impedance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Impedance Routine
+    Protocol
+    
   </span>
   
 
@@ -510,12 +391,60 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="tmpctl/" class="md-nav__link">
+  
+    
+    
+    
+    
+      
         
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
   
   <span class="md-ellipsis">
-    TMPCTL Commands
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAIN
+    
   </span>
   
 
@@ -523,9 +452,268 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
     
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ROUTINE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            ROUTINE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/connection_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connection Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/jv.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JV Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/ipce.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IPCE Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/resistivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resistivity Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/luminescence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Luminescence Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/tpr.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transient Photo Response Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="routine/impedance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Impedance Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmpctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TMPCTL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -533,12 +721,22 @@
       <a href="mux/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    MUX Commands
+    MUX
+    
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -548,34 +746,41 @@
   
   
   
+  
+    
     
     
     
       
+        
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        
-        
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     Examples
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -586,12 +791,15 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="examples/python/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python Example
+    
   </span>
   
 
@@ -635,35 +843,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#request-format" class="md-nav__link">
-    🔧 Request Format
+  <a href="#api-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Modules
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#response-format" class="md-nav__link">
-    Response Format
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Response Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-keys" class="md-nav__link">
-    Response Keys
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#targets-overview" class="md-nav__link">
-    Targets Overview
+  <a href="#connection-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection details
+    </span>
   </a>
   
 </li>
@@ -683,75 +884,63 @@
                   
 
 
+
 <h1 id="arkeo-all-in-one-api-documentation">Arkeo All-in-One API Documentation<a class="headerlink" href="#arkeo-all-in-one-api-documentation" title="Permanent link">&para;</a></h1>
 <p>The Arkeo All-in-One API allows external applications to control and query the Arkeo measurement software. Communication happens using the TCP protocol on port 6360, enabling users to perform a variety of commands manage measurements. Each connected client can send JSON-encoded requests and receive JSON responses.</p>
-<p>All commands follow a standard message structure containing a <strong>target</strong>, a <strong>command</strong>, optional <strong>parameters</strong>, and a <strong>request ID</strong> to match responses.</p>
 <hr />
-<h2 id="request-format">🔧 Request Format<a class="headerlink" href="#request-format" title="Permanent link">&para;</a></h2>
-<p>Every request message must contain the following JSON structure:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;TARGET&gt;&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;COMMAND&gt;&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="w">  </span><span class="c1">//optional</span>
-<span class="p">}</span>
-</code></pre></div>
+<h2 id="api-modules">API Modules<a class="headerlink" href="#api-modules" title="Permanent link">&para;</a></h2>
+<p>The API is divided in 4 section, each controlling a specific part of the software.</p>
+<div class="grid cards">
 <ul>
-<li><strong>target</strong>: Specifies which module should handle the command.
-  Example targets: <code>"MAIN"</code>, <code>"ROUTINE"</code>, <code>"TMPCTL"</code>, <code>"MUX"</code>.</li>
-<li><strong>command</strong>: The specific instruction for that target.</li>
-<li><strong>parameter</strong>: Optional command parameters (may be empty <code>{}</code>).</li>
-<li><strong>request_id</strong>: An integer identifier assigned by the client.</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1-.07 1 2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56.75 1.3 2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04.75-1.3-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55-.75-1.3-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z"/></svg></span> <strong>MAIN</strong> - <strong>System-level control</strong></p>
+<p>Manage application state, connections, and global operations such as routine selection and execution.</p>
+<hr />
+<p><a href="main/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Explore MAIN</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span> <strong>ROUTINE</strong> - <strong>Measurement routines</strong></p>
+<p>Configure and run measurement workflows such as JV scans, MPPT, impedance spectroscopy, and luminescence measurements.</p>
+<hr />
+<p><a href="routine/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Explore ROUTINE</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13V5a3 3 0 0 0-6 0v8a5 5 0 1 0 6 0m-3-9a1 1 0 0 1 1 1v3h-2V5a1 1 0 0 1 1-1"/></svg></span> <strong>TMPCTL</strong> - <strong>Temperature control</strong></p>
+<p>Monitor and control temperature controllers, setpoints, ramps, and stabilization status.</p>
+<hr />
+<p><a href="tmpctl/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Explore TMPCTL</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14 4 2.29 2.29-2.88 2.88 1.42 1.42 2.88-2.88L20 10V4M10 4H4v6l2.29-2.29 4.71 4.7V20h2v-8.41l-5.29-5.3"/></svg></span> <strong>MUX</strong> - <strong>Multiplexer management</strong></p>
+<p>Configure and control hardware multiplexers for channel routing and device selection.</p>
+<hr />
+<p><a href="mux/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Explore MUX</a></p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>If this is your first time using the API, start here:</p>
+<ul>
+<li>📘 <strong><a href="getting-started/overview/">API overview &amp; protocol</a></strong></li>
+<li>🔧 <strong><a href="getting-started/protocol/">Request &amp; response format</a></strong></li>
+<li>🧪 <strong><a href="getting-started/examples/">Example JSON commands</a></strong></li>
 </ul>
 <hr />
-<p><strong>Note</strong>: Each command must be preceded by a 4-byte integer indicating the total length of the command.</p>
-<h2 id="response-format">Response Format<a class="headerlink" href="#response-format" title="Permanent link">&para;</a></h2>
-<p>Each command returns a structured JSON response. The response always includes a <code>status</code> field and the same <code>request_id</code> as the corresponding request. Similar to the request, each response is preceded by a 4-byte integer indicating the total length of the command.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span><span class="w">     </span><span class="c1">// present if status = &quot;OK&quot;</span>
-<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span><span class="w">    </span><span class="c1">// present if status = &quot;ERROR&quot;</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="response-keys">Response Keys<a class="headerlink" href="#response-keys" title="Permanent link">&para;</a></h3>
+<h2 id="connection-details">Connection details<a class="headerlink" href="#connection-details" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>status</strong>: Indicates success or failure (<code>"OK"</code> or <code>"ERROR"</code>).</li>
-<li><strong>data</strong>: Command-specific response payload.</li>
-<li><strong>error</strong>: Only present if an error occurred; contains fields such as:
-  <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid parameters&quot;</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div></li>
-<li><strong>request_id</strong>: Echoes the ID from the request.</li>
+<li><strong>Protocol</strong>: TCP</li>
+<li><strong>Port</strong>: <code>6360</code></li>
+<li><strong>Message format</strong>: JSON (length-prefixed)</li>
 </ul>
-<hr />
-<h2 id="targets-overview">Targets Overview<a class="headerlink" href="#targets-overview" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Target</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>MAIN</strong></td>
-<td>Controls system-wide operations, including routine activation.</td>
-</tr>
-<tr>
-<td><strong>ROUTINE</strong></td>
-<td>Handles measurement routines such as JV, MPPT, Impedance, and Luminescence.</td>
-</tr>
-<tr>
-<td><strong>TMPCTL</strong></td>
-<td>Controls and monitors temperature controllers.</td>
-</tr>
-<tr>
-<td><strong>MUX</strong></td>
-<td>Manages multiplexer connections.</td>
-</tr>
-</tbody>
-</table>
-<hr />
+<p>The API is designed to be language-agnostic and can be used from LabVIEW, Python, MATLAB, C/C++, or any TCP-capable environment.</p>
+
+
+
+
+
+
+
 
 
 
@@ -762,13 +951,14 @@
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -795,10 +985,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       

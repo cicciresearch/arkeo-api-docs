@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../../mux/">
+        <link rel="prev" href="../overview/">
       
+      
+        <link rel="next" href="../../main/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Python Example - Arkeo All-in-One API Documentation (v0.1)</title>
+        <title>Protocol - Arkeo All-in-One API Documentation (v0.1)</title>
       
     
     
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-example" class="md-skip">
+        <a href="#api-protocol" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Example
+              Protocol
             
           </span>
         </div>
@@ -223,8 +225,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -235,13 +239,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -257,7 +259,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -271,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -291,10 +293,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../getting-started/protocol/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Protocol
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -305,6 +329,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transport-and-connection-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport and connection model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message framing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-message-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request message format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request message format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-message-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response message format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response message format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error semantics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -676,8 +813,6 @@
       
   
   
-    
-  
   
   
     
@@ -690,11 +825,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -710,7 +847,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -721,32 +858,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Python Example
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../examples/python/" class="md-nav__link">
         
   
   
@@ -757,62 +872,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -852,36 +911,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-overview" class="md-nav__link">
+  <a href="#transport-and-connection-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Overview
+      Transport and connection model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
+  <a href="#message-framing" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Code
+      Message framing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
+  <a href="#request-message-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Output
+      Request message format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request message format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-message-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response message format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response message format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error semantics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#execution-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      Execution model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility notes
     </span>
   </a>
   
@@ -903,96 +1019,174 @@
 
 
 
-<h1 id="python-example">Python Example<a class="headerlink" href="#python-example" title="Permanent link">&para;</a></h1>
-<p>This example demonstrates how to communicate with the Arkeo All-in-One API
-using Python over TCP sockets.<br />
-It shows how to send JSON commands, receive responses, and handle basic errors.</p>
+<h1 id="api-protocol">API Protocol<a class="headerlink" href="#api-protocol" title="Permanent link">&para;</a></h1>
+<p>The ARKEO API uses a <strong>TCP-based request-response protocol</strong> with
+<strong>length-prefixed JSON messages</strong>.</p>
+<p>External clients connect to a running ARKEO application and exchange
+structured JSON commands to control measurements, query state, and
+configure hardware-related subsystems.</p>
+<p>This page describes the <strong>wire-level protocol</strong>, independent of any
+specific target or command.</p>
 <hr />
-<h2 id="example-overview">Example Overview<a class="headerlink" href="#example-overview" title="Permanent link">&para;</a></h2>
-<p>The script:</p>
-<ol>
-<li>Connects to the API over TCP.</li>
-<li>Sends a <code>StartRoutine</code> command.</li>
-<li>Waits for the response.</li>
-<li>Closes the socket connection.</li>
-</ol>
-<hr />
-<h2 id="example-code">Example Code<a class="headerlink" href="#example-code" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
-
-<span class="n">HOST</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>     <span class="c1"># IP address of the Arkeo API server</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">6360</span>            <span class="c1"># Default TCP port</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">send_command</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Send a JSON message with a 4-byte length prefix.&quot;&quot;&quot;</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-    <span class="n">length</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;&gt;I&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-    <span class="n">sock</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">data</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">receive_response</span><span class="p">(</span><span class="n">sock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Receive a JSON response with a 4-byte length prefix.&quot;&quot;&quot;</span>
-    <span class="n">header</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">header</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="s2">&quot;Incomplete header received.&quot;</span><span class="p">)</span>
-    <span class="n">msg_len</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;&gt;I&quot;</span><span class="p">,</span> <span class="n">header</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">payload</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">msg_len</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="c1"># Connect to the API</span>
-    <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">create_connection</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connected to </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-        <span class="c1"># Example command: start a routine</span>
-        <span class="n">command</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;MAIN&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;StartRoutine&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;routine&quot;</span><span class="p">:</span> <span class="s2">&quot;Luminescence&quot;</span><span class="p">},</span>
-            <span class="s2">&quot;request_id&quot;</span><span class="p">:</span> <span class="mi">1001</span>
-        <span class="p">}</span>
-
-        <span class="c1"># Send the command</span>
-        <span class="n">send_command</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Command sent:&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-
-        <span class="c1"># Wait for and print the response</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">receive_response</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Response received:&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<hr />
-<h2 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h2>
-<p>A typical session looks like this:
-<div class="highlight"><pre><span></span><code>Connected to 127.0.0.1:6360
-Command sent:
-{
-  &quot;target&quot;: &quot;MAIN&quot;,
-  &quot;command&quot;: &quot;StartRoutine&quot;,
-  &quot;params&quot;: {&quot;routine&quot;: &quot;Luminescence&quot;},
-  &quot;request_id&quot;: 1001
-}
-
-Response received:
-{
-  &quot;status&quot;: &quot;OK&quot;,
-  &quot;data&quot;: {&quot;status&quot;: &quot;OK&quot;},
-  &quot;request_id&quot;: 1001
-}
-</code></pre></div></p>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h2 id="transport-and-connection-model">Transport and connection model<a class="headerlink" href="#transport-and-connection-model" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The API uses a <strong>4-byte big-endian header</strong> that specifies the message length.</li>
-<li>Each request and response is transmitted as a <strong>UTF-8 encoded JSON string</strong>.</li>
-<li>The <code>request_id</code> field ensures that each response can be matched with its originating command.</li>
-<li>When an error occurs, the API responds with <code>"status": "ERROR"</code> and includes an <code>"error"</code> object describing the issue.</li>
-<li>Communication is stateless beyond the active TCP session; each message is self-contained and includes all required parameters.</li>
-<li>Commands and responses are not compressed or encrypted by default; if required, encryption must be implemented at the transport layer.</li>
-<li>The connection is persistent — multiple commands can be sent sequentially without reconnecting.</li>
+<li><strong>Transport</strong>: TCP  </li>
+<li><strong>Default port</strong>: <code>6360</code>  </li>
+<li><strong>Connection type</strong>: persistent  </li>
 </ul>
+<p>The ARKEO application acts as a TCP server.<br />
+Clients establish a connection and keep it open for the duration of
+their interaction.</p>
+<p>The protocol is strictly <strong>sequential</strong>:
+- One request is sent
+- One response is received
+- Only then may the next request be sent</p>
+<p>There is no request pipelining or concurrent in-flight commands.</p>
+<hr />
+<h2 id="message-framing">Message framing<a class="headerlink" href="#message-framing" title="Permanent link">&para;</a></h2>
+<p>Every message exchanged over the connection is framed as:</p>
+<div class="highlight"><pre><span></span><code>[4-byte length][JSON payload]
+</code></pre></div>
+<p>The 4-byte length prefix is:</p>
+<ul>
+<li><strong>Unsigned</strong></li>
+<li><strong>Big-endian</strong></li>
+<li>Specifies the number of bytes of the JSON payload only  </li>
+<li>Does <strong>not</strong> include the 4 bytes of the length field itself</li>
+</ul>
+<p>After reading the length prefix, the receiver reads exactly that number
+of bytes and interprets them as a UTF-8 encoded JSON object.</p>
+<hr />
+<h2 id="request-message-format">Request message format<a class="headerlink" href="#request-message-format" title="Permanent link">&para;</a></h2>
+<p>Each request consists of a single JSON object with the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;TARGET&gt;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;COMMAND&gt;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="request-fields">Request fields<a class="headerlink" href="#request-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target</code></td>
+<td>Yes</td>
+<td>Logical subsystem that handles the command</td>
+</tr>
+<tr>
+<td><code>command</code></td>
+<td>Yes</td>
+<td>Command name for the selected target</td>
+</tr>
+<tr>
+<td><code>parameter</code></td>
+<td>Yes</td>
+<td>Command parameters (may be an empty object)</td>
+</tr>
+<tr>
+<td><code>request_id</code></td>
+<td>No</td>
+<td>Client-defined identifier</td>
+</tr>
+</tbody>
+</table>
+<p>All fields except <code>request_id</code> are mandatory.</p>
+<p>The <code>request_id</code> field is optional and, if present, is echoed back in the
+corresponding response. It allows clients to correlate requests and
+responses but does not affect command execution.</p>
+<hr />
+<h2 id="response-message-format">Response message format<a class="headerlink" href="#response-message-format" title="Permanent link">&para;</a></h2>
+<p>Each request produces exactly one response.</p>
+<p>A successful response has the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>An unsuccessful response has the form:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid parameters&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="response-fields">Response fields<a class="headerlink" href="#response-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code></td>
+<td><code>"OK"</code> or <code>"ERROR"</code></td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>Command-specific response data (only if status = OK)</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Error information (only if status = ERROR)</td>
+</tr>
+<tr>
+<td><code>request_id</code></td>
+<td>Echoes the request ID, if provided</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="error-semantics">Error semantics<a class="headerlink" href="#error-semantics" title="Permanent link">&para;</a></h2>
+<p>The API distinguishes between <strong>protocol-level errors</strong> and
+<strong>command-level errors</strong>.</p>
+<ul>
+<li>
+<p>A response with <code>"status": "ERROR"</code> indicates that the <strong>main JSON
+  request structure is invalid</strong> and could not be processed correctly.</p>
+</li>
+<li>
+<p>A response containing an <code>"error"</code> object indicates that the request
+  was syntactically valid, but the <strong>target rejected it</strong>, most commonly
+  due to invalid or missing command parameters.</p>
+</li>
+</ul>
+<p>In both cases, the response is well-formed JSON and follows the standard
+framing rules.</p>
+<p>Transport-level errors (such as connection loss) are not represented as
+API responses and must be handled by the client at the socket level.</p>
+<hr />
+<h2 id="execution-model">Execution model<a class="headerlink" href="#execution-model" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Requests are processed in the order received</li>
+<li>Commands may affect global application state</li>
+<li>Long-running operations may return immediately with status information</li>
+<li>Measurement safety limits and hardware constraints are always enforced
+  by ARKEO</li>
+</ul>
+<p>Clients should always check the response status before using returned
+data.</p>
+<hr />
+<h2 id="compatibility-notes">Compatibility notes<a class="headerlink" href="#compatibility-notes" title="Permanent link">&para;</a></h2>
+<p>The protocol is designed to be stable and forward-compatible.</p>
+<p>Clients should:
+- Ignore unknown fields in responses
+- Not assume that all errors are known in advance
+- Treat unrecognized error codes as generic failures</p>
+<p>Any protocol-level changes will be documented explicitly.</p>
 <hr />
 
 

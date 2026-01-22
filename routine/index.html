@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -24,9 +24,15 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
       
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -47,7 +53,7 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,9 +65,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -88,12 +91,12 @@
     <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -113,27 +116,32 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -141,7 +149,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -152,6 +160,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -182,7 +191,7 @@
     <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Arkeo All-in-One API Documentation (v0.1)
@@ -195,12 +204,15 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Introduction
+    Home
+    
   </span>
   
 
@@ -211,19 +223,98 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../main/" class="md-nav__link">
+      <a href="../getting-started/overview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    MAIN Commands
+    API Overview
+    
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -235,24 +326,31 @@
     
   
   
+  
+    
     
     
     
       
+        
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
-    ROUTINE Commands
+    API Reference
+    
   </span>
   
 
@@ -262,7 +360,72 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            ROUTINE Commands
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAIN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ROUTINE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            ROUTINE
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -271,6 +434,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -284,8 +448,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Overview
+    
   </span>
   
 
@@ -295,8 +461,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Overview
+    
   </span>
   
 
@@ -319,14 +487,18 @@
       
         <li class="md-nav__item">
   <a href="#command-index" class="md-nav__link">
-    Command Index
+    <span class="md-ellipsis">
+      Command Index
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#startmeasurement" class="md-nav__link">
-    StartMeasurement
+    <span class="md-ellipsis">
+      StartMeasurement
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="StartMeasurement">
@@ -334,14 +506,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -353,7 +529,9 @@
       
         <li class="md-nav__item">
   <a href="#stopmeasurement" class="md-nav__link">
-    StopMeasurement
+    <span class="md-ellipsis">
+      StopMeasurement
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="StopMeasurement">
@@ -361,14 +539,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_1" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_1" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -380,7 +562,9 @@
       
         <li class="md-nav__item">
   <a href="#closeroutine" class="md-nav__link">
-    CloseRoutine
+    <span class="md-ellipsis">
+      CloseRoutine
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="CloseRoutine">
@@ -388,14 +572,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_2" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_2" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -407,7 +595,9 @@
       
         <li class="md-nav__item">
   <a href="#getsettings" class="md-nav__link">
-    GetSettings
+    <span class="md-ellipsis">
+      GetSettings
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetSettings">
@@ -415,7 +605,9 @@
         
           <li class="md-nav__item">
   <a href="#example-request_3" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
@@ -427,7 +619,9 @@
       
         <li class="md-nav__item">
   <a href="#applysettings" class="md-nav__link">
-    ApplySettings
+    <span class="md-ellipsis">
+      ApplySettings
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ApplySettings">
@@ -435,14 +629,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_4" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_3" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -454,7 +652,9 @@
       
         <li class="md-nav__item">
   <a href="#getteststatus" class="md-nav__link">
-    GetTestStatus
+    <span class="md-ellipsis">
+      GetTestStatus
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetTestStatus">
@@ -462,21 +662,27 @@
         
           <li class="md-nav__item">
   <a href="#example-request_5" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_4" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#routine-status-values" class="md-nav__link">
-    Routine Status Values
+    <span class="md-ellipsis">
+      Routine Status Values
+    </span>
   </a>
   
 </li>
@@ -488,7 +694,9 @@
       
         <li class="md-nav__item">
   <a href="#gettestdata" class="md-nav__link">
-    GetTestData
+    <span class="md-ellipsis">
+      GetTestData
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetTestData">
@@ -496,7 +704,9 @@
         
           <li class="md-nav__item">
   <a href="#example-request_6" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
@@ -508,7 +718,9 @@
       
         <li class="md-nav__item">
   <a href="#setinfo" class="md-nav__link">
-    SetInfo
+    <span class="md-ellipsis">
+      SetInfo
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="SetInfo">
@@ -516,14 +728,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_7" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_5" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -535,7 +751,9 @@
       
         <li class="md-nav__item">
   <a href="#clearerrors" class="md-nav__link">
-    ClearErrors
+    <span class="md-ellipsis">
+      ClearErrors
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ClearErrors">
@@ -543,14 +761,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_8" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_6" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -562,7 +784,9 @@
       
         <li class="md-nav__item">
   <a href="#getcustomcommands" class="md-nav__link">
-    GetCustomCommands
+    <span class="md-ellipsis">
+      GetCustomCommands
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetCustomCommands">
@@ -570,14 +794,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_9" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_7" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -601,12 +829,15 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="connection_test/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Connection Test
+    
   </span>
   
 
@@ -621,12 +852,15 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="jv/" class="md-nav__link">
+      <a href="jv.md" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     JV Routine
+    
   </span>
   
 
@@ -638,15 +872,18 @@
             
               
                 
+  
   
   
   
     <li class="md-nav__item">
-      <a href="ipce/" class="md-nav__link">
+      <a href="ipce.md" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     IPCE Routine
+    
   </span>
   
 
@@ -658,6 +895,7 @@
             
               
                 
+  
   
   
   
@@ -665,8 +903,10 @@
       <a href="resistivity/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Resistivity Routine
+    
   </span>
   
 
@@ -678,6 +918,7 @@
             
               
                 
+  
   
   
   
@@ -685,8 +926,10 @@
       <a href="luminescence/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Luminescence Routine
+    
   </span>
   
 
@@ -698,15 +941,18 @@
             
               
                 
+  
   
   
   
     <li class="md-nav__item">
-      <a href="TPR/" class="md-nav__link">
+      <a href="tpr.md" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Transient Photo Response Routine
+    
   </span>
   
 
@@ -718,6 +964,7 @@
             
               
                 
+  
   
   
   
@@ -725,8 +972,64 @@
       <a href="impedance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Impedance Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmpctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TMPCTL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MUX
+    
   </span>
   
 
@@ -748,72 +1051,41 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../tmpctl/" class="md-nav__link">
+  
+    
+    
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    TMPCTL Commands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mux/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    MUX Commands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
       
-      
-  
-  
-  
     
-    
-    
-      
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        
-        
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     Examples
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -824,12 +1096,15 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../examples/python/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python Example
+    
   </span>
   
 
@@ -874,14 +1149,18 @@
       
         <li class="md-nav__item">
   <a href="#command-index" class="md-nav__link">
-    Command Index
+    <span class="md-ellipsis">
+      Command Index
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#startmeasurement" class="md-nav__link">
-    StartMeasurement
+    <span class="md-ellipsis">
+      StartMeasurement
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="StartMeasurement">
@@ -889,14 +1168,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -908,7 +1191,9 @@
       
         <li class="md-nav__item">
   <a href="#stopmeasurement" class="md-nav__link">
-    StopMeasurement
+    <span class="md-ellipsis">
+      StopMeasurement
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="StopMeasurement">
@@ -916,14 +1201,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_1" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_1" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -935,7 +1224,9 @@
       
         <li class="md-nav__item">
   <a href="#closeroutine" class="md-nav__link">
-    CloseRoutine
+    <span class="md-ellipsis">
+      CloseRoutine
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="CloseRoutine">
@@ -943,14 +1234,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_2" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_2" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -962,7 +1257,9 @@
       
         <li class="md-nav__item">
   <a href="#getsettings" class="md-nav__link">
-    GetSettings
+    <span class="md-ellipsis">
+      GetSettings
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetSettings">
@@ -970,7 +1267,9 @@
         
           <li class="md-nav__item">
   <a href="#example-request_3" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
@@ -982,7 +1281,9 @@
       
         <li class="md-nav__item">
   <a href="#applysettings" class="md-nav__link">
-    ApplySettings
+    <span class="md-ellipsis">
+      ApplySettings
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ApplySettings">
@@ -990,14 +1291,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_4" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_3" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -1009,7 +1314,9 @@
       
         <li class="md-nav__item">
   <a href="#getteststatus" class="md-nav__link">
-    GetTestStatus
+    <span class="md-ellipsis">
+      GetTestStatus
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetTestStatus">
@@ -1017,21 +1324,27 @@
         
           <li class="md-nav__item">
   <a href="#example-request_5" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_4" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#routine-status-values" class="md-nav__link">
-    Routine Status Values
+    <span class="md-ellipsis">
+      Routine Status Values
+    </span>
   </a>
   
 </li>
@@ -1043,7 +1356,9 @@
       
         <li class="md-nav__item">
   <a href="#gettestdata" class="md-nav__link">
-    GetTestData
+    <span class="md-ellipsis">
+      GetTestData
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetTestData">
@@ -1051,7 +1366,9 @@
         
           <li class="md-nav__item">
   <a href="#example-request_6" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
@@ -1063,7 +1380,9 @@
       
         <li class="md-nav__item">
   <a href="#setinfo" class="md-nav__link">
-    SetInfo
+    <span class="md-ellipsis">
+      SetInfo
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="SetInfo">
@@ -1071,14 +1390,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_7" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_5" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -1090,7 +1413,9 @@
       
         <li class="md-nav__item">
   <a href="#clearerrors" class="md-nav__link">
-    ClearErrors
+    <span class="md-ellipsis">
+      ClearErrors
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="ClearErrors">
@@ -1098,14 +1423,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_8" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_6" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -1117,7 +1446,9 @@
       
         <li class="md-nav__item">
   <a href="#getcustomcommands" class="md-nav__link">
-    GetCustomCommands
+    <span class="md-ellipsis">
+      GetCustomCommands
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="GetCustomCommands">
@@ -1125,14 +1456,18 @@
         
           <li class="md-nav__item">
   <a href="#example-request_9" class="md-nav__link">
-    Example Request
+    <span class="md-ellipsis">
+      Example Request
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#example-response_7" class="md-nav__link">
-    Example Response
+    <span class="md-ellipsis">
+      Example Response
+    </span>
   </a>
   
 </li>
@@ -1155,6 +1490,7 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
 
 
 <h1 id="routine-commands">ROUTINE Commands<a class="headerlink" href="#routine-commands" title="Permanent link">&para;</a></h1>
@@ -1191,7 +1527,7 @@ Each routine can be started from the MAIN target, after which the commands below
 <td>Retrieve the current routine configuration.</td>
 </tr>
 <tr>
-<td><a href="#getstatus">GetStatus</a></td>
+<td><a href="#getteststatus">GetTestStatus</a></td>
 <td>Query the routine’s current operational state.</td>
 </tr>
 <tr>
@@ -1439,18 +1775,26 @@ Returns a list of custom commands available for the active routine.</p>
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1477,10 +1821,13 @@ Returns a list of custom commands available for the active routine.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       
