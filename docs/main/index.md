@@ -23,7 +23,7 @@ Starts a measurement routine by name. Only one routine can be active at a time.
 {
   "target": "MAIN",
   "command": "StartRoutine",
-  "parameter": { "routine_name": "JV" },
+  "parameter": { "routine": "JV" },
   "request_id": 10
 }
 ```
