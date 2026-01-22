@@ -6,7 +6,7 @@ The Arkeo All-in-One API allows external applications to control and query the A
 
 ## API Modules
 
-The API is divided in 4 section, each controlling a specific part of the software.
+The API is divided in 4 sections, each controlling a specific part of the software.
 
 <div class="grid cards" markdown>
 
@@ -48,7 +48,7 @@ If this is your first time using the API, start here:
 
 - 📘 **[API overview & protocol](getting-started/overview.md)**
 - 🔧 **[Request & response format](getting-started/protocol.md)**
-- 🧪 **[Example JSON commands](getting-started/examples.md)**
+- 🧪 **[Examples](examples/python.md)**
 
 ---
 

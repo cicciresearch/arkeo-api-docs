@@ -8,7 +8,7 @@ The API is designed for laboratory and research environments where measurements
 must be scripted, repeated, synchronized with external instruments, or
 integrated into larger experimental workflows.
 
-This page introduces the **core concepts and architecture** of the API before
+This page introduces the core concepts and architecture of the API before
 diving into command details.
 
 ---
@@ -18,57 +18,36 @@ diving into command details.
 The API is a **control and query interface** to a running ARKEO application.
 
 It allows you to:
+
 - Start, stop, and configure measurements
 - Control measurement routines programmatically
 - Read back state, status, and results
 - Coordinate ARKEO with external hardware or software
 
-It does **not**:
+It does not
+
 - Replace the ARKEO graphical user interface
+- Add funtions that cannot be accessed by the user interface
 - Perform measurements on its own
 - Bypass ARKEO’s internal safety checks and limits
 
-The API always acts **through** the ARKEO application.
-
----
-
-## Typical use cases
-
-The API is commonly used for:
-
-- **Automated testing**
-  - Batch measurements
-  - Parameter sweeps
-  - Long-term stability experiments
-
-- **Integration**
-  - Synchronization with environmental chambers
-  - Coordination with optical setups or external SMUs
-  - Data pipelines and FAIR data workflows
-
-- **Remote control**
-  - Headless operation
-  - Network-based experiment orchestration
+The API always acts through the ARKEO application.
 
 ---
 
 ## Architecture overview
 
-At a high level, the system consists of three parts:
+At a high level, the system consists of two parts:
 
-+-------------------+ TCP / JSON +---------------------+
-| External client | <-------------------> | ARKEO application |
-| (Python, LV, etc) | | (API server) |
-+-------------------+ +---------------------+
+**ARKEO application**
 
-
-- **ARKEO application**
   - Runs locally on the measurement PC
   - Owns all hardware connections
   - Executes measurements and routines
   - Exposes a TCP server for API access
 
-- **External clients**
+**External clients**
+
   - Connect over TCP
   - Send JSON-encoded commands
   - Receive structured JSON responses
@@ -87,10 +66,10 @@ A target represents a logical subsystem inside ARKEO.
 
 Main targets include:
 
-- **MAIN** - Application-level control and global state  
-- **ROUTINE** - Measurement routines (JV, tracking, impedance, etc.)  
-- **TMPCTL** - Temperature controllers and thermal environments  
-- **MUX** - Multiplexer configuration and channel routing  
+- [**MAIN**](../main/index.md) - Application-level control and global state  
+- [**ROUTINE**](../routine/index.md) - Measurement routines (JV, tracking, impedance, etc.)  
+- [**TMPCTL**](../tmpctl/index.md) - Temperature controllers and thermal environments  
+- [**MUX**](../mux/index.md) - Multiplexer configuration and channel routing  
 
 Targets provide a clear separation between **what** you control and **how** it
 is controlled.
@@ -102,13 +81,12 @@ is controlled.
 Each target exposes a set of **commands**.
 
 A command:
+
 - Performs an action (e.g. start a routine)
 - Changes a configuration
 - Queries the current state
 
-Commands are always explicit and deterministic:  
-the same command with the same parameters produces the same effect, provided
-the system state allows it.
+Commands are always explicit and deterministic: the same command with the same parameters produces the same effect, provided the system state allows it. Every command returns a response. New commands **should not** be send before a response is received.
 
 ---
 
@@ -117,13 +95,13 @@ the system state allows it.
 Commands may accept **parameters** that define their behavior.
 
 Examples:
-- Voltage limits
+
+- Routine name
 - Measurement settings
 - Channel indices
 - Setpoints or modes
 
-Parameters are always provided as structured JSON objects and are validated by
-ARKEO before execution.
+Parameters are always provided as structured JSON objects and are validated by ARKEO before execution. If an unknown or wrong parameter is send, the command is ignored and an error object is returned.
 
 ---
 
@@ -136,11 +114,10 @@ All communication follows a **request → response** pattern:
 - ARKEO returns a response indicating success or failure
 
 Responses always include:
+
 - Execution status
 - Optional data payload
 - Error information if something went wrong
-
-This makes the API suitable for **robust automation and error handling**.
 
 ---
 
@@ -149,54 +126,25 @@ This makes the API suitable for **robust automation and error handling**.
 A typical automated measurement sequence looks like this:
 
 1. Connect to the ARKEO API server
-2. Configure channels, routines, and settings
-3. Select and configure a measurement routine
-4. Start the routine
-5. Monitor status and progress
-6. Stop or finalize the measurement
-7. Retrieve or post-process generated data
+2. Send a StartRoutine command
+3. Wait until the routine finished initializing by polling the GetTestStatus command
+4. Apply the correct settings with the ApplySettings command
+5. (optional) use any custom commands if required by the routine
+6. Start the measurement with the StartMeasurement command
+7. Monitor status and progress with the GetTestStatus and GetTestData command
+8. Retrieve or post-process generated data
 
 The exact commands depend on the routine and target involved, but this logical
 flow remains consistent.
 
 ---
-
-## Relationship to ARKEO software concepts
-
-The API mirrors the same concepts used in the ARKEO user interface:
-
-- **Routines** correspond to measurement tools available in the GUI
-- **Channels** map to configured electrical paths and devices
-- **Sensors and environments** reflect ARKEO’s internal monitoring systems
-- **Settings** use the same parameter names and meanings as the GUI
-
-This ensures that:
-- API usage matches documented software behavior
-- Scripts remain compatible with manual operation
-- Results are consistent across automated and interactive workflows
-
----
-
-## How this documentation is organized
-
-This documentation is structured around the API architecture:
-
-- **Overview** - Concepts and architecture (this page)
-- **Target sections** - One section per target (MAIN, ROUTINE, TMPCTL, MUX)
-- **Command references** - Detailed command descriptions and parameters
-- **Examples** - Practical command sequences and workflows
-
-You can read the documentation linearly or jump directly to the target you need.
-
----
-
 ## Next steps
 
 If this is your first time using the API:
 
-1. Start with the **MAIN** target to understand application-level control
-2. Explore **ROUTINE** to automate measurements
-3. Use **TMPCTL** and **MUX** when integrating hardware and environments
+1. Start with the [**MAIN**](../main/index.md) target to understand application-level control
+2. Explore [**ROUTINE**](../routine/index.md) to automate measurements
+3. Use [**TMPCTL**](../tmpctl/index.md) and [**MUX**](../mux/index.md) when integrating hardware and environments
 
 Each target section includes:
 - Available commands

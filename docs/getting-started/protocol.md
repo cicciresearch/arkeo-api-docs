@@ -1,14 +1,10 @@
 # API Protocol
 
-The ARKEO API uses a **TCP-based request-response protocol** with
-**length-prefixed JSON messages**.
+The ARKEO API uses a **TCP-based request-response protocol** with **length-prefixed JSON messages**.
 
-External clients connect to a running ARKEO application and exchange
-structured JSON commands to control measurements, query state, and
-configure hardware-related subsystems.
+External clients connect to a running ARKEO application and exchange structured JSON commands to control measurements, query state, and configure hardware-related subsystems.
 
-This page describes the **wire-level protocol**, independent of any
-specific target or command.
+This page describes the **wire-level protocol**, independent of any specific target or command.
 
 ---
 
@@ -18,16 +14,7 @@ specific target or command.
 - **Default port**: `6360`  
 - **Connection type**: persistent  
 
-The ARKEO application acts as a TCP server.  
-Clients establish a connection and keep it open for the duration of
-their interaction.
-
-The protocol is strictly **sequential**:
-- One request is sent
-- One response is received
-- Only then may the next request be sent
-
-There is no request pipelining or concurrent in-flight commands.
+The ARKEO application acts as a TCP server. Clients establish a connection and keep it open for the duration of their interaction. The protocol is strictly **sequential**: One request is sent and one response is received. Only then may the next request be sent.
 
 ---
 
@@ -75,9 +62,7 @@ Each request consists of a single JSON object with the following structure:
 
 All fields except `request_id` are mandatory.
 
-The `request_id` field is optional and, if present, is echoed back in the
-corresponding response. It allows clients to correlate requests and
-responses but does not affect command execution.
+The `request_id` field is optional and, if present, is echoed back in the corresponding response. It allows clients to correlate requests and responses but does not affect command execution.
 
 ---
 
@@ -124,43 +109,11 @@ An unsuccessful response has the form:
 The API distinguishes between **protocol-level errors** and
 **command-level errors**.
 
-- A response with `"status": "ERROR"` indicates that the **main JSON
-  request structure is invalid** and could not be processed correctly.
+- A response with `"status": "ERROR"` indicates that the main JSON request structure is invalid and could not be processed correctly.
+- A response containing an `"error"` object indicates that the request was syntactically valid, but the target rejected it, most commonly due to invalid or missing command parameters.
 
-- A response containing an `"error"` object indicates that the request
-  was syntactically valid, but the **target rejected it**, most commonly
-  due to invalid or missing command parameters.
+In both cases, the response is well-formed JSON and follows the standard framing rules.
 
-In both cases, the response is well-formed JSON and follows the standard
-framing rules.
-
-Transport-level errors (such as connection loss) are not represented as
-API responses and must be handled by the client at the socket level.
-
----
-
-## Execution model
-
-- Requests are processed in the order received
-- Commands may affect global application state
-- Long-running operations may return immediately with status information
-- Measurement safety limits and hardware constraints are always enforced
-  by ARKEO
-
-Clients should always check the response status before using returned
-data.
-
----
-
-## Compatibility notes
-
-The protocol is designed to be stable and forward-compatible.
-
-Clients should:
-- Ignore unknown fields in responses
-- Not assume that all errors are known in advance
-- Treat unrecognized error codes as generic failures
-
-Any protocol-level changes will be documented explicitly.
+Transport-level errors (such as connection loss) are not represented as API responses and must be handled by the client at the socket level.
 
 ---
