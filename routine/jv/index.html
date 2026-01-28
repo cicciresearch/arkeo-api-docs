@@ -575,6 +575,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-command-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example command sequence
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -689,6 +698,29 @@
   
   <span class="md-ellipsis">
     Impedance Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcspc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TCSPC Routine
     
   </span>
   
@@ -898,6 +930,15 @@
   <a href="#command-index" class="md-nav__link">
     <span class="md-ellipsis">
       Command Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-command-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example command sequence
     </span>
   </a>
   
@@ -1162,6 +1203,17 @@
 <hr />
 <h2 id="command-index">Command Index<a class="headerlink" href="#command-index" title="Permanent link">&para;</a></h2>
 <p>No custom commands are available for the JV routine</p>
+<hr />
+<h2 id="example-command-sequence">Example command sequence<a class="headerlink" href="#example-command-sequence" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAIN&quot;</span><span class="p">,</span><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartRoutine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;routine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JV&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestStatus&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// repeat until state == &quot;Ready&quot;</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ApplySettings&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="w"> </span><span class="err">JSON</span><span class="w"> </span><span class="err">Se</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartMeasurement&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestStatus&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// repeat until state == &quot;Ready&quot;</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestData&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CloseRoutine&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr />
 
 
 

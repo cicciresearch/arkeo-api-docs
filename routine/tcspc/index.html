@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../impedance/">
       
       
-        <link rel="next" href="../protocol/">
+        <link rel="next" href="../../tmpctl/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>API Overview - Arkeo All-in-One API Documentation (v0.1)</title>
+        <title>TCSPC Routine - Arkeo All-in-One API Documentation (v0.1)</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-overview" class="md-skip">
+        <a href="#transient-photo-response-routine-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Overview
+              TCSPC Routine
             
           </span>
         </div>
@@ -227,8 +227,6 @@
       
   
   
-    
-  
   
   
     
@@ -241,11 +239,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -261,7 +261,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -272,32 +272,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    API Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/overview/" class="md-nav__link">
         
   
   
@@ -308,113 +286,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-the-api-is-and-is-not" class="md-nav__link">
-    <span class="md-ellipsis">
-      What the API is (and is not)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Architecture overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-api-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core API concepts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core API concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Targets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requests-and-responses-conceptual" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requests and responses (conceptual)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#measurement-workflow-high-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      Measurement workflow (high level)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -427,7 +298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../protocol/" class="md-nav__link">
+      <a href="../../getting-started/protocol/" class="md-nav__link">
         
   
   
@@ -454,8 +325,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -466,13 +339,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -488,7 +359,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -522,6 +393,8 @@
                 
   
   
+    
+  
   
   
     
@@ -531,13 +404,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -553,7 +424,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ROUTINE
@@ -567,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -590,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/connection_test/" class="md-nav__link">
+      <a href="../connection_test/" class="md-nav__link">
         
   
   
@@ -613,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/jv/" class="md-nav__link">
+      <a href="../jv/" class="md-nav__link">
         
   
   
@@ -636,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/ipce/" class="md-nav__link">
+      <a href="../ipce/" class="md-nav__link">
         
   
   
@@ -659,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/resistivity/" class="md-nav__link">
+      <a href="../resistivity/" class="md-nav__link">
         
   
   
@@ -682,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/luminescence/" class="md-nav__link">
+      <a href="../luminescence/" class="md-nav__link">
         
   
   
@@ -705,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/tpr/" class="md-nav__link">
+      <a href="../tpr/" class="md-nav__link">
         
   
   
@@ -728,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/impedance/" class="md-nav__link">
+      <a href="../impedance/" class="md-nav__link">
         
   
   
@@ -748,10 +619,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../routine/tcspc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TCSPC Routine
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -762,6 +655,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Settings JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Data JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Index
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getrates" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetRates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlaser" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLaser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-command-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example command sequence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -930,64 +903,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-the-api-is-and-is-not" class="md-nav__link">
+  <a href="#settings-json" class="md-nav__link">
     <span class="md-ellipsis">
-      What the API is (and is not)
+      ⚙️ Settings JSON
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
+  <a href="#data-json" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture overview
+      🧾 Data JSON
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-api-concepts" class="md-nav__link">
+  <a href="#command-index" class="md-nav__link">
     <span class="md-ellipsis">
-      Core API concepts
+      Command Index
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core API concepts">
+    <nav class="md-nav" aria-label="Command Index">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
+  <a href="#getrates" class="md-nav__link">
     <span class="md-ellipsis">
-      Targets
+      GetRates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#setlaser" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requests-and-responses-conceptual" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requests and responses (conceptual)
+      SetLaser
     </span>
   </a>
   
@@ -999,18 +954,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#measurement-workflow-high-level" class="md-nav__link">
+  <a href="#example-command-sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      Measurement workflow (high level)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next steps
+      Example command sequence
     </span>
   </a>
   
@@ -1032,128 +978,85 @@
 
 
 
-<h1 id="api-overview">API Overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h1>
-<p>The <strong>Arkeo All-in-One API</strong> provides programmatic access to the ARKEO measurement
-application, enabling <strong>automation, remote control, and integration</strong> with
-external software such as LabVIEW, Python, MATLAB, or custom test frameworks.</p>
-<p>The API is designed for laboratory and research environments where measurements
-must be scripted, repeated, synchronized with external instruments, or
-integrated into larger experimental workflows.</p>
-<p>This page introduces the core concepts and architecture of the API before
-diving into command details.</p>
+<h1 id="transient-photo-response-routine-commands">Transient Photo Response Routine Commands<a class="headerlink" href="#transient-photo-response-routine-commands" title="Permanent link">&para;</a></h1>
+<p>This section lists the commands specific to the Time-Correlated Single Photon Counting (TCSPC) routine.  </p>
+<h2 id="settings-json">⚙️ Settings JSON<a class="headerlink" href="#settings-json" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span>
+</code></pre></div>
 <hr />
-<h2 id="what-the-api-is-and-is-not">What the API is (and is not)<a class="headerlink" href="#what-the-api-is-and-is-not" title="Permanent link">&para;</a></h2>
-<p>The API is a <strong>control and query interface</strong> to a running ARKEO application.</p>
-<p>It allows you to:</p>
-<ul>
-<li>Start, stop, and configure measurements</li>
-<li>Control measurement routines programmatically</li>
-<li>Read back state, status, and results</li>
-<li>Coordinate ARKEO with external hardware or software</li>
-</ul>
-<p>It does not</p>
-<ul>
-<li>Replace the ARKEO graphical user interface</li>
-<li>Add funtions that cannot be accessed by the user interface</li>
-<li>Perform measurements on its own</li>
-<li>Bypass ARKEO’s internal safety checks and limits</li>
-</ul>
-<p>The API always acts through the ARKEO application.</p>
+<h2 id="data-json">🧾 Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
+<p><strong>Note</strong> <code>Ofset</code> and <code>Resolution</code> are expressed in ns. Histogram is the counts per bin.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;Offset&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;Resolution&quot;</span><span class="p">:</span><span class="mf">0.025</span><span class="p">,</span><span class="nt">&quot;Histogram&quot;</span><span class="p">:[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">]}</span>
+</code></pre></div>
 <hr />
-<h2 id="architecture-overview">Architecture overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<p>At a high level, the system consists of two parts:</p>
-<p><strong>ARKEO application</strong></p>
-<ul>
-<li>Runs locally on the measurement PC</li>
-<li>Owns all hardware connections</li>
-<li>Executes measurements and routines</li>
-<li>Exposes a TCP server for API access</li>
-</ul>
-<p><strong>External clients</strong></p>
-<ul>
-<li>Connect over TCP</li>
-<li>Send JSON-encoded commands</li>
-<li>Receive structured JSON responses</li>
-</ul>
-<p>Multiple clients may connect, but <strong>measurement state is global</strong> and managed
-by ARKEO.</p>
+<h2 id="command-index">Command Index<a class="headerlink" href="#command-index" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#getrates">GetRates</a></td>
+<td>Get the actual sync and input rates.</td>
+</tr>
+<tr>
+<td><a href="#setlaser">SetLaser</a></td>
+<td>Enable or disable the excitation laser.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="core-api-concepts">Core API concepts<a class="headerlink" href="#core-api-concepts" title="Permanent link">&para;</a></h2>
-<h3 id="targets">Targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h3>
-<p>Every API command is addressed to a <strong>target</strong>.
-A target represents a logical subsystem inside ARKEO.</p>
-<p>Main targets include:</p>
-<ul>
-<li><a href="../../main/"><strong>MAIN</strong></a> - Application-level control and global state  </li>
-<li><a href="../../routine/"><strong>ROUTINE</strong></a> - Measurement routines (JV, tracking, impedance, etc.)  </li>
-<li><a href="../../tmpctl/"><strong>TMPCTL</strong></a> - Temperature controllers and thermal environments  </li>
-<li><a href="../../mux/"><strong>MUX</strong></a> - Multiplexer configuration and channel routing  </li>
-</ul>
-<p>Targets provide a clear separation between <strong>what</strong> you control and <strong>how</strong> it
-is controlled.</p>
+<h3 id="getrates">GetRates<a class="headerlink" href="#getrates" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong><br />
+Get the actual sync and input rates.</p>
+<p><strong>Example Request</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetRates&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Example Response</strong></p>
+<p>Rates are expressed in counts per second</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;sync_rate&quot;</span><span class="p">:</span><span class="mi">10000370</span><span class="p">,</span><span class="nt">&quot;input_rate&quot;</span><span class="p">:</span><span class="mi">193650</span><span class="p">,</span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="mf">0.0193642835215097</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">204</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h3>
-<p>Each target exposes a set of <strong>commands</strong>.</p>
-<p>A command:</p>
-<ul>
-<li>Performs an action (e.g. start a routine)</li>
-<li>Changes a configuration</li>
-<li>Queries the current state</li>
-</ul>
-<p>Commands are always explicit and deterministic: the same command with the same parameters produces the same effect, provided the system state allows it. Every command returns a response. New commands <strong>should not</strong> be send before a response is received.</p>
+<h3 id="setlaser">SetLaser<a class="headerlink" href="#setlaser" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Control the excitation laser</p>
+<p><strong>Example Request</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetLaser&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;laser&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">204</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example Response</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">204</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
-<p>Commands may accept <strong>parameters</strong> that define their behavior.</p>
-<p>Examples:</p>
-<ul>
-<li>Routine name</li>
-<li>Measurement settings</li>
-<li>Channel indices</li>
-<li>Setpoints or modes</li>
-</ul>
-<p>Parameters are always provided as structured JSON objects and are validated by ARKEO before execution. If an unknown or wrong parameter is send, the command is ignored and an error object is returned.</p>
-<hr />
-<h3 id="requests-and-responses-conceptual">Requests and responses (conceptual)<a class="headerlink" href="#requests-and-responses-conceptual" title="Permanent link">&para;</a></h3>
-<p>All communication follows a <strong>request → response</strong> pattern:</p>
-<ul>
-<li>The client sends a request</li>
-<li>ARKEO processes it</li>
-<li>ARKEO returns a response indicating success or failure</li>
-</ul>
-<p>Responses always include:</p>
-<ul>
-<li>Execution status</li>
-<li>Optional data payload</li>
-<li>Error information if something went wrong</li>
-</ul>
-<hr />
-<h2 id="measurement-workflow-high-level">Measurement workflow (high level)<a class="headerlink" href="#measurement-workflow-high-level" title="Permanent link">&para;</a></h2>
-<p>A typical automated measurement sequence looks like this:</p>
-<ol>
-<li>Connect to the ARKEO API server</li>
-<li>Send a StartRoutine command</li>
-<li>Wait until the routine finished initializing by polling the GetTestStatus command</li>
-<li>Apply the correct settings with the ApplySettings command</li>
-<li>(optional) use any custom commands if required by the routine</li>
-<li>Start the measurement with the StartMeasurement command</li>
-<li>Monitor status and progress with the GetTestStatus and GetTestData command</li>
-<li>Retrieve or post-process generated data</li>
-</ol>
-<p>The exact commands depend on the routine and target involved, but this logical
-flow remains consistent.</p>
-<hr />
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>If this is your first time using the API:</p>
-<ol>
-<li>Start with the <a href="../../main/"><strong>MAIN</strong></a> target to understand application-level control</li>
-<li>Explore <a href="../../routine/"><strong>ROUTINE</strong></a> to automate measurements</li>
-<li>Use <a href="../../tmpctl/"><strong>TMPCTL</strong></a> and <a href="../../mux/"><strong>MUX</strong></a> when integrating hardware and environments</li>
-</ol>
-<p>Each target section includes:
-- Available commands
-- Required and optional parameters
-- Expected responses
-- Notes on behavior and constraints</p>
+<h2 id="example-command-sequence">Example command sequence<a class="headerlink" href="#example-command-sequence" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAIN&quot;</span><span class="p">,</span><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartRoutine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;routine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TCSPC&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestStatus&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// repeat until state == &quot;Ready&quot;</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetLaser&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;laser&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">},}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetRates&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//Check that sync rate != 0 and Ratio is 1-5%</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartMeasurement&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestStatus&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// repeat until state == &quot;Ready&quot;</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestData&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CloseRoutine&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
 <hr />
 
 

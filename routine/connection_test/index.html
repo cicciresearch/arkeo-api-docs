@@ -544,30 +544,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SetOutput">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Request
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Response
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -707,6 +683,29 @@
   
   <span class="md-ellipsis">
     Impedance Routine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcspc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TCSPC Routine
     
   </span>
   
@@ -913,30 +912,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SetOutput">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Request
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Response
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -995,15 +970,15 @@
 <h2 id="setoutput">SetOutput<a class="headerlink" href="#setoutput" title="Permanent link">&para;</a></h2>
 <p><strong>Description</strong><br />
 Sets the voltage/current in their respective modes. This function only has an effect when the measurement is running</p>
-<h3 id="example-request">Example Request<a class="headerlink" href="#example-request" title="Permanent link">&para;</a></h3>
+<p><strong>Example Request</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetOutput&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.123</span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span>
 <span class="p">}</span>
-</code></pre></div>
-<h3 id="example-response">Example Response<a class="headerlink" href="#example-response" title="Permanent link">&para;</a></h3>
+</code></pre></div></p>
+<p><strong>Example Response</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="p">},</span>
