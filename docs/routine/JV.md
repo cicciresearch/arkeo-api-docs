@@ -144,3 +144,19 @@ This section lists the commands specific to the JV routine.
 
 ## Command Index
 No custom commands are available for the JV routine
+
+---
+
+## Example command sequence
+
+```json
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "JV"} }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "ApplySettings", "parameter": {... JSON Settings ... } }
+{ "target": "ROUTINE", "command": "StartMeasurement" }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "GetTestData" } 
+{ "target": "ROUTINE", "command": "CloseRoutine" }
+```
+
+---

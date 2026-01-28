@@ -65,12 +65,12 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## SetShutter
+### SetShutter
 
 **Description**  
 Open or close the shutter 
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -80,7 +80,7 @@ Open or close the shutter
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -92,12 +92,12 @@ Open or close the shutter
 
 ---
 
-## SetWavelength
+### SetWavelength
 
 **Description**  
 Move the monochromator to the specified wavelength in nm
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -107,7 +107,7 @@ Move the monochromator to the specified wavelength in nm
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -119,12 +119,12 @@ Move the monochromator to the specified wavelength in nm
 
 ---
 
-## StartCalibration
+### StartCalibration
 
 **Description**  
 Start the lamp calibration with a photodiode
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -134,7 +134,7 @@ Start the lamp calibration with a photodiode
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -146,12 +146,12 @@ Start the lamp calibration with a photodiode
 
 ---
 
-## GetChopperFrequency
+### GetChopperFrequency
 
 **Description**  
 Retreive the live chopper frequency in Hz.
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -160,7 +160,7 @@ Retreive the live chopper frequency in Hz.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -172,12 +172,12 @@ Retreive the live chopper frequency in Hz.
 
 ---
 
-## GetMonochromatorStatus
+### GetMonochromatorStatus
 
 **Description**  
 Returns the status and configuration of the monochromator.
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -187,7 +187,7 @@ Returns the status and configuration of the monochromator.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {

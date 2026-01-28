@@ -26,7 +26,7 @@ Each routine can be started from the MAIN target, after which the commands below
 **Description**  
 Starts a measurement. This command returns an error when the routine is not in the Ready state.
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -35,7 +35,7 @@ Starts a measurement. This command returns an error when the routine is not in t
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -54,7 +54,7 @@ Starts a measurement. This command returns an error when the routine is not in t
 **Description**
 Stops the measurements. This command returns an error when the routine is not in the Starting or Running state.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -64,7 +64,7 @@ Stops the measurements. This command returns an error when the routine is not in
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -83,7 +83,7 @@ Stops the measurements. This command returns an error when the routine is not in
 **Description**
 Stops any ongoing measurement, clears all errors and close the routine. 
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -93,7 +93,7 @@ Stops any ongoing measurement, clears all errors and close the routine.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -112,7 +112,7 @@ Stops any ongoing measurement, clears all errors and close the routine.
 **Description**
 Returns the routine configuration. The format depends on the active routine.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -129,7 +129,7 @@ Returns the routine configuration. The format depends on the active routine.
 **Description**
 Applies a configuration. The configuration JSON must match the active routine. It is recommended to use GetSettings to obtain the correct JSON.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -151,7 +151,7 @@ Applies a configuration. The configuration JSON must match the active routine. I
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -168,7 +168,7 @@ Applies a configuration. The configuration JSON must match the active routine. I
 **Description**
 Returns the current status of the routine.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -178,7 +178,7 @@ Returns the current status of the routine.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -205,7 +205,7 @@ Returns the current status of the routine.
 **Description**
 Retrieves the most recent test or measurement data from the active routine. The response depends on the active routine.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -222,7 +222,7 @@ Retrieves the most recent test or measurement data from the active routine. The 
 **Description**
 Set the user name, device name and device area. 
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -235,7 +235,7 @@ Set the user name, device name and device area.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -254,7 +254,7 @@ Set the user name, device name and device area.
 **Description**
 Clears any errors when the routine is in error. After this command, the routine returns to the Ready state.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -264,7 +264,7 @@ Clears any errors when the routine is in error. After this command, the routine 
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -283,7 +283,7 @@ Clears any errors when the routine is in error. After this command, the routine 
 **Description**
 Returns a list of custom commands available for the active routine.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -293,7 +293,7 @@ Returns a list of custom commands available for the active routine.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {

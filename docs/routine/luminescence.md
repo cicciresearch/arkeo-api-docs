@@ -27,14 +27,14 @@ These commands allow acquisition of luminescence spectra, automatic exposure adj
 
 ---
 
-## AcquireDark / AcquireReference
+### AcquireDark / AcquireReference
 
 **Description**  
 Captures a spectrum and stores it in memory either as Dark / Reference. The current spectrometer settings are used. Returns a 2D array with 2 rows: Wavelength in nm and raw spectrum
 
 **Note**: a new dark/reference must be acquired each time the integration time changes
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -43,7 +43,7 @@ Captures a spectrum and stores it in memory either as Dark / Reference. The curr
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -58,7 +58,7 @@ Captures a spectrum and stores it in memory either as Dark / Reference. The curr
 
 ---
 
-## AcquireSingle
+### AcquireSingle
 
 **Description**  
 Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spectrum, irradiance in µW/cm².
@@ -67,7 +67,7 @@ Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spect
 
 **Note** Irradiance is only valid when a dark spectrum is acquired before this function is called.
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -76,7 +76,7 @@ Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spect
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -92,13 +92,13 @@ Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spect
 
 ---
 
-## AutoExposure
+### AutoExposure
 
 **Description**
 Determines the optimal integration time for luminescence acquisition by iteratively measuring signal intensity.
 The result includes the selected exposure time in milliseconds.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -109,7 +109,7 @@ The result includes the selected exposure time in milliseconds.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -121,12 +121,12 @@ The result includes the selected exposure time in milliseconds.
 
 ---
 
-## SetLaser
+### SetLaser
 
 **Description**
 Controls the excitation laser used during luminescence measurements. Set the PWM frequency and duty cycle of the selected laser channel.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -137,7 +137,7 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -146,3 +146,53 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
   "request_id": 204
 }
 ```
+
+---
+
+## Example command sequence
+
+!!! note
+    For the following examples, it is assumed that a light source is attached to the spectrometer at channel 0.
+
+### PL measurement
+
+```json
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Luminescence"} }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":100 } }
+{ "target": "ROUTINE", "command": "AutoExposure" }
+{ "target": "ROUTINE", "command": "AcquireSingle" }
+{ "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":0 } }
+{ "target": "ROUTINE", "command": "AcquireDark" }
+{ "target": "ROUTINE", "command": "GetTestData" } 
+{ "target": "ROUTINE", "command": "CloseRoutine" }
+```
+
+### Transmittance/Absorbance measurement
+
+```json
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Luminescence"} }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+
+//Place Reference Device
+
+{ "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":100 } }
+{ "target": "ROUTINE", "command": "AutoExposure" }
+{ "target": "ROUTINE", "command": "AcquireReference" }
+{ "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":0 } }
+{ "target": "ROUTINE", "command": "AcquireDark" }
+
+// Place Device
+
+{ "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":100 } }
+{ "target": "ROUTINE", "command": "AcquireSingle" }
+{ "target": "ROUTINE", "command": "GetTestData" } 
+{ "target": "ROUTINE", "command": "CloseRoutine" }
+```
+??? info "Transmittance Calculation"
+    Transmittance = Spectrum / Reference
+
+    Absorbance = -log10(Transmittance)
+
+
+---

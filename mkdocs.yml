@@ -56,6 +56,7 @@ nav:
       - Luminescence Routine: routine/luminescence.md
       - Transient Photo Response Routine: routine/tpr.md
       - Impedance Routine: routine/impedance.md
+      - TCSPC Routine: routine/tcspc.md
     - TMPCTL: tmpctl/index.md
     - MUX: mux/index.md
   - Examples:

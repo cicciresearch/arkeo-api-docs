@@ -40,7 +40,7 @@ This section lists the commands specific to the Connection Test routine.
 **Description**  
 Sets the voltage/current in their respective modes. This function only has an effect when the measurement is running
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -50,7 +50,7 @@ Sets the voltage/current in their respective modes. This function only has an ef
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {

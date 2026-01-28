@@ -8,6 +8,7 @@ No settings are required for this routine
 ---
 
 ## 🧾 Data JSON
+
 Only the latest data point is returned
 ```json
 {
@@ -28,13 +29,14 @@ Only the latest data point is returned
 
 ---
 
-## ApplyCurrent
+### ApplyCurrent
 
 **Description**  
 Applies the specified current in A to the sample.
 
-**Note** You can use scientific notation when applying low current levels. For example ```{"current": 3.14E-9}``` will apply 3.14 nA.
-### Example Request
+**Note** You can use scientific notation when applying low current levels. For example `{"current": 3.14E-9}` will apply 3.14 nA.
+
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -44,7 +46,7 @@ Applies the specified current in A to the sample.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -56,19 +58,17 @@ Applies the specified current in A to the sample.
 
 ---
 
-## SetDeviceDimensions
+### SetDeviceDimensions
 
 **Description**  
 Set the device dimensions to calculate the resistance correction.
 Please refer to the Arkeo manual for full details on the resistance correction calculations
 
-`thickness` in µm
+- `thickness` in µm
+- `length` in mm
+- `width` in mm
 
-`length` in mm
-
-`width` in mm
-
-### Example Request
+**Example Request**
 ```json
 {
   "target": "ROUTINE",
@@ -78,7 +78,7 @@ Please refer to the Arkeo manual for full details on the resistance correction c
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -87,3 +87,19 @@ Please refer to the Arkeo manual for full details on the resistance correction c
   "request_id": 201
 }
 ```
+
+---
+
+## Example command sequence
+
+```json
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Resistivity"} }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "ApplyCurrent", "parameter": {"current": 0.001 } }
+{ "target": "ROUTINE", "command": "StartMeasurement" }
+{ "target": "ROUTINE", "command": "GetTestData" } // repeat until satisfied with result
+{ "target": "ROUTINE", "command": "StopMeasurement" } 
+{ "target": "ROUTINE", "command": "CloseRoutine" }
+```
+
+---
