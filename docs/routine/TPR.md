@@ -40,7 +40,59 @@ This section lists the commands specific to the Transient Photo Response routine
 
 ## 🧾 Data JSON
 ```json
-{"Voltage (V)":0,"Current (A)":0}
+{
+  "test":"TPV",
+  "scans":[
+    {
+    "name":"light:0",
+    "data_scheme":[
+      {"value":"Voltage","unit":"V"},
+      {"value":"Current","unit":"A"}
+    ],
+    "data":[[],[]],
+    "dt (s)":1,
+    "rise_time (s)":0,
+    "fall_time (s)":0
+    }
+  ],
+  "processed_scheme":[
+    {"value":"Voltage","unit":"V"},
+    {"value":"Recombination Time","unit":"s"}
+  ],
+  "processed_data":[[],[]]
+}
+
 ```
 
 ---
+
+## Command Index
+
+| Command | Description |
+|----------|-------------|
+| [SetMode](#setmode) | Set the mode to TPV or TPC. |
+
+---
+
+### SetMode
+
+**Description**  
+Set the mode to TPV or TPC.
+
+**Example Request**
+```json
+{
+  "target": "ROUTINE",
+  "command": "SetMode",
+  "data": {"test":"TPV"},
+}
+```
+
+**Example Response**
+
+```json
+{ "status": "OK" }
+```
+
+---
+

@@ -11,7 +11,7 @@ This section lists the commands specific to the Time-Correlated Single Photon Co
 
 ## 🧾 Data JSON
 
-**Note** `Ofset` and `Resolution` are expressed in ns. Histogram is the counts per bin.
+**Note** `Offset` and `Resolution` are expressed in ns. Histogram is the counts per bin.
 
 ```json
 {"Offset":0,"Resolution":0.025,"Histogram":[6,7,11,8,3,6,9, ... ]}
