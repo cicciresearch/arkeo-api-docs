@@ -13,12 +13,12 @@ They are responsible for selecting and managing routines.
 | [GetAvailableRoutines](#getavailableroutines) | Retrieve the list of available routine plugins. |
 
 ---
-## StartRoutine
+### StartRoutine
 
 **Description**  
 Starts a measurement routine by name. Only one routine can be active at a time.
 
-### Example Request
+**Example Request**
 ```json
 {
   "target": "MAIN",
@@ -28,7 +28,7 @@ Starts a measurement routine by name. Only one routine can be active at a time.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -41,12 +41,12 @@ Starts a measurement routine by name. Only one routine can be active at a time.
 ```
 
 ---
-## GetActiveRoutine
+### GetActiveRoutine
 
 **Description**  
 Returns the name of the currently active routine. If no routine is active, an empty string is returned.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -56,7 +56,7 @@ Returns the name of the currently active routine. If no routine is active, an em
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
@@ -67,12 +67,12 @@ Returns the name of the currently active routine. If no routine is active, an em
 ```
 
 ---
-## GetAvailableRoutines
+### GetAvailableRoutines
 
 **Description**  
 Returns a list of all available routine plugins that can be loaded.
 
-### Example Request
+**Example Request**
 
 ```json
 {
@@ -82,7 +82,7 @@ Returns a list of all available routine plugins that can be loaded.
 }
 ```
 
-### Example Response
+**Example Response**
 
 ```json
 {
