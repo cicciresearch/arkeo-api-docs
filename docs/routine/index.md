@@ -21,9 +21,9 @@ Each routine can be started from the MAIN target, after which the commands below
 
 ---
 
-## StartMeasurement
+### StartMeasurement
 
-**Description**  
+**Description**    
 Starts a measurement. This command returns an error when the routine is not in the Ready state.
 
 **Example Request**
@@ -49,9 +49,9 @@ Starts a measurement. This command returns an error when the routine is not in t
 
 ---
 
-## StopMeasurement
+### StopMeasurement
 
-**Description**
+**Description**  
 Stops the measurements. This command returns an error when the routine is not in the Starting or Running state.
 
 **Example Request**
@@ -78,9 +78,9 @@ Stops the measurements. This command returns an error when the routine is not in
 
 ---
 
-## CloseRoutine
+### CloseRoutine
 
-**Description**
+**Description**  
 Stops any ongoing measurement, clears all errors and close the routine. 
 
 **Example Request**
@@ -107,9 +107,9 @@ Stops any ongoing measurement, clears all errors and close the routine.
 
 ---
 
-## GetSettings
+### GetSettings
 
-**Description**
+**Description**  
 Returns the routine configuration. The format depends on the active routine.
 
 **Example Request**
@@ -124,9 +124,9 @@ Returns the routine configuration. The format depends on the active routine.
 
 ---
 
-## ApplySettings
+### ApplySettings
 
-**Description**
+**Description**  
 Applies a configuration. The configuration JSON must match the active routine. It is recommended to use GetSettings to obtain the correct JSON.
 
 **Example Request**
@@ -163,10 +163,10 @@ Applies a configuration. The configuration JSON must match the active routine. I
 
 ---
 
-## GetTestStatus
+### GetTestStatus
 
-**Description**
-Returns the current status of the routine.
+**Description**  
+Returns the current status of the routine. Each routine returns a different `"progress"` object. Refer to the specific routine page for more details. 
 
 **Example Request**
 
@@ -183,26 +183,37 @@ Returns the current status of the routine.
 ```json
 {
   "status": "OK",
-  "data": { "routine_status":"Running" },
+  "data": { 
+    "routine_status":"Ready",
+    "routine_name":"JV",
+    "progress":null,
+    "error":null,
+  },
   "request_id": 24
 }
 ```
 
-### Routine Status Values
+!!! warning "note on `"progress"`"
+    `"progress"` is always included but returns `#!json null` unless  `"routine_status"` ==  `"Running"`
+
+!!! warning "note on `"error"`"
+    `"error"` is always included but returns `#!json null` unless  `"routine_status"` ==  `"Error"`
+
+**Routine Status Values**
 
 | Value          | Description                                                        |
 | -------------- | ------------------------------------------------------------------ |
 | `Initializing` | Routine is loading or configuring resources.                       |
 | `Ready`        | Routine is idle and ready to start.                                |
-| `Starting`     | Routine has received a start command and is preparing measurement. |
+| `Starting`     | Routine has received a start command and is preparing the measurement. |
 | `Running`      | Measurement is in progress.                                        |
 | `Error`        | Routine encountered an error.                                      |
 
 ---
 
-## GetTestData
+### GetTestData
 
-**Description**
+**Description**  
 Retrieves the most recent test or measurement data from the active routine. The response depends on the active routine.
 
 **Example Request**
@@ -217,10 +228,10 @@ Retrieves the most recent test or measurement data from the active routine. The 
 
 ---
 
-## SetInfo
+### SetInfo
 
-**Description**
-Set the user name, device name and device area. 
+**Description**  
+Set the user name, device name and/or device area. 
 
 **Example Request**
 
@@ -228,9 +239,11 @@ Set the user name, device name and device area.
 {
   "target": "ROUTINE",
   "command": "SetInfo",
-  "parameter": {"user_name": "User",
-                "device_name": "Sample",
-                "device_area": 1.23 },
+  "parameter": {
+    "user_name": "User",
+    "device_name": "Sample",
+    "device_area": 1.23 
+    },
   "request_id": 26
 }
 ```
@@ -249,9 +262,9 @@ Set the user name, device name and device area.
 
 ---
 
-## ClearErrors
+### ClearErrors
 
-**Description**
+**Description**  
 Clears any errors when the routine is in error. After this command, the routine returns to the Ready state.
 
 **Example Request**
@@ -278,9 +291,9 @@ Clears any errors when the routine is in error. After this command, the routine 
 
 ---
 
-## GetCustomCommands
+### GetCustomCommands
 
-**Description**
+**Description**  
 Returns a list of custom commands available for the active routine.
 
 **Example Request**

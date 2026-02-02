@@ -2,14 +2,14 @@
 
 This section lists the commands specific to the Time-Correlated Single Photon Counting (TCSPC) routine.  
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 ```json
 {}
 ```
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 
 **Note** `Offset` and `Resolution` are expressed in ns. Histogram is the counts per bin.
 
@@ -19,7 +19,7 @@ This section lists the commands specific to the Time-Correlated Single Photon Co
 
 ---
 
-## Command Index
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|

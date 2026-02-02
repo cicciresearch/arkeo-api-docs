@@ -2,14 +2,13 @@
 
 This section lists the commands specific to the Resistivity routine.  
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 No settings are required for this routine
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 
-Only the latest data point is returned
 ```json
 {
   "Voltage (V)":1.0234583,
@@ -18,9 +17,13 @@ Only the latest data point is returned
   "Corrected 2D Sheet Resistance (Ohm/Sq)":139.3518173728
 }
 ```
+
+!!! info
+    Only the latest data point is returned.
+
 ---
 
-## Command Index
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|

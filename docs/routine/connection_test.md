@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the Connection Test routine.  
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 ```json
 {
   "Device Name":"SMU",
@@ -20,14 +20,14 @@ This section lists the commands specific to the Connection Test routine.
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 ```json
 {"Voltage (V)":0,"Current (A)":0}
 ```
 
 ---
 
-## Command Index
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|
@@ -35,7 +35,7 @@ This section lists the commands specific to the Connection Test routine.
 
 ---
 
-## SetOutput
+### SetOutput
 
 **Description**  
 Sets the voltage/current in their respective modes. This function only has an effect when the measurement is running

@@ -3,24 +3,24 @@
 This section lists the commands specific to the Luminescence routine.  
 These commands allow acquisition of luminescence spectra, automatic exposure adjustment, and control of laser excitation.
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 ```json
 {"integration_time":100,"averages":1,"pixel_smoothing":1}
 ```
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 ```json
 
 ```
 ---
 
-## Command Index
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|
-| [AcquireDark / AcquireReference / ](#acquire) | Capture a reference spectrum. |
+| AcquireDark / AcquireReference | Capture a reference spectrum. |
 | [AcquireSingle](#acquiresingle) | Capture a spectrum. |
 | [AutoExposure](#autoexposure) | Automatically determine optimal integration time. |
 | [SetLaser](#setlaser) | Enable or disable the excitation laser. |
@@ -158,7 +158,7 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 
 ```json
 { "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Luminescence"} }
-{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until routine_status == "Ready"
 { "target": "ROUTINE", "command": "SetLaser", "parameter": { "channel":0, "duty_cycle":100 } }
 { "target": "ROUTINE", "command": "AutoExposure" }
 { "target": "ROUTINE", "command": "AcquireSingle" }
@@ -172,7 +172,7 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 
 ```json
 { "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Luminescence"} }
-{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until state == "Ready"
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until routine_status == "Ready"
 
 //Place Reference Device
 

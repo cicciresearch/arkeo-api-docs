@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the Transient Photo Response routine.  
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 ```json
 {
   "test":"TPC",
@@ -38,7 +38,7 @@ This section lists the commands specific to the Transient Photo Response routine
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 ```json
 {
   "test":"TPV",
@@ -49,7 +49,14 @@ This section lists the commands specific to the Transient Photo Response routine
       {"value":"Voltage","unit":"V"},
       {"value":"Current","unit":"A"}
     ],
-    "data":[[],[]],
+    "data":[
+      [2.98263548080926,-5.22751659154892E-5],
+      [2.98140850876458,-5.94769650138915E-5],
+      [2.98276884749415,-4.90743663161993E-5],
+      [2.98240875851712,-4.13391006179154E-5],
+      [2.98164856814081,-6.37446978129446E-5],
+      ...
+    ]
     "dt (s)":1,
     "rise_time (s)":0,
     "fall_time (s)":0
@@ -59,14 +66,21 @@ This section lists the commands specific to the Transient Photo Response routine
     {"value":"Voltage","unit":"V"},
     {"value":"Recombination Time","unit":"s"}
   ],
-  "processed_data":[[],[]]
+  "processed_data":[
+    [5.98278102733661,0.001],
+    [6.87851028592209,0.001],
+    [7.77527980193263,0.001],
+    [8.67275616167695,0.001],
+    [9.56888551881537,0.001],
+    ...
+  ]
 }
 
 ```
 
 ---
 
-## Command Index
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|

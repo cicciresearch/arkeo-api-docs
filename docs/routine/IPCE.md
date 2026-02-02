@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the IPCE routine.  
 
-## ⚙️ Settings JSON
+## {{ icons.settings }} Settings JSON
 ```json
 {
   "wavelength":{"Start":300,"Step":10,"End":900},
@@ -23,7 +23,7 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## 🧾 Data JSON
+## {{ icons.data }} Data JSON
 ```json
 {
   "user":"Bas de Jong",
@@ -53,14 +53,32 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## Command Index
+## {{ icons.progress }} Progress JSON
+
+```json
+{
+  "routine_status":"Running",
+  "routine_name":"IPCE",
+  "progress":{
+    "wavelength":550,
+    "points done":25,
+    "total points":61,
+    "progres_pct":40.98
+  },
+  "error":null
+}
+```
+
+---
+
+## {{ icons.commands }} Custom Commands
 
 | Command | Description |
 |----------|-------------|
 | [SetShutter](#setshutter) | Opens or closes the shutter. |
 | [SetWavelength](#setwavelength) | Move the monochromator to the specified wavelength. |
 | [StartCalibration](#startcalibration) | Start the lamp calibration with a photodiode. |
-| [GetChopperFrequency](#getchopperfrequency) | Retreive the live chopper frequency. |
+| [GetChopperFrequency](#getchopperfrequency) | Retrieve the live chopper frequency. |
 | [GetMonochromatorStatus](#getmonochromatorstatus) | Get the monochromator status. |
 
 ---
@@ -69,6 +87,10 @@ This section lists the commands specific to the IPCE routine.
 
 **Description**  
 Open or close the shutter 
+
+!!! warning
+    Do not call this command during a measurement to avoid interrupting it
+
 
 **Example Request**
 ```json
@@ -97,6 +119,9 @@ Open or close the shutter
 **Description**  
 Move the monochromator to the specified wavelength in nm
 
+!!! warning
+    Do not call this command during a measurement to avoid interrupting it
+
 **Example Request**
 ```json
 {
@@ -121,8 +146,11 @@ Move the monochromator to the specified wavelength in nm
 
 ### StartCalibration
 
+!!! warning
+    Do not call this command during a measurement to avoid interrupting it
+
 **Description**  
-Start the lamp calibration with a photodiode
+Start the lamp calibration with a photodiode. Optionally provide a path to a responsivity file of the photodiode.
 
 **Example Request**
 ```json
@@ -149,7 +177,7 @@ Start the lamp calibration with a photodiode
 ### GetChopperFrequency
 
 **Description**  
-Retreive the live chopper frequency in Hz.
+Retrieve the live chopper frequency in Hz. Can be called at any time
 
 **Example Request**
 ```json
@@ -175,14 +203,13 @@ Retreive the live chopper frequency in Hz.
 ### GetMonochromatorStatus
 
 **Description**  
-Returns the status and configuration of the monochromator.
+Returns the status and configuration of the monochromator. Can be called at any time
 
 **Example Request**
 ```json
 {
   "target": "ROUTINE",
   "command": "SetShutter",
-  "parameter": { "shutter_status": true},
   "request_id": 201
 }
 ```
@@ -210,6 +237,20 @@ Returns the status and configuration of the monochromator.
   },
   "request_id": 201
 }
+```
+
+---
+
+## {{ icons.example }} Example command sequence
+
+```json
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "JV"} }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until routine_status == "Ready"
+{ "target": "ROUTINE", "command": "ApplySettings", "parameter": { ... Settings JSON ... } }
+{ "target": "ROUTINE", "command": "StartMeasurement" }
+{ "target": "ROUTINE", "command": "GetTestStatus" } // repeat until routine_status != "Running"
+{ "target": "ROUTINE", "command": "GetTestData" } 
+{ "target": "ROUTINE", "command": "CloseRoutine" }
 ```
 
 ---
