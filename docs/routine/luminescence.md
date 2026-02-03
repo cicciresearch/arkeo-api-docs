@@ -1,7 +1,6 @@
 # Luminescence Routine Commands
 
 This section lists the commands specific to the Luminescence routine.  
-These commands allow acquisition of luminescence spectra, automatic exposure adjustment, and control of laser excitation.
 
 ## {{ icons.settings }} Settings JSON
 ```json
@@ -32,7 +31,8 @@ These commands allow acquisition of luminescence spectra, automatic exposure adj
 **Description**  
 Captures a spectrum and stores it in memory either as Dark / Reference. The current spectrometer settings are used. Returns a 2D array with 2 rows: Wavelength in nm and raw spectrum
 
-**Note**: a new dark/reference must be acquired each time the integration time changes
+!!! warning
+    A new dark/reference must be acquired each time the integration time changes
 
 **Example Request**
 ```json
@@ -63,9 +63,11 @@ Captures a spectrum and stores it in memory either as Dark / Reference. The curr
 **Description**  
 Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spectrum, irradiance in µW/cm².
 
-**Note** The 2nd row is the raw spectrum of the spectrometer and does not include the dark subtraction.
+!!! info
+    The 2nd row is the raw spectrum of the spectrometer and does not include the dark subtraction.
 
-**Note** Irradiance is only valid when a dark spectrum is acquired before this function is called.
+!!! info
+    Irradiance is only valid when a dark spectrum is acquired before this function is called.
 
 **Example Request**
 ```json
@@ -94,7 +96,7 @@ Captures a spectrum. Returns a 2D array with 3 rows: Wavelength in nm, raw spect
 
 ### AutoExposure
 
-**Description**
+**Description**  
 Determines the optimal integration time for luminescence acquisition by iteratively measuring signal intensity.
 The result includes the selected exposure time in milliseconds.
 
@@ -123,7 +125,7 @@ The result includes the selected exposure time in milliseconds.
 
 ### SetLaser
 
-**Description**
+**Description**  
 Controls the excitation laser used during luminescence measurements. Set the PWM frequency and duty cycle of the selected laser channel.
 
 **Example Request**
@@ -149,7 +151,7 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 
 ---
 
-## Example command sequence
+## {{ icons.example }} Example command sequence
 
 !!! note
     For the following examples, it is assumed that a light source is attached to the spectrometer at channel 0.

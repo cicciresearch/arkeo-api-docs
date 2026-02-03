@@ -74,14 +74,17 @@ nav:
     - MAIN: main/index.md
     - ROUTINE: 
       - Overview: routine/index.md
-      - Connection Test: routine/connection_test.md
-      - JV Routine: routine/jv.md
-      - IPCE Routine: routine/ipce.md
-      - Resistivity Routine: routine/resistivity.md
-      - Luminescence Routine: routine/luminescence.md
-      - Transient Photo Response Routine: routine/tpr.md
-      - Impedance Routine: routine/impedance.md
-      - TCSPC Routine: routine/tcspc.md
+      - Steady-State:
+        - Connection Test: routine/connection_test.md
+        - JV Routine: routine/jv.md
+        - IPCE Routine: routine/ipce.md
+        - Resistivity Routine: routine/resistivity.md
+        - Luminescence Routine: routine/luminescence.md
+      - Transient:
+        - Impedance Routine: routine/impedance.md
+        - Transient Photo Response Routine: routine/tpr.md
+        - Photo-CELIV: routine/celiv.md
+        - TCSPC Routine: routine/tcspc.md
     - TMPCTL: tmpctl/index.md
     - MUX: mux/index.md
   - Examples:

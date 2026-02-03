@@ -42,8 +42,7 @@ Get the actual sync and input rates.
 }
 ```
 
-**Example Response**
-
+**Example Response**  
 Rates are expressed in counts per second
 
 ```json
@@ -58,7 +57,7 @@ Rates are expressed in counts per second
 
 ### SetLaser
 
-**Description**
+**Description**  
 Control the excitation laser
 
 **Example Request**

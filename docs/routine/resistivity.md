@@ -18,7 +18,7 @@ No settings are required for this routine
 }
 ```
 
-!!! info
+!!! info "Note"
     Only the latest data point is returned.
 
 ---
