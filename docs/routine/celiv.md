@@ -77,7 +77,7 @@ This section lists the commands specific to the CELIV routine.
 
 ## {{ icons.commands }} Custom Commands
 
-No custom commands are available for the JV routine
+No custom commands are available for the Photo-CELIV routine
 
 ---
 
