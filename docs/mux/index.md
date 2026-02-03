@@ -16,40 +16,38 @@ Each channel can be individually connected or disconnected, or all channels can 
 
 ---
 
-## Connect
+### Connect
 
 **Description**  
 Connect to the multiplexer
 
-### Example Request
+**Example Request**  
 ```json
 {
   "target": "MUX",
   "command": "Connect",
   "request_id": 401
 }
-````
+```
 
-### Example Response
+**Example Response**  
 
 ```json
 {
   "status": "OK",
-  "data": {
-    "state": "OK"
-  },
+  "data": { "state":"OK" },
   "request_id": 401
 }
 ```
 
 ---
 
-## Disconnect
+### Disconnect
 
-**Description**
+**Description**  
 Disconnect from the multiplexer
 
-### Example Request
+**Example Request**  
 
 ```json
 {
@@ -59,37 +57,35 @@ Disconnect from the multiplexer
 }
 ```
 
-### Example Response
+**Example Response**  
 
 ```json
 {
   "status": "OK",
-  "data": {
-    "state": "OK"
-  },
+  "data": { "state":"OK" },
   "request_id": 402
 }
 ```
 
 ---
 
-## GetStatus
+### GetStatus
 
-**Description**
+**Description**  
 Returns the connection status of all multiplexer channels as a Boolean array.
 Each element represents one channel, where `true` means connected and `false` means disconnected.
 
-### Example Request
+**Example Request**  
 
 ```json
 {
   "target": "MUX",
   "command": "GetStatus",
-  "request_id": 403
+  "request_id": 401
 }
 ```
 
-### Example Response
+**Example Response**  
 
 ```json
 {
@@ -106,13 +102,13 @@ Each element represents one channel, where `true` means connected and `false` me
 
 ---
 
-## SetStatus
+### SetStatus
 
-**Description**
+**Description**  
 Sets the connection status for all channels simultaneously.
 Each Boolean value in the `channels` array represents one channel’s desired state.
 
-### Example Request
+**Example Request**  
 
 ```json
 {
@@ -125,14 +121,12 @@ Each Boolean value in the `channels` array represents one channel’s desired st
 }
 ```
 
-### Example Response
+**Example Response**  
 
 ```json
 {
   "status": "OK",
-  "data": {
-    "state": "OK"
-  },
+  "data": { "state":"OK" },
   "request_id": 404
 }
 ```
