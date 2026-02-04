@@ -17,7 +17,9 @@ The temperature controller (TMPCTL) target provides commands to control the temp
 ### SetController
 
 **Description**  
-Select the specified controller.
+Select the specified controller. The following commands then refer to this controller:  
+[SetTemperature](#settemperature)  
+[SetEnable](#setenable)  
 
 **Example Request**  
 
