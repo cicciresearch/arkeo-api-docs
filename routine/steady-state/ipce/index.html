@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../jv/">
+        <link rel="prev" href="../dark-jv/">
       
       
         <link rel="next" href="../resistivity/">
@@ -665,6 +665,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../dark-jv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dark JV Routine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -836,7 +864,7 @@
   <a href="#example-command-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example command sequence
+        Example Command Sequence
       
     </span>
   </a>
@@ -1382,7 +1410,7 @@
   <a href="#example-command-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example command sequence
+        Example Command Sequence
       
     </span>
   </a>
@@ -1619,8 +1647,8 @@ Returns the status and configuration of the monochromator. Can be called at any 
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="example-command-sequence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> Example command sequence<a class="headerlink" href="#example-command-sequence" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAIN&quot;</span><span class="p">,</span><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartRoutine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;routine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JV&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<h2 id="example-command-sequence"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 13v-2h14v2zm0 6v-2h14v2zM7 7V5h14v2zM3 8V5H2V4h2v4zm-1 9v-1h3v4H2v-1h2v-.5H3v-1h1V17zm2.25-7a.75.75 0 0 1 .75.75c0 .2-.08.39-.21.52L3.12 13H5v1H2v-.92L4 11H2v-1z"/></svg></span> Example Command Sequence<a class="headerlink" href="#example-command-sequence" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAIN&quot;</span><span class="p">,</span><span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartRoutine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;routine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IPCE&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetTestStatus&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// repeat until routine_status == &quot;Ready&quot;</span>
 <span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ApplySettings&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">Se</span><span class="kc">tt</span><span class="err">i</span><span class="kc">n</span><span class="err">gs</span><span class="w"> </span><span class="err">JSON</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 <span class="p">{</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ROUTINE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StartMeasurement&quot;</span><span class="w"> </span><span class="p">}</span>
