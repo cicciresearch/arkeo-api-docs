@@ -33,7 +33,7 @@ This section lists the commands specific to the Time-Correlated Single Photon Co
 **Description**  
 Get the actual sync and input rates.
 
-**Example Request**
+**Example Request**  
 ```json
 {
   "target": "ROUTINE",
@@ -60,7 +60,7 @@ Rates are expressed in counts per second
 **Description**  
 Control the excitation laser
 
-**Example Request**
+**Example Request**  
 
 ```json
 {
@@ -71,7 +71,7 @@ Control the excitation laser
 }
 ```
 
-**Example Response**
+**Example Response**  
 
 ```json
 {

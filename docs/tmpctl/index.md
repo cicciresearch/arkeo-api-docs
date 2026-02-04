@@ -8,7 +8,8 @@ The temperature controller (TMPCTL) target provides commands to control the temp
 
 | Command | Description |
 |----------|-------------|
-| [GetStatus](#getstatus) | Gets the status of the controller. |
+| [SetController](#setcontroller) | Select the specified controller. |
+| [GetStatus](#getstatus) | Gets the status all controllers. |
 | [SetTemperature](#settemperature) | Set the target temperature. |
 | [SetEnable](#setenable) | Enable the temperature controller. |
 

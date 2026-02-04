@@ -45,7 +45,7 @@ This section lists the commands specific to the Transient Photo Response routine
   "scans":[
     {
     "name":"light:0",
-    "data_scheme":[
+    "data_schema":[
       {"value":"Voltage","unit":"V"},
       {"value":"Current","unit":"A"}
     ],
@@ -56,13 +56,13 @@ This section lists the commands specific to the Transient Photo Response routine
       [2.98240875851712,-4.13391006179154E-5],
       [2.98164856814081,-6.37446978129446E-5],
       ...
-    ]
+    ],
     "dt (s)":1,
     "rise_time (s)":0,
     "fall_time (s)":0
     }
   ],
-  "processed_scheme":[
+  "processed_schema":[
     {"value":"Voltage","unit":"V"},
     {"value":"Recombination Time","unit":"s"}
   ],
@@ -75,7 +75,29 @@ This section lists the commands specific to the Transient Photo Response routine
     ...
   ]
 }
+```
 
+### `processed_schema`
+
+The `#!json "processed_schema"` object changes based on the selected test.  
+**TPV**  
+```json
+{
+  "processed_schema":[
+    {"value":"Voltage","unit":"V"},
+    {"value":"Recombination Time","unit":"s"}
+  ]
+}
+```
+
+**TPC**  
+```json
+{
+  "processed_schema":[
+    {"value":"Current Density","unit":"A/cm^2"},
+    {"value":"Charge","unit":"C"}
+  ]
+}
 ```
 
 ---
@@ -93,7 +115,7 @@ This section lists the commands specific to the Transient Photo Response routine
 **Description**  
 Set the mode to TPV or TPC.
 
-**Example Request**
+**Example Request**  
 ```json
 {
   "target": "ROUTINE",
@@ -102,7 +124,7 @@ Set the mode to TPV or TPC.
 }
 ```
 
-**Example Response**
+**Example Response**  
 
 ```json
 { "status": "OK" }
