@@ -2,20 +2,21 @@
 
 This section lists the commands specific to the Luminescence routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {"integration_time":100,"averages":1,"pixel_smoothing":1}
 ```
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 
 ```
+
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands }}
 
 | Command | Description |
 |----------|-------------|
@@ -151,7 +152,7 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 
 ---
 
-## {{ icons.example }} Example command sequence
+## {{ headers.example }}
 
 !!! note
     For the following examples, it is assumed that a light source is attached to the spectrometer at channel 0.

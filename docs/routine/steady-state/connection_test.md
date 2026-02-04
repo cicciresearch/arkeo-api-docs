@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the Connection Test routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "Device Name":"SMU",
@@ -20,14 +20,14 @@ This section lists the commands specific to the Connection Test routine.
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data}}
 ```json
 {"Voltage (V)":0,"Current (A)":0}
 ```
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands}}
 
 | Command | Description |
 |----------|-------------|

@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the CELIV routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "output":{
@@ -30,7 +30,7 @@ This section lists the commands specific to the CELIV routine.
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 {
   "delay":{"value":1E-4,"unit":"s"},
@@ -58,7 +58,7 @@ This section lists the commands specific to the CELIV routine.
 
 ---
 
-## {{ icons.progress }} Progress JSON
+## {{ headers.progress }}
 
 ```json
 {
@@ -75,13 +75,13 @@ This section lists the commands specific to the CELIV routine.
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands }}
 
 No custom commands are available for the Photo-CELIV routine
 
 ---
 
-## {{ icons.example }} Example command sequence
+## {{ headers.example }}
 
 ```json
 { "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Photo-CELIV"} }

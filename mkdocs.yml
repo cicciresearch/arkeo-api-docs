@@ -77,6 +77,7 @@ nav:
       - Steady-State:
         - Connection Test: routine/steady-state/connection_test.md
         - JV Routine: routine/steady-state/jv.md
+        - Dark JV Routine: routine/steady-state/dark-jv.md
         - IPCE Routine: routine/steady-state/ipce.md
         - Resistivity Routine: routine/steady-state/resistivity.md
         - Luminescence Routine: routine/steady-state/luminescence.md
@@ -101,6 +102,12 @@ extra:
     progress: ":material-progress-clock:"
     commands: ":material-puzzle-outline:"
     example: ":material-format-list-numbered:"
+  headers:
+    settings: ":material-cog-outline: Settings JSON"
+    data: ":material-database: Data JSON"
+    progress: ":material-progress-clock: Progress JSON"
+    commands: ":material-puzzle-outline: Custom Commands"
+    example: ":material-format-list-numbered: Example Command Sequence"
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js

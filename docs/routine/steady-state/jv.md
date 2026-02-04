@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the JV routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "device_type":"NI-SMU",
@@ -38,7 +38,7 @@ This section lists the commands specific to the JV routine.
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 {
   "user":"Cicci Research",
@@ -105,7 +105,7 @@ This section lists the commands specific to the JV routine.
 
 ---
 
-## {{ icons.progress }} Progress JSON
+## {{ headers.progress}}
 
 ```json
 {
@@ -127,13 +127,13 @@ This section lists the commands specific to the JV routine.
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands}}
 
 No custom commands are available for the JV routine
 
 ---
 
-## {{ icons.example }} Example command sequence
+## {{ headers.example }}
 
 ```json
 { "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "JV"} }

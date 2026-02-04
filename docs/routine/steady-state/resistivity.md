@@ -2,12 +2,12 @@
 
 This section lists the commands specific to the Resistivity routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 No settings are required for this routine
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 
 ```json
 {
@@ -23,7 +23,7 @@ No settings are required for this routine
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands }}
 
 | Command | Description |
 |----------|-------------|
@@ -93,7 +93,7 @@ Please refer to the Arkeo manual for full details on the resistance correction c
 
 ---
 
-## Example command sequence
+## {{ headers.example }}
 
 ```json
 { "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "Resistivity"} }

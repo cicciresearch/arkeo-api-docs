@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the Transient Photo Response routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "test":"TPC",
@@ -38,7 +38,7 @@ This section lists the commands specific to the Transient Photo Response routine
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 {
   "test":"TPV",
@@ -80,7 +80,7 @@ This section lists the commands specific to the Transient Photo Response routine
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands }}
 
 | Command | Description |
 |----------|-------------|

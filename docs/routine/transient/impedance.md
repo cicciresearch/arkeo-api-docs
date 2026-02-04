@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the Impedance routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "Freq":{
@@ -35,7 +35,7 @@ This section lists the commands specific to the Impedance routine.
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 {
   "user":"Cicci Research",
@@ -98,5 +98,5 @@ This section lists the commands specific to the Impedance routine.
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands }}
 No custom commands are available for the JV routine

@@ -2,7 +2,7 @@
 
 This section lists the commands specific to the IPCE routine.  
 
-## {{ icons.settings }} Settings JSON
+## {{ headers.settings }}
 ```json
 {
   "wavelength":{"Start":300,"Step":10,"End":900},
@@ -23,7 +23,7 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## {{ icons.data }} Data JSON
+## {{ headers.data }}
 ```json
 {
   "user":"Bas de Jong",
@@ -53,7 +53,7 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## {{ icons.progress }} Progress JSON
+## {{ headers.progress }}
 
 ```json
 {
@@ -71,7 +71,7 @@ This section lists the commands specific to the IPCE routine.
 
 ---
 
-## {{ icons.commands }} Custom Commands
+## {{ headers.commands}}
 
 | Command | Description |
 |----------|-------------|
@@ -241,10 +241,10 @@ Returns the status and configuration of the monochromator. Can be called at any 
 
 ---
 
-## {{ icons.example }} Example command sequence
+## {{ headers.example }}
 
 ```json
-{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "JV"} }
+{ "target": "MAIN",    "command": "StartRoutine", "parameter": { "routine": "IPCE"} }
 { "target": "ROUTINE", "command": "GetTestStatus" } // repeat until routine_status == "Ready"
 { "target": "ROUTINE", "command": "ApplySettings", "parameter": { ... Settings JSON ... } }
 { "target": "ROUTINE", "command": "StartMeasurement" }
