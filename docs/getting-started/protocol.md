@@ -33,8 +33,7 @@ The 4-byte length prefix is:
 - Specifies the number of bytes of the JSON payload only  
 - Does **not** include the 4 bytes of the length field itself
 
-After reading the length prefix, the receiver reads exactly that number
-of bytes and interprets them as a UTF-8 encoded JSON object.
+After reading the length prefix, the receiver reads exactly that number of bytes and interprets them as a UTF-8 encoded JSON object.
 
 ---
 
@@ -54,7 +53,7 @@ Each request consists of a single JSON object with the following structure:
 ### Request fields
 
 | Field        | Required | Description |
-|-------------|----------|-------------|
+|--------------|----------|-------------|
 | `target`     | Yes      | Logical subsystem that handles the command |
 | `command`    | Yes      | Command name for the selected target |
 | `parameter`  | Yes      | Command parameters (may be an empty object) |
@@ -74,7 +73,7 @@ A successful response has the form:
 
 ```json
 {
-  "status": "OK",
+  "status": "ok",
   "data": { ... },
   "request_id": 42
 }
@@ -84,7 +83,7 @@ An unsuccessful response has the form:
 
 ```json
 {
-  "status": "ERROR",
+  "status": "error",
   "error": {
     "code": 101,
     "message": "Invalid parameters"
@@ -96,8 +95,8 @@ An unsuccessful response has the form:
 ### Response fields
 
 | Field        | Description |
-|-------------|-------------|
-| `status`     | `"OK"` or `"ERROR"` |
+|--------------|-------------|
+| `status`     | `"ok"` or `"error"` |
 | `data`       | Command-specific response data (only if status = OK) |
 | `error`      | Error information (only if status = ERROR) |
 | `request_id` | Echoes the request ID, if provided |
@@ -106,10 +105,9 @@ An unsuccessful response has the form:
 
 ## Error semantics
 
-The API distinguishes between **protocol-level errors** and
-**command-level errors**.
+The API distinguishes between **protocol-level errors** and **command-level errors**.
 
-- A response with `"status": "ERROR"` indicates that the main JSON request structure is invalid and could not be processed correctly.
+- A response with `"status": "error"` indicates that the main JSON request structure is invalid and could not be processed correctly.
 - A response containing an `"error"` object indicates that the request was syntactically valid, but the target rejected it, most commonly due to invalid or missing command parameters.
 
 In both cases, the response is well-formed JSON and follows the standard framing rules.
