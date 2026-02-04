@@ -1404,8 +1404,7 @@
 <li>Specifies the number of bytes of the JSON payload only  </li>
 <li>Does <strong>not</strong> include the 4 bytes of the length field itself</li>
 </ul>
-<p>After reading the length prefix, the receiver reads exactly that number
-of bytes and interprets them as a UTF-8 encoded JSON object.</p>
+<p>After reading the length prefix, the receiver reads exactly that number of bytes and interprets them as a UTF-8 encoded JSON object.</p>
 <hr />
 <h2 id="request-message-format">Request message format<a class="headerlink" href="#request-message-format" title="Permanent link">&para;</a></h2>
 <p>Each request consists of a single JSON object with the following structure:</p>
@@ -1455,14 +1454,14 @@ of bytes and interprets them as a UTF-8 encoded JSON object.</p>
 <p>Each request produces exactly one response.</p>
 <p>A successful response has the form:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>An unsuccessful response has the form:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid parameters&quot;</span>
@@ -1481,7 +1480,7 @@ of bytes and interprets them as a UTF-8 encoded JSON object.</p>
 <tbody>
 <tr>
 <td><code>status</code></td>
-<td><code>"OK"</code> or <code>"ERROR"</code></td>
+<td><code>"ok"</code> or <code>"error"</code></td>
 </tr>
 <tr>
 <td><code>data</code></td>
@@ -1499,10 +1498,9 @@ of bytes and interprets them as a UTF-8 encoded JSON object.</p>
 </table>
 <hr />
 <h2 id="error-semantics">Error semantics<a class="headerlink" href="#error-semantics" title="Permanent link">&para;</a></h2>
-<p>The API distinguishes between <strong>protocol-level errors</strong> and
-<strong>command-level errors</strong>.</p>
+<p>The API distinguishes between <strong>protocol-level errors</strong> and <strong>command-level errors</strong>.</p>
 <ul>
-<li>A response with <code>"status": "ERROR"</code> indicates that the main JSON request structure is invalid and could not be processed correctly.</li>
+<li>A response with <code>"status": "error"</code> indicates that the main JSON request structure is invalid and could not be processed correctly.</li>
 <li>A response containing an <code>"error"</code> object indicates that the request was syntactically valid, but the target rejected it, most commonly due to invalid or missing command parameters.</li>
 </ul>
 <p>In both cases, the response is well-formed JSON and follows the standard framing rules.</p>
