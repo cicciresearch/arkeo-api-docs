@@ -736,6 +736,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Settings JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1249,6 +1266,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Settings JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1326,21 +1360,16 @@
 <span class="w">    </span><span class="nt">&quot;Turn Hold (s)&quot;</span><span class="p">:</span><span class="mi">0</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;device&quot;</span><span class="p">:{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;SMU&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;model&quot;</span><span class="p">:</span><span class="s2">&quot;SMU&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;general&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;Mode&quot;</span><span class="p">:</span><span class="s2">&quot;Constant Voltage&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Sample Rate (S/s)&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Autorange&quot;</span><span class="p">:</span><span class="kc">true</span>
+<span class="w">      </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;Constant Voltage&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;sample_rate&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;autorange&quot;</span><span class="p">:</span><span class="kc">false</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;specific&quot;</span><span class="p">:{</span>
-<span class="w">      </span><span class="nt">&quot;Current Range&quot;</span><span class="p">:</span><span class="s2">&quot;10 mA&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Voltage Range&quot;</span><span class="p">:</span><span class="s2">&quot;Normal (6V)&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;SMU Mode&quot;</span><span class="p">:</span><span class="s2">&quot;60V DC Range&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Aperture Time (s)&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Current limit (A)&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Voltage Limit (V)&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;sense&quot;</span><span class="p">:</span><span class="mi">1009</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Device&quot;</span><span class="p">:</span><span class="s2">&quot;SMUx1_1&quot;</span>
+<span class="w">      </span><span class="nt">&quot;current_compliance&quot;</span><span class="p">:</span><span class="mf">0.02</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;voltage_compliance&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;sense&quot;</span><span class="p">:</span><span class="s2">&quot;4-wire&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;photodetector&quot;</span><span class="p">:{</span>
@@ -1354,6 +1383,67 @@
 <span class="w">  </span><span class="nt">&quot;sweep_settings&quot;</span><span class="p">:[]</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<p><strong><code>scan_settings.Scan Order</code></strong> <em>(enum)</em><br />
+Allowed values: <code>FW -&gt; RV</code>, <code>RV -&gt; FW</code>, <code>FW Only</code>, <code>RV Only</code>, </p>
+<p><strong><code>device.specifc</code></strong><br />
+The <code>device.specifc</code> object changes based on the <code>device.model</code> selected:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>"type":"SMU"</code></label><label for="__tabbed_1_2"><code>"type":"Keithley24xx"</code></label><label for="__tabbed_1_3"><code>"type":"Keithley26xx"</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;specific&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;current_compliance&quot;</span><span class="p">:</span><span class="mf">0.02</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;voltage_compliance&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sense&quot;</span><span class="p">:</span><span class="s2">&quot;4-wire&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;specific&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;GPIB0::24::INSTR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;shutter&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;remote_sense&quot;</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;specific&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;KE2600&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Hi-C Mode&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Sense&quot;</span><span class="p">:</span><span class="s2">&quot;4 Wire&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+<p><strong><code>photodetector.settings</code></strong><br />
+The <code>photodetector.settings</code> object changes based on the <code>photodetector.type</code> selected:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>"type":"None"</code></label><label for="__tabbed_2_2"><code>"type":"Spectrometer"</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;settings&quot;</span><span class="p">:{</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;settings&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;integration_time_s&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;averages&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;smoothing&quot;</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
 <hr />
 <h2 id="data-json"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>

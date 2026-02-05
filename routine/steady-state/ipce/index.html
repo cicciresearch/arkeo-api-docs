@@ -1448,11 +1448,31 @@
 <span class="w">    </span><span class="nt">&quot;Chopper Frequency (Hz)&quot;</span><span class="p">:</span><span class="mi">0</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;device&quot;</span><span class="p">:{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;Simulate&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;configuration&quot;</span><span class="p">:{</span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;NI-SMU&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;configuration&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;Autorange&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Current Range&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Voltage Range&quot;</span><span class="p">:</span><span class="mi">0</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p><strong><code>device.configuration</code></strong><br />
+The <code>device.configuration</code> object changes based on the <code>device.type</code> selected:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>"type":"NI-SMU"</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="grid" markdown>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;configuration&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="nt">&quot;Autorange&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Current Range&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Voltage Range&quot;</span><span class="p">:</span><span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
 <hr />
 <h2 id="data-json"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> Data JSON<a class="headerlink" href="#data-json" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
