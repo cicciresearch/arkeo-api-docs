@@ -15,11 +15,30 @@ This section lists the commands specific to the IPCE routine.
     "Chopper Frequency (Hz)":0
   },
   "device":{
-    "type":"Simulate",
-    "configuration":{"foo":"bar"}
+    "type":"NI-SMU",
+    "configuration":{
+      "Autorange":true,
+      "Current Range":3,
+      "Voltage Range":0
+    }
   }
 }
 ```
+
+**`device.configuration`**  
+The `device.configuration` object changes based on the `device.type` selected:
+
+=== "`"type":"NI-SMU"`"
+
+    <div class="grid" markdown>
+    ```json
+    "configuration":{
+      "Autorange":true,
+      "Current Range":3,
+      "Voltage Range":0
+    }
+    ```
+    </div>
 
 ---
 

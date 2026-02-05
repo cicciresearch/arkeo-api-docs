@@ -15,21 +15,16 @@ This section lists the commands specific to the Dark JV routine.
     "Turn Hold (s)":0
   },
   "device":{
-    "type":"SMU",
+    "model":"SMU",
     "general":{
-      "Mode":"Constant Voltage",
-      "Sample Rate (S/s)":10,
-      "Autorange":true
+      "mode":"Constant Voltage",
+      "sample_rate":10,
+      "autorange":false
     },
     "specific":{
-      "Current Range":"10 mA",
-      "Voltage Range":"Normal (6V)",
-      "SMU Mode":"60V DC Range",
-      "Aperture Time (s)":0.1,
-      "Current limit (A)":0.01,
-      "Voltage Limit (V)":6,
-      "sense":1009,
-      "Device":"SMUx1_1"
+      "current_compliance":0.02,
+      "voltage_compliance":6,
+      "sense":"4-wire"
     }
   },
   "photodetector":{
@@ -43,6 +38,73 @@ This section lists the commands specific to the Dark JV routine.
   "sweep_settings":[]
 }
 ```
+
+### Notes
+
+**`scan_settings.Scan Order`** *(enum)*  
+Allowed values: `FW -> RV`, `RV -> FW`, `FW Only`, `RV Only`, 
+
+**`device.specifc`**  
+The `device.specifc` object changes based on the `device.model` selected:
+
+=== "`"type":"SMU"`"
+
+    <div class="grid" markdown>
+    ```json
+    "specific":{
+      "current_compliance":0.02,
+      "voltage_compliance":6,
+      "sense":"4-wire"
+    }
+    ```
+    </div>
+
+=== "`"type":"Keithley24xx"`"
+
+    <div class="grid" markdown>
+    ```json
+    "specific":{
+      "port":"GPIB0::24::INSTR",
+      "shutter":true,
+      "remote_sense":true
+    }
+    ```
+    </div>
+
+=== "`"type":"Keithley26xx"`"
+
+    <div class="grid" markdown>
+    ```json
+    "specific":{
+      "port":"KE2600",
+      "Hi-C Mode":0,
+      "Sense":"4 Wire"
+    }
+    ```
+    </div>
+
+**`photodetector.settings`**  
+The `photodetector.settings` object changes based on the `photodetector.type` selected:
+
+=== "`"type":"None"`"
+
+    <div class="grid" markdown>
+    ```json
+    "settings":{ }
+    ```
+    </div>
+
+=== "`"type":"Spectrometer"`"
+
+    <div class="grid" markdown>
+    ```json
+    "settings":{
+      "integration_time_s":0.01,
+      "averages":10,
+      "smoothing":1
+    }
+    ```
+    </div>
 
 ---
 
