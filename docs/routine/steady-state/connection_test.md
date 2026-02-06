@@ -18,6 +18,11 @@ This section lists the commands specific to the Connection Test routine.
 }
 ```
 
+**Notes**
+
+**`device.specifc`**  
+--8<-- "embeds/spice-json.md:device-configuration"
+
 ---
 
 ## {{ headers.data}}
