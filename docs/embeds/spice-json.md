@@ -6,8 +6,8 @@ The `device.specific` object changes based on the `device.type` selected:
     <div class="grid" markdown>
     ```json
     "specific":{
-      "current_compliance":0.02,
-      "voltage_compliance":6,
+      "current_compliance":0.02,  //in A
+      "voltage_compliance":6,     //in V
       "sense":"4-wire"
     }
     ```
