@@ -1,15 +1,14 @@
 # Transient Photo Response Routine Commands
 
-This section lists the commands specific to the Transient Photo Response routine.  
+This section lists the commands specific to the Transient Photo Response (TPR) routine.  
 
 ## {{ headers.settings }}
 ```json
 {
-  "test":"TPC",
-  "device_type":0,
+  "test":"TPV",
+  "device_type":"Oscilloscope Real-Time",
   "device_settings":{
-    "Voltage Compliance":2,
-    "Current Compliance":0.01
+    "range":{"value":0.1,"unit":"A"}
   },
   "output_settings":{
     "pulse":{
@@ -28,13 +27,35 @@ This section lists the commands specific to the Transient Photo Response routine
       "ramp":true,
       "dark":false,
       "offset":0.5,
-      "bias":0.5
+      "bias":0.7
     },
     "additional":{"step_delay":0.5},
     "transient":{"high":80,"mid":50,"low":20}
   }
 }
 ```
+
+The `device_settings` object changes based on the `device_type` selected:
+
+=== "`"device_type":"SMU"`"
+
+    <div class="grid" markdown>
+    ```json
+    "device_settings":{
+      "compliance":{"value":0.01,"unit":"A"}
+    },
+    ```
+    </div>
+
+=== "`"type":"Oscilloscope Real-Time"`"
+
+    <div class="grid" markdown>
+    ```json
+    "device_settings":{
+      "range":{"value":0.1,"unit":"A"}
+    },
+    ```
+    </div>
 
 ---
 
@@ -104,31 +125,7 @@ This section lists the commands specific to the Transient Photo Response routine
 
 ## {{ headers.commands }}
 
-| Command | Description |
-|----------|-------------|
-| [SetMode](#setmode) | Set the mode to TPV or TPC. |
-
----
-
-### SetMode
-
-**Description**  
-Set the mode to TPV or TPC.
-
-**Example Request**  
-```json
-{
-  "target": "ROUTINE",
-  "command": "SetMode",
-  "data": {"test":"TPV"},
-}
-```
-
-**Example Response**  
-
-```json
-{ "status": "OK" }
-```
+No custom commands are available for the TPR routine
 
 ---
 

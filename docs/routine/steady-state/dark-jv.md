@@ -30,8 +30,8 @@ This section lists the commands specific to the Dark JV routine.
   "photodetector":{
     "type":"Spectrometer",
     "settings":{
-      "integration_time_s":0.01,
-      "averages":10,
+      "integration_time_s":0.1,
+      "averages":1,
       "smoothing":1
     }
   },

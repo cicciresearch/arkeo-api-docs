@@ -45,7 +45,7 @@ The `device.configuration` object changes based on the `device.type` selected:
 ## {{ headers.data }}
 ```json
 {
-  "user":"Bas de Jong",
+  "user":"Cicci Research",
   "device":"Sample",
   "temperature":0,
   "test":"IPCE",

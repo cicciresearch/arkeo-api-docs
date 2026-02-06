@@ -6,7 +6,7 @@ This section lists the commands specific to the JV routine.
 ```json
 {
   "device_type":"NI-SMU",
-  "device_settings":{"Compliance (A)":0.01},
+  "device_settings":{"Compliance (A)":0.1},
   "scan_settings":{
     "scan":{
       "Start (V)":-0.2,
