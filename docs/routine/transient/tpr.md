@@ -35,6 +35,10 @@ This section lists the commands specific to the Transient Photo Response (TPR) r
 }
 ```
 
+**`test`** *(enum)*  
+Allowed values: `TPV`, `TPC`
+
+**`device_type`**  
 The `device_settings` object changes based on the `device_type` selected:
 
 === "`"device_type":"SMU"`"

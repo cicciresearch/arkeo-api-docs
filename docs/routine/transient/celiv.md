@@ -19,11 +19,13 @@ This section lists the commands specific to the CELIV routine.
     },
     "Delay (s)":0.001,
     "Averages":100,
-    "Dark-CELIV":false
   },
+  "device_thickness_m":2E-5,
   "instrument":{
     "type":"Fast",
-    "config":{"Filter":"Noise","Range":0}
+    "config":{
+      "range":{"value":0.05,"unit":"A"}
+    }
   }
 }
 ```

@@ -99,4 +99,4 @@ This section lists the commands specific to the Impedance routine.
 ---
 
 ## {{ headers.commands }}
-No custom commands are available for the JV routine
+No custom commands are available for the impedance routine
