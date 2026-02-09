@@ -9,28 +9,28 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../tmpctl/">
       
       
-        <link rel="next" href="../protocol/">
+        <link rel="next" href="../mux/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>API Overview - Arkeo All-in-One API Documentation (v0.1)</title>
+        <title>LED - Arkeo All-in-One API Documentation (v0.1)</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,11 +57,11 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/compact-lists.css">
+      <link rel="stylesheet" href="../assets/stylesheets/compact-lists.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-overview" class="md-skip">
+        <a href="#led-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
+    <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-header__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Overview
+              LED
             
           </span>
         </div>
@@ -238,7 +238,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
+    <a href=".." title="Arkeo All-in-One API Documentation (v0.1)" class="md-nav__button md-logo" aria-label="Arkeo All-in-One API Documentation (v0.1)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -256,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -280,8 +280,6 @@
       
   
   
-    
-  
   
   
     
@@ -294,11 +292,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -319,7 +319,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -334,37 +334,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../getting-started/overview/" class="md-nav__link">
         
   
   
@@ -380,131 +353,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-the-api-is-and-is-not" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What the API is (and is not)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-api-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core API concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core API concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Targets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requests-and-responses-conceptual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requests and responses (conceptual)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#measurement-workflow-high-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Measurement workflow (high level)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -517,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../protocol/" class="md-nav__link">
+      <a href="../getting-started/protocol/" class="md-nav__link">
         
   
   
@@ -549,8 +397,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -561,13 +411,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -588,7 +436,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -606,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/" class="md-nav__link">
+      <a href="../main/" class="md-nav__link">
         
   
   
@@ -685,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/" class="md-nav__link">
+      <a href="../routine/" class="md-nav__link">
         
   
   
@@ -764,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/connection_test/" class="md-nav__link">
+      <a href="../routine/steady-state/connection_test/" class="md-nav__link">
         
   
   
@@ -792,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/jv/" class="md-nav__link">
+      <a href="../routine/steady-state/jv/" class="md-nav__link">
         
   
   
@@ -820,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/dark-jv/" class="md-nav__link">
+      <a href="../routine/steady-state/dark-jv/" class="md-nav__link">
         
   
   
@@ -848,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/ipce/" class="md-nav__link">
+      <a href="../routine/steady-state/ipce/" class="md-nav__link">
         
   
   
@@ -876,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/resistivity/" class="md-nav__link">
+      <a href="../routine/steady-state/resistivity/" class="md-nav__link">
         
   
   
@@ -904,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/steady-state/luminescence/" class="md-nav__link">
+      <a href="../routine/steady-state/luminescence/" class="md-nav__link">
         
   
   
@@ -991,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/transient/impedance/" class="md-nav__link">
+      <a href="../routine/transient/impedance/" class="md-nav__link">
         
   
   
@@ -1019,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/transient/tpr/" class="md-nav__link">
+      <a href="../routine/transient/tpr/" class="md-nav__link">
         
   
   
@@ -1047,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/transient/celiv/" class="md-nav__link">
+      <a href="../routine/transient/celiv/" class="md-nav__link">
         
   
   
@@ -1075,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../routine/transient/tcspc/" class="md-nav__link">
+      <a href="../routine/transient/tcspc/" class="md-nav__link">
         
   
   
@@ -1119,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tmpctl/" class="md-nav__link">
+      <a href="../tmpctl/" class="md-nav__link">
         
   
   
@@ -1144,10 +992,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../light/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LED
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1163,6 +1038,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#command-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Index
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GetStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvalues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SetValues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1175,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mux/" class="md-nav__link">
+      <a href="../mux/" class="md-nav__link">
         
   
   
@@ -1264,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/python/" class="md-nav__link">
+      <a href="../examples/python/" class="md-nav__link">
         
   
   
@@ -1319,44 +1253,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-the-api-is-and-is-not" class="md-nav__link">
+  <a href="#command-index" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What the API is (and is not)
+        Command Index
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-api-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core API concepts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core API concepts">
+    <nav class="md-nav" aria-label="Command Index">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#targets" class="md-nav__link">
+  <a href="#getstatus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Targets
+        GetStatus
       
     </span>
   </a>
@@ -1364,32 +1276,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#setvalues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requests-and-responses-conceptual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requests and responses (conceptual)
+        SetValues
       
     </span>
   </a>
@@ -1398,28 +1288,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#measurement-workflow-high-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Measurement workflow (high level)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next steps
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1440,129 +1308,83 @@
 
 
 
-<h1 id="api-overview">API Overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h1>
-<p>The <strong>Arkeo All-in-One API</strong> provides programmatic access to the ARKEO measurement
-application, enabling <strong>automation, remote control, and integration</strong> with
-external software such as LabVIEW, Python, MATLAB, or custom test frameworks.</p>
-<p>The API is designed for laboratory and research environments where measurements
-must be scripted, repeated, synchronized with external instruments, or
-integrated into larger experimental workflows.</p>
-<p>This page introduces the core concepts and architecture of the API before
-diving into command details.</p>
+<h1 id="led-commands">LED Commands<a class="headerlink" href="#led-commands" title="Permanent link">&para;</a></h1>
+<p>The light (LED) target provides commands to control the multiLED control.</p>
 <hr />
-<h2 id="what-the-api-is-and-is-not">What the API is (and is not)<a class="headerlink" href="#what-the-api-is-and-is-not" title="Permanent link">&para;</a></h2>
-<p>The API is a <strong>control and query interface</strong> to a running ARKEO application.</p>
-<p>It allows you to:</p>
-<ul>
-<li>Start, stop, and configure measurements</li>
-<li>Control measurement routines programmatically</li>
-<li>Read back state, status, and results</li>
-<li>Coordinate ARKEO with external hardware or software</li>
-</ul>
-<p>It does not</p>
-<ul>
-<li>Replace the ARKEO graphical user interface</li>
-<li>Add funtions that cannot be accessed by the user interface</li>
-<li>Perform measurements on its own</li>
-<li>Bypass ARKEO’s internal safety checks and limits</li>
-</ul>
-<p>The API always acts through the ARKEO application.</p>
+<h2 id="command-index">Command Index<a class="headerlink" href="#command-index" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#getstatus">GetStatus</a></td>
+<td>Returns the connection status of the light controller.</td>
+</tr>
+<tr>
+<td><a href="#setvalues">SetValues</a></td>
+<td>Set the values of the light controller channels.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="architecture-overview">Architecture overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<p>At a high level, the system consists of two parts:</p>
-<p><strong>ARKEO application</strong></p>
-<ul>
-<li>Runs locally on the measurement PC</li>
-<li>Owns all hardware connections</li>
-<li>Executes measurements and routines</li>
-<li>Exposes a TCP server for API access</li>
-</ul>
-<p><strong>External clients</strong></p>
-<ul>
-<li>Connect over TCP</li>
-<li>Send JSON-encoded commands</li>
-<li>Receive structured JSON responses</li>
-</ul>
-<p>Multiple clients may connect, but <strong>measurement state is global</strong> and managed
-by ARKEO.</p>
+<h3 id="getstatus">GetStatus<a class="headerlink" href="#getstatus" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong><br />
+Returns the connection status of the light controller.</p>
+<p><strong>Example Request</strong>  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LED&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GetStatus&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">401</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example Response</strong>  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;connected&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="s2">&quot;LVVISA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;values&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">401</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
-<h2 id="core-api-concepts">Core API concepts<a class="headerlink" href="#core-api-concepts" title="Permanent link">&para;</a></h2>
-<h3 id="targets">Targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h3>
-<p>Every API command is addressed to a <strong>target</strong>.
-A target represents a logical subsystem inside ARKEO.</p>
-<p>Main targets include:</p>
-<ul>
-<li><a href="../../main/"><strong>MAIN</strong></a> - Application-level control and global state  </li>
-<li><a href="../../routine/"><strong>ROUTINE</strong></a> - Measurement routines (JV, tracking, impedance, etc.)  </li>
-<li><a href="../../tmpctl/"><strong>TMPCTL</strong></a> - Temperature controllers and thermal environments  </li>
-<li><a href="../../mux/"><strong>MUX</strong></a> - Multiplexer configuration and channel routing  </li>
-</ul>
-<p>Targets provide a clear separation between <strong>what</strong> you control and <strong>how</strong> it
-is controlled.</p>
-<hr />
-<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h3>
-<p>Each target exposes a set of <strong>commands</strong>.</p>
-<p>A command:</p>
-<ul>
-<li>Performs an action (e.g. start a routine)</li>
-<li>Changes a configuration</li>
-<li>Queries the current state</li>
-</ul>
-<p>Commands are always explicit and deterministic: the same command with the same parameters produces the same effect, provided the system state allows it. Every command returns a response. New commands <strong>should not</strong> be send before a response is received.</p>
-<hr />
-<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
-<p>Commands may accept <strong>parameters</strong> that define their behavior.</p>
-<p>Examples:</p>
-<ul>
-<li>Routine name</li>
-<li>Measurement settings</li>
-<li>Channel indices</li>
-<li>Setpoints or modes</li>
-</ul>
-<p>Parameters are always provided as structured JSON objects and are validated by ARKEO before execution. If an unknown or wrong parameter is send, the command is ignored and an error object is returned.</p>
-<hr />
-<h3 id="requests-and-responses-conceptual">Requests and responses (conceptual)<a class="headerlink" href="#requests-and-responses-conceptual" title="Permanent link">&para;</a></h3>
-<p>All communication follows a <strong>request → response</strong> pattern:</p>
-<ul>
-<li>The client sends a request</li>
-<li>ARKEO processes it</li>
-<li>ARKEO returns a response indicating success or failure</li>
-</ul>
-<p>Responses always include:</p>
-<ul>
-<li>Execution status</li>
-<li>Optional data payload</li>
-<li>Error information if something went wrong</li>
-</ul>
-<hr />
-<h2 id="measurement-workflow-high-level">Measurement workflow (high level)<a class="headerlink" href="#measurement-workflow-high-level" title="Permanent link">&para;</a></h2>
-<p>A typical automated measurement sequence looks like this:</p>
-<ol>
-<li>Connect to the ARKEO API server</li>
-<li>Send a StartRoutine command</li>
-<li>Wait until the routine finished initializing by polling the GetTestStatus command</li>
-<li>Apply the correct settings with the ApplySettings command</li>
-<li>(optional) use any custom commands if required by the routine</li>
-<li>Start the measurement with the StartMeasurement command</li>
-<li>Monitor status and progress with the GetTestStatus and GetTestData command</li>
-<li>Retrieve or post-process generated data</li>
-</ol>
-<p>The exact commands depend on the routine and target involved, but this logical
-flow remains consistent.</p>
-<hr />
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>If this is your first time using the API:</p>
-<ol>
-<li>Start with the <a href="../../main/"><strong>MAIN</strong></a> target to understand application-level control</li>
-<li>Explore <a href="../../routine/"><strong>ROUTINE</strong></a> to automate measurements</li>
-<li>Use <a href="../../tmpctl/"><strong>TMPCTL</strong></a> and <a href="../../mux/"><strong>MUX</strong></a> when integrating hardware and environments</li>
-</ol>
-<p>Each target section includes:
-- Available commands
-- Required and optional parameters
-- Expected responses
-- Notes on behavior and constraints</p>
-<hr />
+<h3 id="setvalues">SetValues<a class="headerlink" href="#setvalues" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong><br />
+Set the values of the light controller channels. Each value in the <code>values</code> array represents one channel’s desired output. Values must be between 0 (off) and 1 (maximum). Values provided outside this range will be coerced.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The size of the provided <code>values</code> array must match the number of channels.</p>
+</div>
+<p><strong>Example Request</strong>  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LED&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SetValues&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;values&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example Response</strong>  </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;ok&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="mi">1001</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="s2">&quot;Invalid array size: 1. Must match number of channels: 12&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -1618,16 +1440,16 @@ flow remains consistent.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "navigation.top", "search.highlight", "search.suggest", "content.footnote.tooltips", "content.code.annotate", "content.code.copy", "content.image.zoom", "content.action.copy", "content.icons"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
-        <script src="../../js/katex-init.js"></script>
+        <script src="../js/katex-init.js"></script>
       
     
   </body>
