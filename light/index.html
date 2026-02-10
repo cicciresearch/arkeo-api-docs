@@ -1345,7 +1345,7 @@ Returns the connection status of the light controller.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;connected&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;connected&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;driver&quot;</span><span class="p">:</span><span class="s2">&quot;LVVISA&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;values&quot;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 <span class="w">  </span><span class="p">},</span>
@@ -1358,7 +1358,7 @@ Returns the connection status of the light controller.</p>
 Set the values of the light controller channels. Each value in the <code>values</code> array represents one channel’s desired output. Values must be between 0 (off) and 1 (maximum). Values provided outside this range will be coerced.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The size of the provided <code>values</code> array must match the number of channels.</p>
+<p>The size of the provided <code>values</code> array must match the number of channels. If not, the command is ignored and an error message is returned.</p>
 </div>
 <p><strong>Example Request</strong>  </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
