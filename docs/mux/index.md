@@ -34,8 +34,8 @@ Connect to the multiplexer
 
 ```json
 {
-  "status": "OK",
-  "data": { "state":"OK" },
+  "status": "ok",
+  "data": { "state":"ok" },
   "request_id": 401
 }
 ```
@@ -61,8 +61,8 @@ Disconnect from the multiplexer
 
 ```json
 {
-  "status": "OK",
-  "data": { "state":"OK" },
+  "status": "ok",
+  "data": { "state":"ok" },
   "request_id": 402
 }
 ```
@@ -81,7 +81,7 @@ Each element represents one channel, where `true` means connected and `false` me
 {
   "target": "MUX",
   "command": "GetStatus",
-  "request_id": 401
+  "request_id": 403
 }
 ```
 
@@ -89,7 +89,7 @@ Each element represents one channel, where `true` means connected and `false` me
 
 ```json
 {
-  "status": "OK",
+  "status": "ok",
   "data": {
     "connected":true,
     "firmware":"Multiplexer_v1.1",
@@ -125,8 +125,8 @@ Each Boolean value in the `channels` array represents one channel’s desired st
 
 ```json
 {
-  "status": "OK",
-  "data": { "state":"OK" },
+  "status": "ok",
+  "data": { "state":"ok" },
   "request_id": 404
 }
 ```

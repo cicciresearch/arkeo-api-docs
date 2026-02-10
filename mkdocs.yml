@@ -89,6 +89,7 @@ nav:
         - Photo-CELIV: routine/transient/celiv.md
         - TCSPC Routine: routine/transient/tcspc.md
     - TMPCTL: tmpctl/index.md
+    - LED: light/index.md
     - MUX: mux/index.md
   - Examples:
       - Python Example: examples/python.md

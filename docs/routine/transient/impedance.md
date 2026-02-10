@@ -5,31 +5,22 @@ This section lists the commands specific to the Impedance routine.
 ## {{ headers.settings }}
 ```json
 {
-  "Freq":{
-    "FreqType":"Ramp",
-    "Frequency":{
-      "Start (Hz)":100,
-      "Stop (Hz)":10000,
-      "Steps":10
+  "instrument":"SMU",
+  "config":{
+    "frequency":{
+      "mode":"Ramp",
+      "ramp":{
+        "Start (Hz)":200,
+        "Stop (Hz)":10000,
+        "Steps":10
+      },
+      "Amplitude (V)":0.1,
+      "Offset (V)":0,
+      "Periods":10
     },
-    "Amplitude (V)":0.1,
-    "Offset (V)":0,
-    "Periods":10
-  },
-  "Offset":{
-    "Type":"Fixed",
-    "Start (V)":0,
-    "Stop (V)":1,
-    "Steps":10
-  },
-  "Light":{
-    "LightType":"Off",
-    "LED Type":"Fast LED",
-    "Start":0,
-    "Stop":1,
-    "Steps":10
-  },
-  "LED":{"LED Level":0}
+    "offset":{"mode":"Fixed","Offset (V)":0},
+    "light":{"mode":"Off"}
+  }
 }
 ```
 
@@ -38,11 +29,11 @@ This section lists the commands specific to the Impedance routine.
 ## {{ headers.data }}
 ```json
 {
-  "user":"Cicci Research",
-  "device":"Sample",
+  "user":"User",
+  "device":"Device",
   "temperature":0,
   "test":"Impedance",
-  "time":"2025-11-12T13:21:36.021Z",
+  "time":"2026-02-09T16:04:47.538Z",
   "output_values":{
     "light":{
       "unit":"a.u.",
@@ -55,15 +46,15 @@ This section lists the commands specific to the Impedance routine.
     "frequency":{
       "unit":"Hz",
       "values":[
-        100,
-        166.810053720006,
-        278.255940220713,
-        464.158883361278,
-        774.263682681127,
-        1291.54966501488,
-        2154.43469003188,
-        3593.81366380463,
-        5994.84250318941,
+        200,
+        308.890420989276,
+        477.06646089466,
+        736.806299728077,
+        1137.96204055278,
+        1757.52786888082,
+        2714.41761659491,
+        4192.28800165354,
+        6474.78802869525,
         10000
       ]
     }
@@ -80,16 +71,16 @@ This section lists the commands specific to the Impedance routine.
     {
       "iteration":{"light":0,"offset":0,"frequency":0},
       "data":[
-        ["72.80","0.00","-0.00","-0.00","-0.00","Inf"],
-        ["91.20","-0.00","-0.00","-0.00","-0.00","Inf"],
-        ["163.01","-0.00","-0.00","-0.00","-0.00","Inf"],
-        ["280.12","-0.00","-0.00","-0.00","-0.00","Inf"],
-        ["475.39","0.00","0.00","0.00","0.00","-Inf"],
-        ["723.83","-0.00","0.00","0.00","0.00","-Inf"],
-        ["1265.24","-0.00","-0.00","-0.00","-0.00","Inf"],
-        ["3035.43","-0.00","-0.00","-0.00","-0.00","Inf"],
-        ["5547.07","0.00","0.00","0.00","0.00","-Inf"],
-        ["9550.32","0.00","0.00","0.00","0.00","-Inf"]
+        [123.822655,0,0,0,0,-Infinity],
+        [200.188982,0,0,0,0,-Infinity],
+        [287.12285,0,0,0,0,Infinity],
+        [456.387042,0,0,0,0,-Infinity],
+        [730.160017,0,0,0,0,Infinity],
+        [1227.31876,0,0,0,0,Infinity],
+        [1826.76732,0,0,0,0,-Infinity],
+        [3334.42597,0,0,0,0,Infinity],
+        [5787.06779,0,0,0,0,-Infinity],
+        [9550.3184,0,0,0,0,-Infinity]
       ]
     }
   ]
