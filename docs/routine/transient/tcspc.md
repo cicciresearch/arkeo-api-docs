@@ -66,7 +66,7 @@ Control the excitation laser
 {
   "target": "ROUTINE",
   "command": "SetLaser",
-  "parameter": {"laser":true},
+  "parameter": {"port_id":7, "laser":true},
   "request_id": 204
 }
 ```

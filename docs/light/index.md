@@ -36,7 +36,14 @@ Returns the connection status of the light controller.
   "data": {
     "connected":true,
     "driver":"LVVISA",
-    "values":[0,0,0,0,0,0,0,0,0,0,0,0]
+    "boards":[
+      {
+        "address":1,
+        "connected":true,
+        "values":[0,0,0,0,0,0,0,0,0,0,0,0]
+      }
+    ]
+    
   },
   "request_id": 401
 }
@@ -59,9 +66,10 @@ Set the values of the light controller channels. Each value in the `values` arra
   "target": "LED",
   "command": "SetValues",
   "parameter": {
+    "address":1,
     "values":[0,0,0.8,0,0,0,0,0,0,0,0,0]
   },
-  "request_id": 404
+  "request_id": 402
 }
 ```
 
@@ -71,7 +79,7 @@ Set the values of the light controller channels. Each value in the `values` arra
 {
   "status": "ok",
   "data": { "state":"ok" },
-  "request_id": 404
+  "request_id": 402
 }
 ```
 

@@ -124,6 +124,9 @@ The `photodetector.settings` object changes based on the `photodetector.type` se
 }
 ```
 
+!!! Note
+    If no photodetector is selected, `#!json "spectral_data":{}` will still be included as an empty object. It can then simply be ignored
+
 ---
 
 ## {{ headers.progress}}
