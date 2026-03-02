@@ -1333,7 +1333,7 @@
 <hr />
 <h3 id="getstatus">GetStatus<a class="headerlink" href="#getstatus" title="Permanent link">&para;</a></h3>
 <p><strong>Description</strong><br />
-Returns the connection status of the light controller.</p>
+Returns the connection status of the light controller. The <code>boards</code> field is an array as there may be multiple boards present in the system. The boards are uniquely identified by their address.</p>
 <p><strong>Example Request</strong>  </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LED&quot;</span><span class="p">,</span>
