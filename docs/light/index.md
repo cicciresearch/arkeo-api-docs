@@ -16,7 +16,7 @@ The light (LED) target provides commands to control the multiLED control.
 ### GetStatus
 
 **Description**  
-Returns the connection status of the light controller.
+Returns the connection status of the light controller. The `boards` field is an array as there may be multiple boards present in the system. The boards are uniquely identified by their address.
 
 **Example Request**  
 

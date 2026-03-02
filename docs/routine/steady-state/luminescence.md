@@ -11,9 +11,18 @@ This section lists the commands specific to the Luminescence routine.
 
 ## {{ headers.data }}
 ```json
-
+{
+  "wavelengths":[336.2,336.8,337.4,337.99,338.59],
+  "dark":[98.15,96.57,100.65,97.65,98.65],
+  "reference":[1.74,4.32,0.99,1.32,-4.26],
+  "spectrum":[-3.56,-0.64,-0.39,-1.14,-4.72],
+  "irradiance":[-5.34374988703235E-10,-9.68753827157443E-11,-0.0404323935508728,-1.71875375043484E-10,-7.09375724827765E-10],
+  "absorbance":[NaN,NaN,NaN,NaN,-0.0444840553995501],
+  "transmittance":[-2.05776536017416,-0.149686749033192,-0.403400873932853,-0.871634601433505,1.10785789095536]
+}
 ```
-
+!!! note "invalid data"
+    All fields are always send, even if the array is empty. This may happen if no reference is taken, in that case, the `absorbance` and `transmittance` fields will contain an empty array.
 ---
 
 ## {{ headers.commands }}
