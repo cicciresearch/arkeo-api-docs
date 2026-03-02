@@ -30,6 +30,28 @@ This section lists the commands specific to the CELIV routine.
 }
 ```
 
+**`device_type`**  
+The `instrument.config` object changes based on the `instrument.type` selected:
+
+=== "`"instrument.type":"Slow"`"
+
+    <div class="grid" markdown>
+    ```json
+    "device_settings":{
+      "compliance":{"value":0.01,"unit":"A"}
+    },
+    ```
+    </div>
+
+=== "`"instrument.type":"Fast"`"
+
+    <div class="grid" markdown>
+    ```json
+    "device_settings":{
+      "range":{"value":0.1,"unit":"A"}
+    },
+    ```
+    </div>
 ---
 
 ## {{ headers.data }}
