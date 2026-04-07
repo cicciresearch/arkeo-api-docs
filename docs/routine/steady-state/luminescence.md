@@ -144,10 +144,13 @@ Controls the excitation laser used during luminescence measurements. Set the PWM
 {
   "target": "ROUTINE",
   "command": "SetLaser",
-  "parameter": {"channel":0, "frequency":10000, "duty_cycle":50},
+  "parameter": {"channel":0, "frequency":10000, "duty_cycle":50, "intensity":50},
   "request_id": 204
 }
 ```
+
+!!! info "`duty cycle` vs `intensity`"
+    The `SetLaser` command accepts `duty_cycle` or `intensity` to set the intensity of the light. Some light work in opposite amplitude, i.e. a duty cycle of 0% corresponds to 100% intensity. Other light may saturate at 50% duty cycle. In that case, the 0-100% intensity is mapped to a duty cycle of 0-50%. It is recommended to use `intensity` to set the actual light intensity. While `duty_cycle` remains available for testing.
 
 **Example Response**
 
