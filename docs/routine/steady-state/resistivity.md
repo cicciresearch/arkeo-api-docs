@@ -3,7 +3,16 @@
 This section lists the commands specific to the Resistivity routine.  
 
 ## {{ headers.settings }}
-No settings are required for this routine
+```json
+{
+  "acquisition":{"V limit":10},
+  "device_dimension":{
+    "Film Thickness (um)":100,
+    "Length (mm)":100,
+    "Width (mm)":25
+  }
+}
+```
 
 ---
 
@@ -62,6 +71,9 @@ Applies the specified current in A to the sample.
 ---
 
 ### SetDeviceDimensions
+
+!!!warning "Deprecated function"
+    These values are included in the settings json. This function is left in for compatibility
 
 **Description**  
 Set the device dimensions to calculate the resistance correction.

@@ -2,6 +2,8 @@ site_name: Arkeo All-in-One API Documentation (v0.1)
 
 theme:
   name: material
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
   icon:
     annotation: material/arrow-right-circle 
   features:
